@@ -1,0 +1,67 @@
+.imgArgProg{
+  max-width: 320px;
+  margin: .5rem .5rem;
+
+}
+.imgArgProg:hover{
+  border-radius: .5rem;
+  background: rgb(92, 127, 199);
+  /* transition:background  .3s ease-in-out; */
+}
+nav{
+  position:fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+@keyframes pulso{
+  0%{
+    color: whitesmoke;
+     transform: scale(1.3);
+  }
+  50%{
+     transform: scale(.7);
+  }
+  100%{
+     transform: scale(1.3);
+  }
+  }
+  .pulso{
+    font-size: 1.5rem;
+     animation: pulso 1.5s linear infinite;
+ }
+
+  #navBarMy{
+  border-bottom:2px solid grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+
+}
+
+    @media screen and (min-width:850px){
+      #navBarMy{
+        border-bottom:2px solid grey;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(5, 5, 71,.5);
+            }
+            .navMy{
+              height: 140px;
+            }
+  }
+.yoProg{
+  width: 20rem;
+  font-size: 2rem;
+}
+.centrar{
+  display: flex;
+  justify-content: center;
+}
+

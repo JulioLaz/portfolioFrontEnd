@@ -1,0 +1,182 @@
+
+{
+   "nombre": "Julio Alberto Lazarte",
+   "ubicacion": "Tucumán, Argentina",
+   "edad": "44 años",
+   "foto":"../../../assets/julio.png",
+   "titulo":"Full Stack Developer Jr",
+   "historia":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse ratione at ipsam assumenda officia voluptas quo illum tenetur delectus velit architecto quis vel, dignissimos dolorem corporis quidem, sed animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse ratione at ipsam assumenda officia voluptas quo illum tenetur delectus velit architecto quis vel, dignissimos dolorem corporis quidem, sed animi!",
+
+   "education":[
+  {
+   "school":"Argentina Programa #YO-PROGRAMO",
+   "title":"Full Stack Developer Jr",
+   "img":"https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/sliderimage1/1662441043/banner-ok-argentina-programa.jpg",
+   "alt":"logo Argentina Programa",
+   "duracion":9,
+   "start":"2022",
+   "end":"2023",
+   "city":"Online",
+   "completado":false
+   }
+   ,
+  {
+   "school":"ALURA LATAM  -  Oracle Next Education",
+   "title":"Front End Developer",
+   "img":"https://app.aluracursos.com/assets/images/logos/logo-aluraespanhol.svg",
+   "alt":"logo_alura_latam",
+   "duracion":6,
+   "start":"2022",
+   "end":"2023",
+   "city":"Online",
+   "completado":false
+   }
+   ,
+  {
+   "school":"UNT - Universidad Nacional de Tucumán",
+   "title":"Ingeniería Química",
+   "img":"https://campus5.unt.edu.ar/pluginfile.php/30616/mod_label/intro/Logo-AH-01.jpg",
+   "alt":"logo UNT",
+   "duracion":72,
+   "start":"2003",
+   "end":"2008",
+   "city":"TUCUMAN",
+   "completado":false
+   }
+   ,
+  {
+    "school":"SEMINARIO MAYOR ARQUIDIOCESANO",
+    "title":"Profesor de FILOSOFIA",
+    "img":"https://yt3.ggpht.com/ytc/AMLnZu8qHBWxnwAc--pPrRH1evsbnH58LPOF3Q1ShHnL=s176-c-k-c0x00ffffff-no-rj",
+    "alt":"logo SEMINARIO MAYOR",
+    "duracion":48,
+    "start":"1998",
+    "end":"2002",
+    "city":"TUCUMAN",
+    "completado":true
+  }
+  ,
+  {
+    "school":"INSTITUTO TECNICO LORENZO MASSA",
+    "title":"Técnico ELECTRO-MECANICO",
+    "img":"https://app.aulica.com.ar/uploads/29/imgEmpresa/00000196Juqjw.png",
+    "alt":"logo LORENZO MASSA",
+    "duracion":72,
+    "start":"1990",
+    "end":"1996",
+    "city":"TUCUMAN",
+    "completado":true
+  }
+]
+,
+"programacion":[
+{
+  "program":"JS",
+  "porcentaje":"65%"
+}
+,
+{
+  "program":"HTML",
+  "porcentaje":"80%"
+}
+,
+{
+  "program":"CSS",
+  "porcentaje":"90%"
+}
+,
+{
+  "program":"MySQL",
+  "porcentaje":"40%"
+}
+,
+{
+  "program":"ANGULAR",
+  "porcentaje":"50%"
+}
+,
+{
+  "program":"MySQL",
+  "porcentaje":"40%"
+}
+,
+{
+  "program":"BOOTSTRAP",
+  "porcentaje":"45%"
+}
+]
+,
+"idiomas":[
+  {
+"lengua":"Ingles",
+"porcentaje":"25%"
+  },
+  {
+"lengua":"Italiano",
+"porcentaje":"25%"
+  }
+],
+  "works":[
+    {
+      "id":6,
+      "empresa":"Ministerio de Educación",
+      "puesto":"Docente",
+      "tarea":"Profesor de Filosofía.",
+      "start":"2015",
+      "end":"2022",
+      "city":"TUCUMAN"
+    }
+    ,
+    {
+      "id":5,
+      "empresa":"Prelatura de Cafayate",
+      "puesto":"Administrador",
+      "tarea":"Tareas generales administrativas y técnicas.",
+      "start":"2011",
+      "end":"2014",
+      "city":"Sta. María - CATAMARCA"
+    }
+    ,
+    {
+      "ïd":4,
+      "empresa":"Empresa familiar",
+      "puesto":"Administrativo",
+      "tarea":"Tareas generales administrativas y técnicas.",
+      "start":"2006",
+      "end":"2010",
+      "city":"TUCUMAN"
+    }
+    ,
+    {
+      "ïd":3,
+      "empresa":"Cia. Azucarera Los Balcanes",
+      "puesto":"Asistente de fabricación",
+      "tarea":"Control del proceso de fabricación de azucar.",
+      "start":"2004",
+      "end":"2007",
+      "city":"La Florida - TUCUMAN"
+    }
+    ,
+    {
+      "ïd":2,
+      "empresa":"Cia. Azucarera Los Balcanes",
+      "puesto":"Químico",
+      "tarea":"Químico de control de calidad de azucar tipo A.",
+      "start":"2004",
+      "end":"2007",
+      "city":"La Florida - TUCUMAN"
+    }
+    ,
+    {
+    "ïd":1,
+    "empresa":"Laboratorio Monjes Benedictinos",
+    "puesto":"Técnico",
+    "tarea":"Mantenimiento en laboratorio de fitoterápicos y cremas.",
+    "start":"2002",
+    "end":"2003",
+    "city":"El Siambon - TUCUMAN"
+  }
+],
+  "imgArentinaPrograma":"../../../assets/redes/imgArgentinaPrograma.png"
+
+}

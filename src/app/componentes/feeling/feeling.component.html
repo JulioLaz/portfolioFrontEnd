@@ -1,0 +1,35 @@
+<div class="card bgCardFondo" style="margin:0 1rem ;">
+  <div class="card-header" style="background-color: transparent;border: none; ">
+      <h3 class="h3Center">Formación en programación:
+          <h5 class="h5Center">* % de conocimientos</h5>
+      </h3>
+    <div class="card" style="background-color: transparent;border: none; ">
+      <div class="card-body">
+          <blockquote class="blockquote mb-0 " style="background-color: transparent ">
+              <div class="container-centrado row centrado" >
+                <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of miPortfolio">
+                    <!-- <img src={{item.img}} class="card-img-top cardMod {{item.program}}" alt=> -->
+                  <div class="card-body fsCalc">
+                      <p class="card-text text-center fw-bolder">{{item.program}}</p>
+                      <div class="experiencia">
+                        <div class="contenedor texto_barra">
+                           <div class="barra{{item.program}} texto_barra">
+                              <div class="texto{{item.program}} "></div>
+                           </div>
+                        </div>
+                     </div>
+
+
+                    </div>
+                </div>
+              </div>
+                <hr>
+                  <footer  >
+                    <cite class="text" title="Source Title">"No te preocupes si funciona bien. Si todo estuviera correcto, serías despedido de tu trabajo"</cite>
+                    <cite class="autor"> - Ley de Mosher de la ingeniería del Software</cite>
+                  </footer>
+          </blockquote>
+      </div>
+    </div>
+  </div>
+</div>

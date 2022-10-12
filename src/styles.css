@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  background:rgb(146, 201, 243);
+  overflow-x:hidden;
+  background: url(./assets/matrixrojo.gif);
+  background-repeat: no-repeat;
+  background-size: auto;
+}

@@ -1,0 +1,34 @@
+<div class="card bgCardFondo" style="margin:1rem 1rem ;width: auto;">
+  <div class="card-header bgCard" style="background-color: transparent; padding: 5px; border: none;">
+      <h3 class="h3Center">EXPERIENCIA LABORAL</h3>
+    <div class="card"
+          style="background-color: transparent;
+                  border: none;
+                  width: auto;
+                  display: flex;
+                  justify-content: center;">
+      <div class="container centrado" style="margin: 0;padding: 1rem 0;width: auto;max-width: initial;">
+          <div class="cardFlex card-body" *ngFor="let item of worksList" style="width: auto;padding:0; display: flex;justify-content: center;">
+            <p >
+              <button class="btn btn-dark" id="btnShow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" style="margin: 0" onclick="reduccion()">
+                {{item.empresa}}
+              </button>
+            </p>
+          <div>
+            <div class="collapse multi-collapse" id="collapseWidthExample">
+              <div class="card card-body text-center hiddenCard" style="width: 58vw;height: 6rem;margin:0 0 0 .5rem;padding: 5px;" >
+                <p><strong>{{item.puesto}}: </strong>{{item.tarea}}</p>
+                <p>{{item.start}}-{{item.end}} <span> / </span> {{item.city}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <footer  >
+          <cite class="text" title="Source Title">"La única forma de hacer un gran trabajo es amando lo que haces"</cite>
+          <cite class="autor"> - Steve Jobs</cite>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>

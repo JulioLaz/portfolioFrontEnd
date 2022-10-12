@@ -1,0 +1,31 @@
+<div class="card bgCardFondo" style="margin:0 1rem ;">
+  <div class="card-header" style="background-color: transparent;border: none; ">
+      <h3 class="h3Center">Qué formación tengo:</h3>
+    <div class="card" style="background-color: transparent;border: none; ">
+      <div class="card-body">
+          <blockquote class="blockquote mb-0 " style="background-color: transparent ">
+              <div class="container-centrado row centrado" >
+                <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of educacionList">
+                    <img src={{item.img}} class="card-img-top cardMod {{item.alt}}" alt={{item.alt}}>
+                  <div class="card-body fsCalc">
+                      <p class="card-text text-center fw-bolder">{{item.school}}</p>
+                      <p class="card-text text-center ">{{item.title}}</p>
+                      <p class="card-text text-center">{{item.start}}-{{item.end}} </p>
+                      <p class="card-text text-center" *ngIf="item.completado; else nocompletado">COMPLETADO</p>
+                      <ng-template #nocompletado><p class="card-text text-center" *ngIf="item.end!=2023; else porcentaje">85% de la carrera</p></ng-template>
+                      <ng-template #porcentaje><p class="card-text text-center" >Cursando</p></ng-template>
+
+                      <p class="card-text text-center">{{item.city}} </p>
+                  </div>
+                </div>
+              </div>
+                <hr>
+                  <footer  >
+                    <cite class="text" title="Source Title">"Todo aquello que el hombre ignora no existe para él. Por eso el universo de cada uno se resume al tamaño de su saber"</cite>
+                    <cite class="autor"> - Albert Einstein</cite>
+                  </footer>
+          </blockquote>
+      </div>
+    </div>
+  </div>
+</div>
