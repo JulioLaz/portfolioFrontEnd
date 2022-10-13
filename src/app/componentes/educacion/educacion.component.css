@@ -2,6 +2,7 @@
   background: rgba(22, 22, 22, 0.9);
   color: antiquewhite;
   border: 1px solid grey;
+  margin: 0 1rem;
 }
 .bgCard{
   display: flex;
@@ -26,14 +27,24 @@
 .fsCalc{
   font-size: calc(.7rem + .6vw);
 }
-.cardMod{
- width: auto;
- height: 300px;
- margin-top: 4px;
+.cardImg{
+  display: flex;
+  margin-top: 5px;
+  width: auto;
+  height: 300px;
+  border: 1px solid grey;
+  border-radius: .5rem;
+  border-radius: .5rem;
+  align-items: center;
+  background-color: rgba(22, 22, 22, 0.9);
+}
+.imagen{
+  padding:1px;
+  height: 300px;
+  border-radius: .5rem;
 }
 .logo_alura_latam{
   padding: 1rem;
-  background-color: rgba(22, 22, 22, 0.9);
 
 }
 .h3Center{

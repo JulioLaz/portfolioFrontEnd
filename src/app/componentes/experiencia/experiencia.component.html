@@ -1,13 +1,8 @@
-<div class="card bgCardFondo" style="margin:1rem 1rem ;width: auto;">
-  <div class="card-header bgCard" style="background-color: transparent; padding: 5px; border: none;">
+<div class="card bgCardFondo" style="width:initial">
+  <div class="card-header bgCard">
       <h3 class="h3Center">EXPERIENCIA LABORAL</h3>
-    <div class="card"
-          style="background-color: transparent;
-                  border: none;
-                  width: auto;
-                  display: flex;
-                  justify-content: center;">
-      <div class="container centrado" style="margin: 0;padding: 1rem 0;width: auto;max-width: initial;">
+    <div class="card-header cajaBotones">
+      <div class="container cajaExperiencia" >
           <div class="cardFlex card-body" *ngFor="let item of worksList" style="width: auto;padding:0; display: flex;justify-content: center;">
             <p >
               <button class="btn btn-dark" id="btnShow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" style="margin: 0" onclick="reduccion()">

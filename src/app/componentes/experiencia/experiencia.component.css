@@ -1,11 +1,18 @@
-.bgCard{background: rgba(22, 22, 22, 0.9)}
-.bgCard:hover{
-  background: rgba(237, 211, 211, 0.7);
-  transition: background 0.5s
+.bgCardFondo{
+  background: rgba(22, 22, 22, 0.9);
+  color: antiquewhite;
+  border: 1px solid grey;
+  margin: 0 1rem;
+  width:initial;
+}
+
+.bgCard{
+  background: rgba(22, 22, 22, 0.1);
+  padding: 5px;
+  border: none;
 }
 .cardFlex{
   display: flex;
-  /* flex-direction: row; */
   justify-content: start;
 }
 div.card{
@@ -31,8 +38,10 @@ div.card{
 }
 .bgCardFondo{
   background: rgba(22, 22, 22, 0.9);
-  color: antiquewhite;
   border: 1px solid grey;
+  color: antiquewhite;
+  margin:0 1rem;
+  /* width: ; */
 }
 .h3Center{
   text-align: center;
@@ -50,7 +59,6 @@ div.card{
   font-size: calc(.8rem + .6vw);
   text-align: center;
   color: rgb(189, 186, 182);
-  /* text-shadow: 1px 2px 2px grey; */
 }
 .autor{
   display: flex;
@@ -58,4 +66,15 @@ div.card{
   padding: 0 1rem;
   font-size: calc(.8rem + .6vw);
   font-style: normal;
+}
+.cajaExperiencia{
+  margin: 0;
+  padding: 1rem 0;
+}
+.cajaBotones{
+  background-color: transparent;
+  border: none;
+  width: auto;
+  display: flex;
+  justify-content: center;
 }
