@@ -1,7 +1,7 @@
 .bgCardFondo{
-  background: rgba(22, 22, 22, 0.9);
-  color: antiquewhite;
+  background: rgba(22, 22, 22, 0.6);
   border: 1px solid grey;
+  color: antiquewhite;
   margin: 0 1rem;
   width:initial;
 }
@@ -26,23 +26,18 @@ div.card{
   height: 6rem;
   width: 26vw;
   margin: 5px .5rem;
-  /* color: red; */
 }
 
-.hiddenCard{
+#hiddenCard{
+  background-color: grey;
   font-size: calc(.5rem + .8vw);
   height: 6rem;
-  width: 55vw;
-  margin: 0 .5rem;
+  padding: 5px;
+  width: 58vw;
+  margin-left:.5rem;
   color: black;
 }
-.bgCardFondo{
-  background: rgba(22, 22, 22, 0.9);
-  border: 1px solid grey;
-  color: antiquewhite;
-  margin:0 1rem;
-  /* width: ; */
-}
+/* style="width: 58vw;height: 6rem;margin:0 0 0 .5rem;padding: 5px;background-color: grey;" */
 .h3Center{
   text-align: center;
   padding-bottom: .5rem;

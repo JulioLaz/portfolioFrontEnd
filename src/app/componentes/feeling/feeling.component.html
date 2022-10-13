@@ -23,9 +23,9 @@
                 </div>
               </div>
                 <hr>
-                  <footer  >
-                    <cite class="text" title="Source Title">"No te preocupes si funciona bien. Si todo estuviera correcto, serías despedido de tu trabajo"</cite>
-                    <cite class="autor"> - Ley de Mosher de la ingeniería del Software</cite>
+                  <footer *ngFor="let item of frases"  >
+                    <cite class="text" title="Source Title">"{{item.programacion}}"</cite>
+                    <cite class="autor"> - {{item.programacionAutor}}</cite>
                   </footer>
           </blockquote>
       </div>

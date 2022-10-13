@@ -11,7 +11,7 @@
             </p>
           <div>
             <div class="collapse multi-collapse" id="collapseWidthExample">
-              <div class="card card-body text-center hiddenCard" style="width: 58vw;height: 6rem;margin:0 0 0 .5rem;padding: 5px;" >
+              <div class="card card-body text-center " id="hiddenCard" >
                 <p><strong>{{item.puesto}}: </strong>{{item.tarea}}</p>
                 <p>{{item.start}}-{{item.end}} <span> / </span> {{item.city}}</p>
               </div>
@@ -19,11 +19,11 @@
           </div>
         </div>
         <hr>
-        <footer  >
-          <cite class="text" title="Source Title">"La única forma de hacer un gran trabajo es amando lo que haces"</cite>
-          <cite class="autor"> - Steve Jobs</cite>
+        <footer *ngFor="let item of frases"  >
+          <cite class="text" title="Source Title">"{{item.experiencia}}"</cite>
+          <cite class="autor"> - {{item.experienciaAutor}}</cite>
         </footer>
-      </div>
+</div>
     </div>
   </div>
 </div>

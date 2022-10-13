@@ -9,12 +9,14 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class FeelingComponent implements OnInit {
   educacionList: any;
   miPortfolio: any;
+  frases:any;
 
   constructor(private datosPortfolio:PortfolioService) { }
   ngOnInit(): void {
   this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
     this.educacionList=data.education;
     this.miPortfolio=data.programacion;
+    this.frases=data.frases
   });
   }
 }
