@@ -342,3 +342,49 @@
    35% {content: '45%'}
    40% {content: '50%'}
 }
+/* GitHub */
+.barraGitHub{
+  animation: progresoGitHub 3s ease-out infinite;
+  background: linear-gradient(90deg, rgba(238,250,2,1) 30%, rgba(245,18,2,1) 100%);
+  border-radius: 5px;
+  margin: 5px;
+  padding: .5rem;
+  width: 0;
+}
+.textoGitHub{
+  align-items: center;
+  color: #eb7260;
+  display: flex;
+  font-size: 2em;
+  font-weight: bold;
+  height: 100%;
+  line-height: 2em;
+  mix-blend-mode: multiply;
+  padding: 0 5px;
+  text-align: start;
+}
+.textoGitHub:after {
+  animation: porcentajeGitHub 3s linear infinite;
+  color:black;
+  content: '65%';
+}
+
+@keyframes progresoGitHub {
+   0% {width: 0}
+  65% {width: 60%}
+}
+
+@keyframes porcentajeGitHub {
+   0% {content: '65%';color: red;}
+   5% {content: '15%'}
+   10% {content: '20%'}
+   15% {content: '25%'}
+   20% {content: '30%'}
+   25% {content: '35%'}
+   30% {content: '40%'}
+   35% {content: '45%'}
+   40% {content: '50%'}
+   45% {content: '55%'}
+   50% {content: '60%'}
+   55% {content: '65%'}
+}

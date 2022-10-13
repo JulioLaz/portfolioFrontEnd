@@ -96,8 +96,8 @@
 }
 ,
 {
-  "program":"MySQL",
-  "porcentaje":"40%"
+  "program":"GitHub",
+  "porcentaje":"60%"
 }
 ,
 {
@@ -175,6 +175,20 @@
     "start":"2002",
     "end":"2003",
     "city":"El Siambon - TUCUMAN"
+  }
+]
+,
+"frases":[
+  {
+"educacion":"Todo aquello que el hombre ignora no existe para él. Por eso el universo de cada uno se resume al tamaño de su saber",
+"educacionAutor":"Albert Einstein",
+"experiencia":"La única forma de hacer un gran trabajo es amando lo que haces",
+"experienciaAutor":"Steve Jobs",
+"programacion":"No te preocupes si funciona bien. Si todo estuviera correcto, serías despedido de tu trabajo",
+"programacionAutor":"Ley de Mosher de la ingeniería del Software",
+"idiomas":"Los límites de mi idioma son los límites de mi mundo",
+"idiomasAutor":"Ludwig Wittgenstein"
+
   }
 ],
   "imgArentinaPrograma":"../../../assets/redes/imgArgentinaPrograma.png"

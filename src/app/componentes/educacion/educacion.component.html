@@ -22,11 +22,11 @@
                 </div>
               </div>
                 <hr>
-                  <footer  >
-                    <cite class="text" title="Source Title">"Todo aquello que el hombre ignora no existe para él. Por eso el universo de cada uno se resume al tamaño de su saber"</cite>
-                    <cite class="autor"> - Albert Einstein</cite>
-                  </footer>
-          </blockquote>
+                <footer *ngFor="let item of frases"  >
+                  <cite class="text" title="Source Title">"{{item.educacion}}"</cite>
+                  <cite class="autor"> - {{item.educacionAutor}}</cite>
+                </footer>
+                  </blockquote>
       </div>
     </div>
   </div>

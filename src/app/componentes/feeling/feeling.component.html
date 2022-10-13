@@ -8,7 +8,6 @@
           <blockquote class="blockquote mb-0 " style="background-color: transparent ">
               <div class="container-centrado row centrado" >
                 <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of miPortfolio">
-                    <!-- <img src={{item.img}} class="card-img-top cardMod {{item.program}}" alt=> -->
                   <div class="card-body fsCalc">
                       <p class="card-text text-center fw-bolder">{{item.program}}</p>
                       <div class="experiencia">
@@ -24,9 +23,9 @@
                 </div>
               </div>
                 <hr>
-                  <footer  >
-                    <cite class="text" title="Source Title">"No te preocupes si funciona bien. Si todo estuviera correcto, serías despedido de tu trabajo"</cite>
-                    <cite class="autor"> - Ley de Mosher de la ingeniería del Software</cite>
+                  <footer *ngFor="let item of frases"  >
+                    <cite class="text" title="Source Title">"{{item.programacion}}"</cite>
+                    <cite class="autor"> - {{item.programacionAutor}}</cite>
                   </footer>
           </blockquote>
       </div>

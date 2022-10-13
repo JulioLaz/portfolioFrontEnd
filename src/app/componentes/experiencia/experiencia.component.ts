@@ -9,12 +9,15 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class ExperienciaComponent implements OnInit {
  worksList: any;
  name:any;
+ frases:any;
 
   constructor(private datosPortfolio:PortfolioService) { }
   ngOnInit(): void {
   this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
     this.worksList=data.works;
     this.name=data;
+    this.frases=data.frases
+
   });
   }
 }
