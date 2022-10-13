@@ -1,4 +1,4 @@
-<div class="card bgCardFondo" style="margin:0 1rem ;">
+<div class="card bgCardFondo">
   <div class="card-header" style="background-color: transparent;border: none; ">
       <h3 class="h3Center">Qué formación tengo:</h3>
     <div class="card" style="background-color: transparent;border: none; ">
@@ -6,7 +6,9 @@
           <blockquote class="blockquote mb-0 " style="background-color: transparent ">
               <div class="container-centrado row centrado" >
                 <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of educacionList">
-                    <img src={{item.img}} class="card-img-top cardMod {{item.alt}}" alt={{item.alt}}>
+                  <div class="cardImg">
+                    <img src={{item.img}} class="card-img imagen {{item.alt}}" alt={{item.alt}}>
+                  </div>
                   <div class="card-body fsCalc">
                       <p class="card-text text-center fw-bolder">{{item.school}}</p>
                       <p class="card-text text-center ">{{item.title}}</p>
