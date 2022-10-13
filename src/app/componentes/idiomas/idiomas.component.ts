@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
-  selector: 'app-feeling',
-  templateUrl: './feeling.component.html',
-  styleUrls: ['./feeling.component.css']
+  selector: 'app-idiomas',
+  templateUrl: './idiomas.component.html',
+  styleUrls: ['./idiomas.component.css']
 })
-export class FeelingComponent implements OnInit {
+export class IdiomasComponent implements OnInit {
   educacionList: any;
   miPortfolio: any;
   frases:any;
@@ -15,8 +15,7 @@ export class FeelingComponent implements OnInit {
   ngOnInit(): void {
   this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
     this.educacionList=data.education;
-    this.miPortfolio=data.programacion;
-    this.frases=data.frases
+    this.miPortfolio=data.idiomas;
+    this.frases=data.frases;
   });
-  }
-}
+}}
