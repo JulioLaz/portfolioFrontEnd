@@ -1,6 +1,6 @@
 <div class="card bgCardFondo" style="margin:0 1rem ;">
   <div class="card-header" style="background-color: transparent;border: none; ">
-      <h3 class="h3Center">Formación en idiomas:
+      <h3 class="h3Center">Formación en programación:
           <h5 class="h5Center">* % de conocimientos</h5>
       </h3>
     <div class="card" style="background-color: transparent;border: none; ">
@@ -9,11 +9,11 @@
               <div class="container-centrado row centrado" >
                 <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of miPortfolio">
                   <div class="card-body fsCalc">
-                      <p class="card-text text-center fw-bolder">{{item.lengua}}</p>
+                      <p class="card-text text-center fw-bolder">{{item.program}} {{(item.porcentaje)}} </p>
                       <div class="experiencia">
                         <div class="contenedor texto_barra">
-                           <div class="barra{{item.lengua}} texto_barra">
-                              <div class="texto{{item.lengua}} "></div>
+                           <div class="barra{{item.program}} texto_barra">
+                              <div class="texto{{item.program}} "></div>
                            </div>
                         </div>
                      </div>
@@ -23,11 +23,11 @@
                 </div>
               </div>
                 <hr>
-                <footer *ngFor="let item of frases"  >
-                  <cite class="text" title="Source Title">"{{item.idiomas}}"</cite>
-                  <cite class="autor"> - {{item.idiomasAutor}}</cite>
-                </footer>
-        </blockquote>
+                  <footer *ngFor="let item of frases"  >
+                    <cite class="text" title="Source Title">"{{item.programacion}}"</cite>
+                    <cite class="autor"> - {{item.programacionAutor}}</cite>
+                  </footer>
+          </blockquote>
       </div>
     </div>
   </div>

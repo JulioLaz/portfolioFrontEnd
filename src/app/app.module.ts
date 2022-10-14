@@ -15,9 +15,9 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { LogoAppComponent } from './componentes/logo-app/logo-app.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { RedesSocialesComponent } from './componentes/redes-sociales/redes-sociales.component';
-import { HerramientasComponent } from './componentes/herramientas/herramientas.component';
-import { SlideComponent } from './componentes/slide/slide.component';
-import { FeelingComponent } from './componentes/feeling/feeling.component';
+import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
+import { BarraProgramacionComponent } from './componentes/barra-programacion/barra-programacion.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,9 +31,9 @@ import { FeelingComponent } from './componentes/feeling/feeling.component';
     LogoAppComponent,
     ProyectosComponent,
     RedesSocialesComponent,
-    HerramientasComponent,
-    SlideComponent,
-    FeelingComponent,
+    IdiomasComponent,
+    BarraProgramacionComponent,
+    FooterComponent,
 
   ],
   imports: [
