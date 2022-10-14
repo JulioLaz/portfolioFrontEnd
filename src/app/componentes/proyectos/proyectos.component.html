@@ -1,1 +1,36 @@
-<p>proyectos works!</p>
+<div class="card bgCardFondo">
+  <div class="card-header" style="background-color: transparent;border: none; ">
+      <h3 class="h3Center">Mis proyectos:</h3>
+    <div class="card" style="background-color: transparent;border: none; ">
+      <div class="card-body">
+          <blockquote class="blockquote mb-0 " style="background-color: transparent ">
+              <div class="container-centrado centrado" >
+                <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of proyectos">
+                  <div class="cardImg">
+                    <a href={{item.url}} target="_blank">
+                      <img src={{item.img}} class="card-img imagen {{item.alt}}" alt={{item.alt}}>
+                    </a>
+                  </div>
+                  <div class="card-body cajaTextos" >
+                      <p class="card-text text-center fw-bolder txtTituloProyecto">{{item.proyecto}}</p>
+                      <p class="card-text text-center txtdecripcionProyecto ">{{item.descripcion}}</p>
+                        <img src={{item.imgLenguajes}} class="card-img {{item.alt}}" alt={{item.alt}} >
+
+                      <!-- <p class="card-text text-center" *ngIf="item.completado; else nocompletado">COMPLETADO</p>
+                      <ng-template #nocompletado><p class="card-text text-center" *ngIf="item.end!=2023; else porcentaje">85% de la carrera</p></ng-template>
+                      <ng-template #porcentaje><p class="card-text text-center" >Cursando</p></ng-template>
+
+                      <p class="card-text text-center">{{item.city}} </p> -->
+                  </div>
+                </div>
+              </div>
+                <hr>
+                <footer *ngFor="let item of frases"  >
+                  <cite class="text" title="Source Title">"{{item.educacion}}"</cite>
+                  <cite class="autor"> - {{item.educacionAutor}}</cite>
+                </footer>
+                  </blockquote>
+      </div>
+    </div>
+  </div>
+</div>

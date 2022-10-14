@@ -191,6 +191,27 @@
 
   }
 ],
-  "imgArentinaPrograma":"../../../assets/redes/imgArgentinaPrograma.png"
+  "imgArentinaPrograma":"../../../assets/redes/imgArgentinaPrograma.png",
+  "proyectos":[
+   {
+    "id":1,
+    "proyecto": "Juego Ahorcadito",
+    "alt":"ahorcadito_julio_Lazarte",
+    "descripcion": "Juego para adivinar palabras según lineamientos de proyecto",
+    "img": "../../../assets/imghorcadito.png",
+    "imgLenguajes": "../../../assets/lenguajeAhorcadito.png",
+    "url": "https://juliolaz.github.io/juego-ahorcadito"
+  }
+  ,
+  {
+    "id":2,
+    "proyecto": "Encriptador",
+    "alt":"encriptador_julio_Lazarte",
+    "descripcion": "Encripta frases según lineamientos de proyecto",
+    "img": "../../../assets/imgEncriptador.png",
+    "imgLenguajes": "../../../assets/lenguajeEncriptador.png",
+    "url": "https://juliolaz.github.io/"
 
+   }
+  ]
 }
