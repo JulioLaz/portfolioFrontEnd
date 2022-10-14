@@ -9,7 +9,7 @@
               <div class="container-centrado row centrado" >
                 <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of miPortfolio">
                   <div class="card-body fsCalc">
-                      <p class="card-text text-center fw-bolder">{{item.program}}</p>
+                      <p class="card-text text-center fw-bolder">{{item.program}} {{(item.porcentaje)}} </p>
                       <div class="experiencia">
                         <div class="contenedor texto_barra">
                            <div class="barra{{item.program}} texto_barra">

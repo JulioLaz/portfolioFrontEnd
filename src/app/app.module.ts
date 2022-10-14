@@ -17,6 +17,7 @@ import { ProyectosComponent } from './componentes/proyectos/proyectos.component'
 import { RedesSocialesComponent } from './componentes/redes-sociales/redes-sociales.component';
 import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
 import { BarraProgramacionComponent } from './componentes/barra-programacion/barra-programacion.component';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { BarraProgramacionComponent } from './componentes/barra-programacion/bar
     RedesSocialesComponent,
     IdiomasComponent,
     BarraProgramacionComponent,
+    FooterComponent,
 
   ],
   imports: [

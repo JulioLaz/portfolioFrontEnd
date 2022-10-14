@@ -1,4 +1,3 @@
-<p>idiomas works!</p>
 <div class="card bgCardFondo" style="margin:0 1rem ;">
   <div class="card-header" style="background-color: transparent;border: none; ">
       <h3 class="h3Center">Formación en idiomas:
@@ -10,7 +9,7 @@
               <div class="container-centrado row centrado" >
                 <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of miPortfolio">
                   <div class="card-body fsCalc">
-                      <p class="card-text text-center fw-bolder">{{item.lengua}}</p>
+                      <p class="card-text text-center fw-bolder">{{item.lengua}} {{(item.porcentaje)}} </p>
                       <div class="experiencia">
                         <div class="contenedor texto_barra">
                            <div class="barra{{item.lengua}} texto_barra">
@@ -18,8 +17,6 @@
                            </div>
                         </div>
                      </div>
-
-
                     </div>
                 </div>
               </div>
