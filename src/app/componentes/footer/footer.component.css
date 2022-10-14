@@ -10,6 +10,9 @@
 
 .footer{
   background: black;
+  background-image: url(../../../assets/fondo.jpg);
+  background-size: cover;
+
   border-top: 2px solid grey;
   color: white;
   padding: .5rem;

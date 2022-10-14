@@ -32,6 +32,7 @@ nav{
   .navBarMy{
   align-items: center;
   background-image: url(../../../assets/fondo.jpg);
+  background-size: cover;
   border-bottom:2px solid grey;
   display: flex;
   flex-direction: column;
