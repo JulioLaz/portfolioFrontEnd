@@ -13,6 +13,7 @@
   flex-wrap: nowrap;
   justify-content: space-evenly;
   border: 1px solid grey;
+  padding: 0;
 
 }
 .bgCard:hover{
