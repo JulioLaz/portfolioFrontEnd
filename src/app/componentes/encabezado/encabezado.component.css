@@ -15,13 +15,13 @@ nav{
 @keyframes pulso{
   0%{
     color: whitesmoke;
-     transform: scale(1.1);
+     transform: scale(1);
   }
   50%{
      transform: scale(.9);
   }
   100%{
-     transform: scale(1.1);
+     transform: scale(1);
   }
   }
   .pulso{
@@ -37,7 +37,6 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 @media screen and (min-width:850px){
@@ -52,10 +51,12 @@ nav{
 }
 .yoProg{
   font-size: 2rem;
-  width: 20rem;
+  /* width: 20rem; */
 }
 .centrar{
   display: flex;
   justify-content: center;
 }
-
+#cajaRedesLogin{
+display: flex;
+}

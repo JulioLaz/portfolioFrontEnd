@@ -1,15 +1,18 @@
 <nav class=" bg-black ">
   <div class="navBarMy">
-    <div class="col-sm-6 col-md-4 col-lg-3 ">
+    <div class="">
       <a href="https://argentinaprograma.inti.gob.ar/" target="_blank" class="">
         <img class="imgArgProg" [src]="miPortfolio.imgArentinaPrograma" alt="logo Argentina Programa" >
       </a>
       </div>
-      <div class="col-sm-2 col-md-3 col-lg-3 yoProg centrar">
+      <!-- <div class="yoProg centrar">
         <p class="pulso">#Yo Programo</p>
-      </div>
-      <div class="col-sm-4 col-md-3 col-lg-3 " >
-        <app-redes-sociales></app-redes-sociales>
+      </div> -->
+      <div class="  cajaRedesLogin" style="display: flex;justify-content: end;margin-right: 1.2rem;">
+          <app-redes-sociales></app-redes-sociales>
+          <app-button></app-button>
+          <app-dropdowns-header></app-dropdowns-header>
       </div>
   </div>
 </nav>
+

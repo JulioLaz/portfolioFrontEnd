@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
-// import { NgbModule} '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,10 @@ import { RedesSocialesComponent } from './componentes/redes-sociales/redes-socia
 import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
 import { BarraProgramacionComponent } from './componentes/barra-programacion/barra-programacion.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { DropdownsHeaderComponent } from './componentes/dropdowns-header/dropdowns-header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -34,12 +38,19 @@ import { FooterComponent } from './componentes/footer/footer.component';
     IdiomasComponent,
     BarraProgramacionComponent,
     FooterComponent,
+    DropdownsHeaderComponent,
+
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
