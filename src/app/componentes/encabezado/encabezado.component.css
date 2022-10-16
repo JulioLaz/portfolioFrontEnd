@@ -1,6 +1,6 @@
 .imgArgProg{
   max-width: 320px;
-  margin: .5rem .5rem;
+  margin-top: .2rem;
 }
 .imgArgProg:hover{
   border-radius: .5rem;
@@ -47,11 +47,14 @@ nav{
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: space-between;
-            }
+        }
+        .imgArgProg{
+          max-width: 320px;
+          margin: .5rem .5rem;
+        }
 }
 .yoProg{
   font-size: 2rem;
-  /* width: 20rem; */
 }
 .centrar{
   display: flex;
