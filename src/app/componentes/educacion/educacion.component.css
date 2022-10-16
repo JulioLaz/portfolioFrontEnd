@@ -68,3 +68,31 @@
   font-size: calc(.8rem + .6vw);
   font-style: normal;
 }
+.titulo{
+  display: flex;
+  justify-content: center;
+}
+.editDelete{
+  display: flex;
+  background-color: rgba(0, 0, 0, .6);
+    justify-content: center;
+  align-items: center;
+  width: 3rem;
+  border-radius: 5px;
+  margin: 0 1rem;
+}
+.btnBgEdit{
+  fill: grey;
+}
+
+.btnBgEdit:hover{
+ fill: white;
+}
+.btnBgDelete{
+  fill: grey;
+}
+
+.btnBgDelete:hover{
+ fill: red;
+}
+

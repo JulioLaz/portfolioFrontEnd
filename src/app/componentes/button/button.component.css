@@ -1,1 +1,4 @@
-
+.btnBg:hover{
+  background-color:inherit;
+  color: white;
+}
