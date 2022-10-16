@@ -22,6 +22,7 @@ import { DropdownsHeaderComponent } from './componentes/dropdowns-header/dropdow
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MatMenuModule } from '@angular/material/menu';
     BarraProgramacionComponent,
     FooterComponent,
     DropdownsHeaderComponent,
+    LoginComponent,
 
 
   ],

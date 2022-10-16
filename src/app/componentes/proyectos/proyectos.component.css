@@ -7,7 +7,7 @@
 .bgCard{
   display: flex;
   flex-direction: row;
-  color: rgb(190, 171, 148);
+  color: antiquewhite;
   background: rgba(60, 60, 60, 0.7);
   width: 350px;
   flex-wrap: nowrap;
@@ -18,7 +18,6 @@
 }
 .bgCard:hover{
   background: rgba(141, 131, 131, 0.6);
-  color:antiquewhite;
   transition:0.5s
 }
 .centrado{
@@ -71,12 +70,14 @@
   font-style: normal;
 }
 .ahorcadito_julio_Lazarte{
-cursor: pointer;}
+cursor: pointer;
+}
 .txtTituloProyecto{
-  font-size: calc(.9rem + .6vw);
+  font-size: calc(.6rem + .6vw);
+  padding: 1rem 0;
 }
 .txtdecripcionProyecto{
-  font-size: calc(.7rem + .6vw);
+  font-size: calc(.6rem + .5vw);
 }
 .cajaTextos{
   display: flex;
