@@ -48,10 +48,11 @@
 
 }
 .h3Center{
+  font-size: calc(1rem + .7vw);
   text-align: center;
-  padding-bottom: .5rem;
-  margin: 0;
+  padding-bottom: 8px;
   border-bottom: 1px solid grey;
+  margin: 0;
 }
 .text{
   display: flex;
@@ -59,7 +60,6 @@
   font-size: calc(.8rem + .6vw);
   text-align: center;
   color: rgb(189, 186, 182);
-  /* text-shadow: 1px 2px 2px grey; */
 }
 .autor{
   display: flex;

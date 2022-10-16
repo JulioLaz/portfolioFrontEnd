@@ -9,3 +9,11 @@ border: 1px solid black;
   background: url(../assets/matrixrojo.gif);
   background-size: contain;
 }
+[id]{
+  scroll-margin-top: 130px;
+}
+@media screen and (min-width:850px){
+  [id]{
+  scroll-margin-top: 105px;
+ }
+}

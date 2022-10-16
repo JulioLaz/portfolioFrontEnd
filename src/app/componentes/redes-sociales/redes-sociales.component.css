@@ -1,7 +1,3 @@
-html {
-  min-height: 100%;
-  position: relative;
-}
 .redes{
   display: flex;
   align-content: space-around;
@@ -45,14 +41,13 @@ html {
   }
 
   span{
-     width: 38px;
-     height: 38px;
+    width:calc(24px + .7vw);
+    height:calc(24px + .7vw);
      }
-span.redAlura{
+/* span.redAlura{
   width:150px;
 }
   #alura{
      height: 38px;
      width: 80px;
-
-  }
+  } */
