@@ -10,6 +10,7 @@ export class EducacionComponent implements OnInit {
   educacionList: any;
   miPortfolio: any;
   frases: any;
+  deleteCards:boolean=true;
 
   constructor(private datosPortfolio:PortfolioService) { }
   ngOnInit(): void {

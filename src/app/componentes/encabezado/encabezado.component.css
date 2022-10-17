@@ -37,6 +37,7 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  /* width: calc(100vw - 15px); */
 }
 
 @media screen and (min-width:850px){
