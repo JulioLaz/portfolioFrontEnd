@@ -1,29 +1,44 @@
 <div class="card bgCardFondo" style="width:initial">
   <div class="card-header" style="background-color: transparent;border: none; ">
-    <h3 class="h3Center">EXPERIENCIA LABORAL</h3>
-    <div class="card-header cajaBotones">
-      <div class="container cajaExperiencia" >
+    <div>
+
+      <h3 class="h3Center">EXPERIENCIA LABORAL</h3>
+      <div class="card-header cajaBotones">
+        <div class="container cajaExperiencia" >
           <div class="cardFlex card-body" *ngFor="let item of worksList" style="width: auto;padding:0; display: flex;justify-content: center;">
-            <p >
-              <button class="btn btn-dark" id="btnShow" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample" style="margin: 0" onclick="reduccion()">
+            <p *ngIf="item.id">
+              <button data-bs-toggle="collapse.show" class="btn btn-dark" id="btnShow" type="button"  data-bs-target="#collapseWidthExample" aria-controls="collapseWidthExample" style="margin: 0" (click)="item.id=!item.id">
                 {{item.empresa}}
               </button>
             </p>
           <div>
-            <div class="collapse multi-collapse" id="collapseWidthExample">
-              <div class="card card-body text-center " id="hiddenCard" >
-                <p><strong>{{item.puesto}}: </strong>{{item.tarea}}</p>
+            <div class="collapse.show multi-collapse" id="collapseWidthExample" *ngIf="!item.id">
+              <div class="card card-body text-center " id="hiddenCard" (click)="item.id=!item.id">
+                <p class="fw-bolder" style="font-size:calc(.7rem + .6vw); padding: .2rem;">{{item.empresa}}</p>
+                <p><span class="fw-bolder fst-italic">{{item.puesto}}: </span>{{item.tarea}}</p>
                 <p>{{item.start}}-{{item.end}} <span> / </span> {{item.city}}</p>
               </div>
             </div>
           </div>
         </div>
-        <hr>
-        <footer *ngFor="let item of frases"  >
-          <cite class="text" title="Source Title">"{{item.experiencia}}"</cite>
-          <cite class="autor"> - {{item.experienciaAutor}}</cite>
-        </footer>
-</div>
+      </div>
     </div>
   </div>
+  <div class="" style="border-top:1px solid grey;width:100%;">
+    <footer *ngFor="let item of frases"  >
+      <cite class="text" title="Source Title">"{{item.educacion}}"</cite>
+      <cite class="autor"> - {{item.experienciaAutor}}</cite>
+    </footer>
+  </div>
+  </div>
 </div>
+
+<!-- onclick="reduccion()"
+*ngIf="!item.id"
+ aria-expanded="false"
+data-bs-toggle="collapse"
+              class="btn btn-dark" id="btnShow" type="button"  data-bs-target="#collapseWidthExample" aria-controls="collapseWidthExample" style="margin: 0" (click)="item.id=!item.id">
+
+
+-->
+<!--  -->

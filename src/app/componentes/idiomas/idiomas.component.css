@@ -37,12 +37,14 @@
   font-size: calc(.8rem + .6vw);
   text-align: center;
   color: rgb(189, 186, 182);
-  /* text-shadow: 1px 2px 2px grey; */
+  margin-top: 1rem;
+  padding-top: .5rem;
 }
 .autor{
+  color: whitesmoke;
   display: flex;
   justify-content: end;
-  padding: 0 1rem;
+  padding:.5rem;
   font-size: calc(.8rem + .6vw);
   font-style: normal;
 }

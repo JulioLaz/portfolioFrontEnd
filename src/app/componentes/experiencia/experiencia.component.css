@@ -14,6 +14,7 @@
 .cardFlex{
   display: flex;
   justify-content: start;
+  margin-bottom: .5rem;
 }
 div.card{
   width: 100rem;
@@ -23,7 +24,7 @@ div.card{
 }
 #btnShow{
   font-size: calc(.5rem + .9vw);
-  height: 6rem;
+  height: 6.5rem;
   width: 26vw;
   margin: 5px .5rem;
 }
@@ -31,11 +32,10 @@ div.card{
 #hiddenCard{
   background-color: grey;
   font-size: calc(.5rem + .8vw);
-  height: 6rem;
-  padding: 5px;
-  width: 58vw;
-  margin-left:.5rem;
+  height: 6.5rem;
+  width: 80vw;
   color: black;
+  padding-top: .5rem;
 }
 .h3Center{
   font-size: calc(1rem + .7vw);
@@ -54,11 +54,14 @@ div.card{
   font-size: calc(.8rem + .6vw);
   text-align: center;
   color: rgb(189, 186, 182);
+  margin-top: 1rem;
+  padding-top: .5rem;
 }
 .autor{
+  color: whitesmoke;
   display: flex;
   justify-content: end;
-  padding: 0 1rem;
+  padding:.5rem;
   font-size: calc(.8rem + .6vw);
   font-style: normal;
 }
@@ -72,4 +75,7 @@ div.card{
   width: auto;
   display: flex;
   justify-content: center;
+}
+p{
+  margin: 0;
 }

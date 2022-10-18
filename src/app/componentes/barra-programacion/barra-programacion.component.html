@@ -6,6 +6,7 @@
     <div class="card" style="background-color: transparent;border: none; ">
       <div class="card-body">
           <blockquote class="blockquote mb-0 " style="background-color: transparent ">
+            <div>
               <div class="container-centrado row centrado" >
                 <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of miPortfolio">
                   <div class="card-body fsCalc">
@@ -22,11 +23,13 @@
                     </div>
                 </div>
               </div>
-                <hr>
+              </div>
+                <div class="" style="border-top:1px solid grey;width:100%;margin-top: 1rem;">
                   <footer *ngFor="let item of frases"  >
-                    <cite class="text" title="Source Title">"{{item.programacion}}"</cite>
+                    <cite class="text" title="Source Title">"{{item.educacion}}"</cite>
                     <cite class="autor"> - {{item.programacionAutor}}</cite>
                   </footer>
+                </div>
           </blockquote>
       </div>
     </div>
