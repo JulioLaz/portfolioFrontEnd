@@ -19,11 +19,11 @@
   justify-content: space-evenly;
 
 }
-.bgCard:hover{
+/* .bgCard:hover{
   background: rgba(141, 131, 131, 0.6);
   color:antiquewhite;
   transition:0.5s
-}
+} */
 .centrado{
   display: flex;
   justify-content: center;
@@ -49,8 +49,8 @@
 }
 .logo_alura_latam{
   padding: 1rem;
-  width: 230px;
-  height: 220px;
+  width: 242px;
+  height: 230px;
 
 }
 .h3Center{
@@ -128,4 +128,15 @@
   position:absolute;
   top: 3.5rem;
   right: 1.5rem;
+  /* z-index: 999999; */
+}
+.btn_position_edit_title{
+  position:absolute;
+  top: .5rem;
+  right: 3rem;
+
+}
+.bg_edit_card {
+  background-color:rgba(255, 0, 0,.5);
+  /* opacity: .7; */
 }

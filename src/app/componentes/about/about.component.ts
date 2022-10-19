@@ -21,7 +21,6 @@ textoOriginal(){
   this.newMiHistoria = this.historiaOriginal;
 }
 
-
 cerrar(){
   this.newMiHistoria = this.miHistoria;
 }
