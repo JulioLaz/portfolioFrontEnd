@@ -9,7 +9,7 @@ export class EducacionComponent implements OnInit {
   educacionList: any;
   miPortfolio: any;
   frases: any;
-  id!:number;
+  id:number=0;
   deleteCards:boolean=true;
   currentYear=new Date();
   editCards:boolean=true;
@@ -29,8 +29,8 @@ export class EducacionComponent implements OnInit {
     }
 
     save(){
-      // this.miSchool=this.newMiSchool;
-      this.newMiSchool=this.miSchool;
+      this.miSchool=this.newMiSchool;
+      // this.newMiSchool=this.miSchool;
       console.log(this.miSchool)
     }
   constructor(private datosPortfolio:PortfolioService) { }
@@ -38,10 +38,10 @@ export class EducacionComponent implements OnInit {
 
     this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
       this.educacionList=data.education;
-      this.miPortfolio=data;
+      // this.miPortfolio=data;
       this.frases=data.frases;
-      this.id=data.educacion.id;
-      this.miSchool=data.education.school;
+      // this.id=data.educacion.id;
+      // this.miSchool=data.education.school;
 
 
       // console.log(data.education.school);
