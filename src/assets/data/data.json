@@ -18,8 +18,12 @@
    "start":"2022",
    "end":"2023",
    "city":"Online",
-   "completado":false
+   "estado":{
+    "completado":false,
+    "enCurso":true,
+    "porcentaje":""
    }
+  }
    ,
   {
     "id":2,
@@ -31,7 +35,11 @@
    "start":"2022",
    "end":"2023",
    "city":"Online",
-   "completado":false
+   "estado":{
+    "completado":false,
+    "enCurso":true,
+    "porcentaje":""
+   }
    }
    ,
   {
@@ -44,8 +52,12 @@
    "start":"2003",
    "end":"2008",
    "city":"TUCUMAN",
-   "completado":false
+   "estado":{
+    "completado":false,
+    "enCurso":false,
+    "porcentaje":"80%"
    }
+  }
    ,
   {
     "id":4,
@@ -57,7 +69,11 @@
     "start":"1998",
     "end":"2002",
     "city":"TUCUMAN",
-    "completado":true
+    "estado":{
+      "completado":true,
+      "enCurso":false,
+      "porcentaje":""
+     }
   }
   ,
   {
@@ -70,7 +86,11 @@
     "start":"1990",
     "end":"1996",
     "city":"TUCUMAN",
-    "completado":true
+    "estado":{
+      "completado":true,
+      "enCurso":false,
+      "porcentaje":""
+     }
   }
 ]
 ,

@@ -19,11 +19,6 @@
   justify-content: space-evenly;
 
 }
-/* .bgCard:hover{
-  background: rgba(141, 131, 131, 0.6);
-  color:antiquewhite;
-  transition:0.5s
-} */
 .centrado{
   display: flex;
   justify-content: center;
@@ -86,16 +81,37 @@
   fill: blue;
   background-color:rgb(190, 187, 187);
 }
+.btnBgEditCard{
+  fill: grey;
+  background: white;
+}
+.btnBgEditCardPinche{
+  fill: blue;
+  background: white;
+}
+
+.btnBgEditCard:hover{
+  fill: blue;
+}
 .btnBgDelete{
   fill: grey;
   background-color: rgba(0, 0, 0, .6);
-
+  background: #000;
 }
-
 .btnBgDelete:hover{
- fill: red;
- background-color: rgba(65, 46, 46, 0.9);
+  fill: red;
+  background-color: rgba(65, 46, 46, 0.9);
+  background: grey;
 }
+
+.btnBgDelCard{
+  fill: grey;
+  background-color: white;
+}
+.btnBgDelCard:hover{
+ fill: red;
+}
+
 @media screen and (min-width:450px){
   .h3Center{
     text-align: center;
@@ -128,15 +144,32 @@
   position:absolute;
   top: 3.5rem;
   right: 1.5rem;
-  /* z-index: 999999; */
 }
 .btn_position_edit_title{
   position:absolute;
   top: .5rem;
   right: 3rem;
-
 }
 .bg_edit_card {
   background-color:rgba(255, 0, 0,.5);
-  /* opacity: .7; */
+}
+.edit_Card_Years{
+  display: flex;
+  justify-content: space-evenly;
+}
+.edit_Card_YearStarEnd{
+text-align: center;
+width: 60px;
+border-radius: 5px;
+background-color: crimson;
+margin: 3px 0;
+color: bisque;
+}
+.edit_Card_YearDatos{
+text-align: center;
+width: 100%;
+border-radius: 5px;
+background-color: crimson;
+margin: 3px 0;
+color: bisque;
 }
