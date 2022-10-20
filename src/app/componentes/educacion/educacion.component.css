@@ -151,7 +151,7 @@
   right: 3rem;
 }
 .bg_edit_card {
-  background-color:rgba(255, 0, 0,.5);
+  background-color:rgba(222, 64, 64, 0.5);
 }
 .edit_Card_Years{
   display: flex;
@@ -161,15 +161,17 @@
 text-align: center;
 width: 60px;
 border-radius: 5px;
-background-color: crimson;
+background-color: black;
 margin: 3px 0;
-color: bisque;
+color: yellow;
+cursor: pointer;
 }
 .edit_Card_YearDatos{
 text-align: center;
 width: 100%;
 border-radius: 5px;
-background-color: crimson;
+background-color: black;
 margin: 3px 0;
-color: bisque;
+color: yellow;
+cursor: pointer;
 }

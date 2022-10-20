@@ -15,6 +15,7 @@ export class EducacionComponent implements OnInit {
   currentYear=new Date();
   editCards:boolean=true;
   editCard:boolean=true;
+  borrar:boolean=true;
   editCardItem:any=false;
   fondo:boolean=false;
   miSchool:any;
