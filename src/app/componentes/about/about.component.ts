@@ -16,21 +16,33 @@ export class AboutComponent implements OnInit {
   miTitulo:any;
   newMiTitulo!:string;
   tituloOriginal!:string;
+  miEdad:any;
+  newMiEdad!:string;
+  edadOriginal!:string;
+  miUbicacion:any;
+  newMiUbicacion!:string;
+  ubicacionOriginal!:string;
 
 
-save(){
+  save_titulo(){
+  this.miHistoria=this.newMiHistoria
+  this.miTitulo=this.newMiTitulo
+  this.miEdad=this.newMiEdad
+  this.miUbicacion=this.newMiUbicacion
+}
+  save(){
   this.miHistoria=this.newMiHistoria
 }
-save_titulo(){
-  this.miTitulo=this.newMiTitulo
+fc_tituloOriginal(){
+  this.newMiHistoria = this.historiaOriginal;
+  this.newMiTitulo = this.tituloOriginal;
+  this.newMiEdad = this.edadOriginal;
+  this.newMiUbicacion = this.ubicacionOriginal;
 }
-textoOriginal(){
+  fc_textoOriginal(){
   this.newMiHistoria = this.historiaOriginal;
 }
-fc_tituloOriginal(){
-  this.newMiTitulo = this.tituloOriginal;
 
-}
 cerrar(){
   this.newMiHistoria = this.miHistoria;
 }
@@ -46,6 +58,14 @@ cerrar(){
     this.miTitulo=data.titulo;
     this.newMiTitulo=this.miTitulo;
     this.tituloOriginal=this.miTitulo;
+
+    this.miEdad=data.edad;
+    this.newMiEdad=this.miEdad;
+    this.edadOriginal=this.miEdad;
+
+    this.miUbicacion=data.ubicacion;
+    this.newMiUbicacion=this.miUbicacion;
+    this.ubicacionOriginal=this.miUbicacion;
   });
   }
 }

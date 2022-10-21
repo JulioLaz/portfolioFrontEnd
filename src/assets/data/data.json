@@ -2,7 +2,7 @@
 {
    "nombre": "Julio Alberto Lazarte",
    "ubicacion": "Tucumán, Argentina",
-   "edad": "44 años",
+   "edad": 44,
    "foto":"../../../assets/julio.png",
    "titulo":"Full Stack Developer Jr",
    "historia":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse ratione at ipsam assumenda officia voluptas quo illum tenetur delectus velit architecto quis vel, dignissimos dolorem corporis quidem, sed animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis esse ratione at ipsam assumenda officia voluptas quo illum tenetur delectus velit architecto quis vel, dignissimos dolorem corporis quidem, sed animi!",
