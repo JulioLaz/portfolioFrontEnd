@@ -79,15 +79,18 @@
 
 .btnBgEdit:hover{
   fill: blue;
-  background-color:rgb(190, 187, 187);
+  background-color: darkgrey;
 }
 .btnBgEditCard{
   fill: grey;
   background: white;
 }
-.btnBgEditCardPinche{
+.btnBgEditCard_diskette{
   fill: blue;
   background: white;
+}
+.btnBgEditCard_diskette:hover{
+background-color:gainsboro;
 }
 
 .btnBgEditCard:hover{
@@ -105,11 +108,13 @@
 }
 
 .btnBgDelCard{
-  fill: grey;
+  fill: red;
   background-color: white;
 }
 .btnBgDelCard:hover{
  fill: red;
+ background-color:gainsboro;
+
 }
 
 @media screen and (min-width:450px){
@@ -151,7 +156,7 @@
   right: 3rem;
 }
 .bg_edit_card {
-  background-color:rgba(222, 64, 64, 0.5);
+  background-color:rgb(215, 123, 123);
 }
 .edit_Card_Years{
   display: flex;
@@ -175,3 +180,10 @@ margin: 3px 0;
 color: yellow;
 cursor: pointer;
 }
+.btn_position_edit_exit{
+  position:absolute;
+  border: 1px solid black;
+  top: 1rem;
+  left: 1rem;
+}
+

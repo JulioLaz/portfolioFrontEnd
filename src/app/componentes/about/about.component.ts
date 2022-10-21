@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { takeUntil } from 'rxjs';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -12,15 +13,24 @@ export class AboutComponent implements OnInit {
   textoAbout!:string;
   newMiHistoria!:string;
   historiaOriginal!:string;
+  miTitulo:any;
+  newMiTitulo!:string;
+  tituloOriginal!:string;
 
 
 save(){
   this.miHistoria=this.newMiHistoria
 }
+save_titulo(){
+  this.miTitulo=this.newMiTitulo
+}
 textoOriginal(){
   this.newMiHistoria = this.historiaOriginal;
 }
+fc_tituloOriginal(){
+  this.newMiTitulo = this.tituloOriginal;
 
+}
 cerrar(){
   this.newMiHistoria = this.miHistoria;
 }
@@ -31,7 +41,11 @@ cerrar(){
     this.miPortfolio=data;
     this.miHistoria=data.miHistoria;
     this.newMiHistoria=this.miHistoria;
-    this.historiaOriginal=this.miHistoria
+    this.historiaOriginal=this.miHistoria;
+
+    this.miTitulo=data.titulo;
+    this.newMiTitulo=this.miTitulo;
+    this.tituloOriginal=this.miTitulo;
   });
   }
 }

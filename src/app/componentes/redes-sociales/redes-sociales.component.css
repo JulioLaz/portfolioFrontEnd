@@ -1,25 +1,25 @@
 .redes{
   display: flex;
   align-content: space-around;
-  justify-content: center;   }
+  justify-content: center
+}
+
   img{
-     width: calc(20px + .7vw);
+     width: calc(25px + .7vw);
   }
   .red{
      margin: .3rem .5rem;
   }
 
   .imgFooter:hover{
-  width: 35px;
-  border-radius: 50%;
-  transition:width 0.3s ease ;
+  /* width: 35px; */
+border-radius: 50%;
+border: 2px solid white;
+/* transition:all 0.3s ease ; */
   }
 
-  img#youtube:hover{
-     background-color: #3b5998;
-  }
 
-  img#facebook:hover{
+  /* img#facebook:hover{
      background-color: #3b5998;
   }
 
@@ -29,25 +29,9 @@
 
   img#github:hover{
      background-color: #171515;
-  }
-
-  img#instagram:hover{
-     background: #d6249f;
-     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%)
-  }
-
-  img#twitter:hover{
-     background-color: #00acee ;
-  }
+  } */
 
   span{
     width:calc(24px + .7vw);
     height:calc(24px + .7vw);
      }
-/* span.redAlura{
-  width:150px;
-}
-  #alura{
-     height: 38px;
-     width: 80px;
-  } */
