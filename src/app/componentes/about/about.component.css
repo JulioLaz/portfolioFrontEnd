@@ -66,7 +66,7 @@
   width: 100%;
 display: flex;
 flex-direction: column;
-align-items: flex-end;}
+align-items: center;}
 
 .btnBgEdit{
   position: absolute;
@@ -75,6 +75,9 @@ align-items: flex-end;}
   fill: grey;
   margin-right: .5rem;
 }
+.btn_edit_titulo{
+  right: -12px;
+  }
 @media screen and (min-width:759px){
          .divCenter{
           border-left: 1px solid grey;
@@ -86,9 +89,9 @@ align-items: flex-end;}
         .btnBgEdit{
           top: -2px;
         }
-        /* .imgEdit_titulo{ */
-          /* top: 110px; */
-        /* } */
+        .btn_edit_titulo{
+right: -4px;
+}
 }
 
 
@@ -118,6 +121,7 @@ align-items: center;
   width: 3.5rem;
   height: 1.5rem;
   margin: .3rem 0;
+  color: black;
 }
 .caja_titulo{
   height: 100%;
