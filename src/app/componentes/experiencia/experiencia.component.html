@@ -60,35 +60,35 @@
               </button>
             </p>
 
-          <div>
-            <div class="collapse.show multi-collapse" id="collapseWidthExample" *ngIf="!item.id||editCardItem">
-              <div class="card card-body text-center " id="hiddenCard"  [ngClass]="asignaClases()">
+                  <div  (click)="item.id=!item.id">
+                    <div class="collapse.show multi-collapse" id="collapseWidthExample" *ngIf="!item.id||editCardItem">
+                      <div class="card card-body text-center " id="hiddenCard"  [ngClass]="asignaClases()">
 
-                <div class="edit_card_empresa">
-                  <label *ngIf="!editCard" class="label_edit_card" for="empresa">Empresa:</label>
-                  <input id="empresa" class="edit_Card_YearDatos"  [(ngModel)]='item.empresa'  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" *ngIf="!editCard" style="border-radius: 5px;">
-                  <p class="fw-bolder" style="font-size:calc(.7rem + .6vw); padding: .2rem;" *ngIf="editCard">{{item.id}}-{{idCard}}--{{item.empresa}}</p>
-                </div>
-                <div class="edit_card_empresa">
-                  <label *ngIf="!editCard" class="label_edit_card" for="puesto">Cargo:</label>
-                  <input id="puesto" class="edit_Card_YearDatos"  [(ngModel)]='item.puesto'  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" *ngIf="!editCard"style="border-radius: 5px;">
-                  <label *ngIf="!editCard" class="label_edit_card" for="tarea">Tarea:</label>
-                  <input id="tarea" class="edit_Card_YearDatos"  [(ngModel)]='item.tarea'  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" *ngIf="!editCard"style="border-radius: 5px;" >
-                  <p *ngIf="editCard"><span class="fw-bolder fst-italic" >{{item.puesto}}: </span>{{item.tarea}}</p>
-                </div>
-                <div class="edit_card_years_city">
-                  <label *ngIf="!editCard" class="label_edit_card" for="start">Inicio:</label>
-                  <input id="start" class="edit_Card_YearStarEnd" [(ngModel)]='item.start' *ngIf="!editCard" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5" style="text-align: center;;border-radius: 5px;">
-                  <label *ngIf="!editCard"  class="label_edit_card" for="end">Fin:</label>
-                  <input id="end"  class="edit_Card_YearStarEnd" [(ngModel)]='item.end' *ngIf="!editCard"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5" style="text-align: center;border-radius: 5px;">
-                  <label *ngIf="!editCard"  class="label_edit_card" for="city">City:</label>
-                  <input id="city" class="edit_Card_YearDatos"  [(ngModel)]='item.city' *ngIf="!editCard" onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" style="border-radius: 5px;">
-                  <p *ngIf="editCard">{{item.start}}-{{item.end}} <span> / </span> {{item.city}}</p>
-                </div>
+                        <div class="edit_card_empresa">
+                          <label *ngIf="!editCard" class="label_edit_card" for="empresa">Empresa:</label>
+                          <input id="empresa" class="edit_Card_YearDatos"  [(ngModel)]='item.empresa'  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" *ngIf="!editCard" style="border-radius: 5px;">
+                          <p class="fw-bolder" style="font-size:calc(.7rem + .6vw); padding: .2rem;" *ngIf="editCard">{{item.id}}-{{idCard}}--{{item.empresa}}</p>
+                        </div>
+                        <div class="edit_card_empresa">
+                          <label *ngIf="!editCard" class="label_edit_card" for="puesto">Cargo:</label>
+                          <input id="puesto" class="edit_Card_YearDatos"  [(ngModel)]='item.puesto'  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" *ngIf="!editCard"style="border-radius: 5px;">
+                          <label *ngIf="!editCard" class="label_edit_card" for="tarea">Tarea:</label>
+                          <input id="tarea" class="edit_Card_YearDatos"  [(ngModel)]='item.tarea'  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" *ngIf="!editCard"style="border-radius: 5px;" >
+                          <p *ngIf="editCard"><span class="fw-bolder fst-italic" >{{item.puesto}}: </span>{{item.tarea}}</p>
+                        </div>
+                        <div class="edit_card_years_city">
+                          <label *ngIf="!editCard" class="label_edit_card" for="start">Inicio:</label>
+                          <input id="start" class="edit_Card_YearStarEnd" [(ngModel)]='item.start' *ngIf="!editCard" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5" style="text-align: center;;border-radius: 5px;">
+                          <label *ngIf="!editCard"  class="label_edit_card" for="end">Fin:</label>
+                          <input id="end"  class="edit_Card_YearStarEnd" [(ngModel)]='item.end' *ngIf="!editCard"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5" style="text-align: center;border-radius: 5px;">
+                          <label *ngIf="!editCard"  class="label_edit_card" for="city">City:</label>
+                          <input id="city" class="edit_Card_YearDatos"  [(ngModel)]='item.city' *ngIf="!editCard" onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" style="border-radius: 5px;">
+                          <p *ngIf="editCard">{{item.start}}-{{item.end}} <span> / </span> {{item.city}}</p>
+                        </div>
 
-              </div>
-            </div>
-          </div>
+                      </div>
+                    </div>
+                </div>
         </div>
       </div>
     </div>
@@ -100,25 +100,3 @@
     </footer>
   </div>
   </div>
-<!--
-  <div class="card-body fsCalc">
-    <input class="edit_Card_YearDatos"  [(ngModel)]='item.school'  *ngIf="item.id==idCard" onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)">
-    <p  class="card-text text-center fw-bolder" *ngIf="item.id!==idCard">{{item.school}}</p>
-
-    <input class="edit_Card_YearDatos" [(ngModel)]='item.title' *ngIf="item.id==idCard" onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
-    <p class="card-text text-center "  *ngIf="item.id!==idCard">{{item.title}}</p>
-
-    <div class="edit_Card_Years">
-      <input class="edit_Card_YearStarEnd" [(ngModel)]='item.start' *ngIf="item.id==idCard" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4">
-      <input class="edit_Card_YearStarEnd" [(ngModel)]='item.end' *ngIf="item.id==idCard"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4">
-    </div>
-    <p class="card-text text-center" *ngIf="item.id!==idCard">{{item.start}}-{{item.end}} </p>
-
-    <p class="card-text text-center" *ngIf="item.estado.completado; else nocompletado">COMPLETADO</p>
-    <ng-template #nocompletado><p class="card-text text-center" *ngIf="item.estado.enCurso; else porcentaje">Cursando - {{currentYear|date}}</p></ng-template>
-    <ng-template #porcentaje><p class="card-text text-center" >{{item.estado.porcentaje}} de la carrera</p></ng-template>
-
-
-    <input class="edit_Card_YearDatos" [(ngModel)]='item.city' *ngIf="item.id==idCard"  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
-    <p class="card-text text-center" *ngIf="item.id!==idCard">{{item.city}} </p>
-  </div> -->
