@@ -69,6 +69,7 @@
                           <input id="empresa" class="edit_Card_YearDatos"  [(ngModel)]='item.empresa'  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" *ngIf="!editCard" style="border-radius: 5px;">
                           <p class="fw-bolder" style="font-size:calc(.7rem + .6vw); padding: .2rem;" *ngIf="editCard">{{item.id}}-{{idCard}}--{{item.empresa}}</p>
                         </div>
+
                         <div class="edit_card_empresa">
                           <label *ngIf="!editCard" class="label_edit_card" for="puesto">Cargo:</label>
                           <input id="puesto" class="edit_Card_YearDatos"  [(ngModel)]='item.puesto'  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" *ngIf="!editCard"style="border-radius: 5px;">
@@ -76,6 +77,7 @@
                           <input id="tarea" class="edit_Card_YearDatos"  [(ngModel)]='item.tarea'  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" *ngIf="!editCard"style="border-radius: 5px;" >
                           <p *ngIf="editCard"><span class="fw-bolder fst-italic" >{{item.puesto}}: </span>{{item.tarea}}</p>
                         </div>
+                        
                         <div class="edit_card_years_city">
                           <label *ngIf="!editCard" class="label_edit_card" for="start">Inicio:</label>
                           <input id="start" class="edit_Card_YearStarEnd" [(ngModel)]='item.start' *ngIf="!editCard" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5" style="text-align: center;;border-radius: 5px;">
