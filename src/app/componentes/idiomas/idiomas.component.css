@@ -99,16 +99,20 @@
 
  @keyframes progresoIngles {
      0% {width: 0%}
-    30% {width: 30%}
+    50% {width: 50%}
  }
 
  @keyframes porcentajeIngles {
-     0% {content: '10%';color:blue;}
-     5% {content: '15%'}
-     10% {content: '20%'}
-     15% {content: '25%'}
-     20% {content: '30%'}
- }
+  0% {content: '60%';color:blue;}
+  5% {content: '15%'}
+  10% {content: '20%'}
+  15% {content: '25%'}
+  20% {content: '30%'}
+  25% {content: '35%'}
+  30% {content: '40%'}
+  35% {content: '45%'}
+  40% {content: '50%'}
+}
   /*Italiano */
   .barraItaliano{
     animation: progresoItaliano 3s ease-out infinite;
@@ -137,15 +141,21 @@
 
  @keyframes progresoItaliano {
      0% {width: 0}
-    30% {width: 30%}
+    60% {width: 60%}
  }
 
  @keyframes porcentajeItaliano {
-     0% {content: '10%';color:blue;}
+     0% {content: '60%';color:blue;}
      5% {content: '15%'}
      10% {content: '20%'}
      15% {content: '25%'}
      20% {content: '30%'}
+     25% {content: '35%'}
+     30% {content: '40%'}
+     35% {content: '45%'}
+     40% {content: '50%'}
+     55% {content: '55%'}
+     60% {content: '60%'}
 
  }
 

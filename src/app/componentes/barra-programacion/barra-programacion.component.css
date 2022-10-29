@@ -100,19 +100,28 @@
 
  @keyframes progresoBOOTSTRAP {
      0% {width: 0}
-    45% {width: 40%}
+    80% {width: 80%}
  }
 
  @keyframes porcentajeBOOTSTRAP {
-     0% {content: '45%';color:red;}
-     5% {content: '15%'}
-     10% {content: '20%'}
-     15% {content: '25%'}
-     20% {content: '30%'}
-     25% {content: '35%'}
-     30% {content: '40%'}
-     35% {content: '45%'}
- }
+  0% {content: '80%';color: red;}
+  5% {content: '15%'}
+  10% {content: '20%'}
+  15% {content: '25%'}
+  20% {content: '30%'}
+  25% {content: '35%'}
+  30% {content: '40%'}
+  35% {content: '45%'}
+  40% {content: '50%'}
+  45% {content: '55%'}
+  50% {content: '60%'}
+  55% {content: '65%'}
+  60% {content: '70%'}
+  65% {content: '75%'}
+  70% {content: '80%'}
+  75% {content: '80%'}
+}
+
 
  /* HTML */
  .barraHTML{
@@ -330,11 +339,11 @@
 
 @keyframes progresoANGULAR {
    0% {width: 0}
-  40% {width: 40%}
+  60% {width: 60%}
 }
 
 @keyframes porcentajeANGULAR {
-   0% {content: '50%';color:RED;}
+   0% {content: '60%';color:RED;}
    5% {content: '15%'}
    10% {content: '20%'}
    15% {content: '25%'}
@@ -343,6 +352,8 @@
    30% {content: '40%'}
    35% {content: '45%'}
    40% {content: '50%'}
+   45% {content: '55%'}
+   50% {content: '60%'}
 }
 /* GitHub */
 .barraGitHub{
@@ -368,16 +379,16 @@
 .textoGitHub:after {
   animation: porcentajeGitHub 3s linear infinite;
   color:black;
-  content: '65%';
+  content: '80%';
 }
 
 @keyframes progresoGitHub {
    0% {width: 0}
-  65% {width: 60%}
+  80% {width: 80%}
 }
 
 @keyframes porcentajeGitHub {
-   0% {content: '65%';color: red;}
+   0% {content: '80%';color: red;}
    5% {content: '15%'}
    10% {content: '20%'}
    15% {content: '25%'}
@@ -389,6 +400,10 @@
    45% {content: '55%'}
    50% {content: '60%'}
    55% {content: '65%'}
+   60% {content: '70%'}
+   65% {content: '75%'}
+   70% {content: '80%'}
+   75% {content: '80%'}
 }
 .btn_delete_position_Title{
   position:absolute;
