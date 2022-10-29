@@ -14,14 +14,15 @@ nav{
 
 @keyframes pulso{
   0%{
-    color: whitesmoke;
-     transform: scale(1);
+    color:rgb(199, 199, 242);
+    transform: scale(1);
   }
   50%{
-     transform: scale(.9);
+    transform: scale(1);
   }
   100%{
-     transform: scale(1);
+    transform: scale(1);
+    color:rgb(91, 91, 122);
   }
   }
   .pulso{
