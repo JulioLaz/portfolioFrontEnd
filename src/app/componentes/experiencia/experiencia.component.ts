@@ -25,6 +25,7 @@ export class ExperienciaComponent implements OnInit {
  miSchool:any;
  newMiSchool:any;
  disabledFlag:boolean=false;
+ borrarExperiencia:boolean=true;
 
 
   checkFondo(){

@@ -148,3 +148,33 @@
      20% {content: '30%'}
 
  }
+
+ .btn_delete_position_Title{
+  position:absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+.btn_position_edit_title{
+  position:absolute;
+  top: .5rem;
+  right: 3rem;
+}
+.btnBgDelete{
+  fill: grey;
+  background-color: rgba(0, 0, 0, .6);
+  background: #000;
+}
+.btnBgDelete:hover{
+  fill: red;
+  background-color: rgba(65, 46, 46, 0.9);
+  background: grey;
+}
+.btnBgEdit{
+  fill: white;
+  background: none;
+}
+
+.btnBgEdit:hover{
+  fill: blue;
+  background-color: darkgrey;
+}

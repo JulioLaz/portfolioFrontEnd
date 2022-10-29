@@ -117,28 +117,28 @@
 ,
 {
   "program":"ANGULAR",
-  "porcentaje":"50%"
+  "porcentaje":"60%"
 }
 ,
 {
   "program":"GitHub",
-  "porcentaje":"65%"
+  "porcentaje":"80%"
 }
 ,
 {
   "program":"BOOTSTRAP",
-  "porcentaje":"45%"
+  "porcentaje":"80%"
 }
 ]
 ,
 "idiomas":[
   {
 "lengua":"Ingles",
-"porcentaje":"30%"
+"porcentaje":"50%"
   },
   {
 "lengua":"Italiano",
-"porcentaje":"30%"
+"porcentaje":"60%"
   }
 ],
   "works":[
@@ -213,7 +213,7 @@
 "programacionAutor":"Ley de Mosher de la ingeniería del Software",
 "idiomas":"Los límites de mi idioma son los límites de mi mundo",
 "idiomasAutor":"Ludwig Wittgenstein",
-"proyectos":" Estoy convencido de que la mitad de lo que separa a los emprendedores exitosos de los que no triunfan es la perseverancia.",
+"proyectos":"Estoy convencido de que la mitad de lo que separa a los emprendedores exitosos de los que no triunfan es la perseverancia.",
 "proyectosAutor":"Steve Jobs"
   }
 ],
@@ -224,6 +224,7 @@
     "proyecto": "Mi Portafolio",
     "alt":"portafolio_julio_Lazarte",
     "descripcion": "Algunos aspectos sobre mi vida laboral y académica (curriculum vitae)",
+    "fecha":"2022-09-01",
     "img": "../../../assets/imgPortafolio.png",
     "imgLenguajes": "../../../assets/lenguajePortafolio.png",
     "url": "https://juliolaz.github.io/portfolioFrontEnd"
@@ -234,6 +235,7 @@
     "proyecto": "El Ahorcadito",
     "alt":"ahorcadito_julio_Lazarte",
     "descripcion": "Juego para adivinar palabras según lineamientos de proyecto",
+    "fecha":"2022-09-01",
     "img": "../../../assets/imghorcadito.png",
     "imgLenguajes": "../../../assets/lenguajeAhorcadito.png",
     "url": "https://juliolaz.github.io/juego-ahorcadito"
@@ -244,6 +246,7 @@
     "proyecto": "Encriptador",
     "alt":"encriptador_julio_Lazarte",
     "descripcion": "Encripta frases según lineamientos de proyecto",
+    "fecha":"2022-09-01",
     "img": "../../../assets/imgEncriptador.png",
     "imgLenguajes": "../../../assets/lenguajeEncriptador.png",
     "url": "https://juliolaz.github.io/"
