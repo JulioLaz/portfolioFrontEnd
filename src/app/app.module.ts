@@ -22,6 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { LoginComponent } from './componentes/login/login.component';
+import { HomeComponent } from './componentes/home/home.component';
+import { interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,8 @@ import { LoginComponent } from './componentes/login/login.component';
     FooterComponent,
     DropdownsHeaderComponent,
     LoginComponent,
+    HomeComponent,
+    NewExperienciaComponent,
 
 
   ],
@@ -53,7 +58,9 @@ import { LoginComponent } from './componentes/login/login.component';
     MatButtonModule,
     MatMenuModule,
   ],
-  providers: [],
+  providers: [
+    interceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

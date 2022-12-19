@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { takeUntil } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/service/persona.service';
+import { TokenService } from 'src/app/service/token.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -8,6 +10,9 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls:['./about.component.css']
 })
 export class AboutComponent implements OnInit {
+
+persona: Persona = new Persona("","","");
+
   miPortfolio:any;
   miHistoria:any;
   textoAbout!:string;
@@ -22,7 +27,9 @@ export class AboutComponent implements OnInit {
   miUbicacion:any;
   newMiUbicacion!:string;
   ubicacionOriginal!:string;
-
+  imagen!:string;
+  // tokenService!: any;
+  isLogged!: boolean;
 
   save_titulo(){
   this.miHistoria=this.newMiHistoria
@@ -47,8 +54,29 @@ cerrar(){
   this.newMiHistoria = this.miHistoria;
 }
 
-  constructor(private datosPortfolio:PortfolioService) { }
+
+// <<<SIGUIENDO EL PROYECTO DE YOUTUBE>>>
+
+// constructor(public personaService: PersonaService){}
+// ngOnInit():void{
+//   this.personaService.getPersona().subscribe((data=> (this.persona=data)))
+// }
+
+  constructor(private tokenService: TokenService,public personaService: PersonaService,public datosPortfolio:PortfolioService) { }
   ngOnInit(): void {
+    // this.cargarExperiencia();
+
+    this.personaService.getPersona().subscribe((data)=> {
+      this.persona=data;
+      this.imagen=`https://avatars.githubusercontent.com/u/`+data.img
+
+      if (this.tokenService.getToken()) {
+        this.isLogged = true;
+      } else {
+        this.isLogged = false;
+      };
+  });
+  console.log(this.persona);
   this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
     this.miPortfolio=data;
     this.miHistoria=data.miHistoria;
@@ -67,5 +95,8 @@ cerrar(){
     this.newMiUbicacion=this.miUbicacion;
     this.ubicacionOriginal=this.miUbicacion;
   });
+  }
+  cargarExperiencia() {
+    throw new Error('Method not implemented.');
   }
 }

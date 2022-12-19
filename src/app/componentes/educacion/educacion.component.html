@@ -5,8 +5,8 @@
             <div *ngIf="editCards || editCardItem">
               <!-- botones en el TITULO -->
                   <!-- btn Delete: con Dropdown para elimira todas las cards-->
-                  <div class="editDelete">
-                    <div class="btn_delete_position_Title btn btn-outline-secondary btn-sm  btnBgDelete" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="deleteCards">
+                  <div class="editDelete" *ngIf="isLogged">
+                    <div class="btn_delete_position_Title btn btn-outline-secondary btn-sm  btnBgDelete" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="deleteCards" >
                       <svg class="delete btnWidth" id="imgdelete" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;"  xml:space="preserve"><g><path d="M229.5,0C102.751,0,0,102.751,0,229.5S102.751,459,229.5,459S459,356.249,459,229.5S356.249,0,229.5,0z M307.105,271.629    c9.797,9.797,9.797,25.68,0,35.477c-4.898,4.898-11.318,7.347-17.738,7.347c-6.42,0-12.84-2.449-17.738-7.347L229.5,264.977    l-42.128,42.129c-4.898,4.898-11.318,7.347-17.738,7.347c-6.42,0-12.84-2.449-17.738-7.347c-9.797-9.796-9.797-25.68,0-35.477    l42.129-42.129l-42.129-42.129c-9.797-9.797-9.797-25.68,0-35.477s25.68-9.797,35.477,0l42.128,42.129l42.128-42.129    c9.797-9.797,25.68-9.797,35.477,0c9.797,9.796,9.797,25.68,0,35.477l-42.13,42.129L307.105,271.629z"/></g></svg>
                     </div>
                     <div class="btn_delete_position_Title btn btn-outline-secondary btn-sm  btnBgDelete" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="!deleteCards">
@@ -21,7 +21,7 @@
                   </div>
 
                   <!-- Btn Edit del titulo: muestra los botones en tarjetas-->
-                  <div class="btn_position_edit_title" >
+                  <div class="btn_position_edit_title"*ngIf="isLogged">
                     <!-- lapiz -->
                     <button class="btn btn-outline-secondary btn-sm  btnBgEdit"
                             (click)="

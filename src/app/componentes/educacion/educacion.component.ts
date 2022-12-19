@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'src/app/service/token.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 @Component({
   selector: 'app-educacion',
@@ -21,6 +22,7 @@ export class EducacionComponent implements OnInit {
   miSchool:any;
   newMiSchool:any;
   disabledFlag:boolean=false;
+  isLogged!: boolean;
 
   checkFondo(){
     this.fondo=!this.fondo;
@@ -37,13 +39,17 @@ export class EducacionComponent implements OnInit {
       this.miSchool=this.newMiSchool;
     }
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private tokenService: TokenService,private datosPortfolio:PortfolioService) { }
   ngOnInit(): void {
 
     this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
       this.educacionList=data.education;
       this.frases=data.frases;
     });
-
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    };
   }
 }

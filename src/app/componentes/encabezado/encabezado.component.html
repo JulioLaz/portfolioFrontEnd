@@ -10,7 +10,13 @@
       </div>
       <div class="  cajaRedesLogin" style="display: flex;justify-content: end;margin:0 1.2rem;align-items: center;">
           <app-redes-sociales></app-redes-sociales>
-          <app-button></app-button>
+          <button type="button" class="btn btn-outline-secondary  btn-sm btnBg"  style="text-decoration:none; color:grey ;" (click)="login()" *ngIf="!isLogged">
+            Login
+          </button>
+          <button type="button" class="btn btn-outline-secondary  btn-sm btnBg"  style="text-decoration:none; color:grey ;" (click)="onLogOut()" *ngIf="isLogged">
+            Cerrar sesión
+          </button>
+          <!-- <app-button></app-button> -->
           <app-dropdowns-header></app-dropdowns-header>
       </div>
   </div>
