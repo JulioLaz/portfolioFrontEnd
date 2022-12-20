@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -10,6 +11,7 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ExperienciaComponent implements OnInit {
 expe: Experiencia[]=[];
+// expLab: Experiencia;
 
 
  worksList: any;
@@ -44,7 +46,7 @@ expe: Experiencia[]=[];
     }
 
 
-  constructor(private sExperienciaService: SExperienciaService, private tokenService: TokenService,private datosPortfolio:PortfolioService) { }
+  constructor(private sExperienciaService: SExperienciaService, private tokenService: TokenService,private datosPortfolio:PortfolioService,private activatedRouter: ActivatedRoute) { }
   isLogged = false;
 
   ngOnInit(): void {
@@ -53,7 +55,8 @@ expe: Experiencia[]=[];
       this.isLogged = true;
     } else {
       this.isLogged = false;
-    };
+    }
+
 
   this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
     this.worksList=data.works;
@@ -78,5 +81,4 @@ delete(id?: number){
       )
     }
   }
-
 }

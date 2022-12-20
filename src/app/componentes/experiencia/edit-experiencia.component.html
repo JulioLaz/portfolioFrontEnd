@@ -1,0 +1,41 @@
+<div class="container" *ngIf="expLab">
+   <div class="row">
+       <div style="display: flex;justify-content: center;">
+           <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="margin-top: 5rem; width: 50vw;padding: 3rem; border:2px solid grey; border-radius: .5rem;">
+               <div class="input-group mb-3">
+                  <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >Nombre de la empresa:</span>
+                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                  id="nombreE" name="nombreE" [(ngModel)]="expLab.nombreE" required>
+               </div>
+               <div class="input-group mb-3">
+                  <span class="texto_casillero input-group-text" id="inputGroup-sizing-default">Cargo:</span>
+                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                  id="cargoE" name="cargoE" [(ngModel)]="expLab.cargoE" required>
+               </div>
+               <div class=" input-group mb-3">
+                  <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Descripcion:</span>
+                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                  id="descripcionE" name="descripcionE" [(ngModel)]="expLab.descripcionE" required>
+               </div>
+               <div class=" input-group mb-3">
+                  <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Año de inicio:</span>
+                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                  id="startE" name="startE" [(ngModel)]="expLab.startE" required>
+               </div>
+               <div class=" input-group mb-3">
+                  <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Año de finalizado:</span>
+                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                  id="endE" name="endE" [(ngModel)]="expLab.endE" required>
+               </div>
+               <div class=" input-group mb-3">
+                  <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Ciudad:</span>
+                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                  id="cityE" name="cityE" [(ngModel)]="expLab.cityE" required>
+               </div>
+               <div style="display: flex;justify-content: center;">
+                 <button type="submit" class="btn btn-primary">Actualizar</button>
+               </div>
+           </form>
+       </div>
+   </div>
+</div>
