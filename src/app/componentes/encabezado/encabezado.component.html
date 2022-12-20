@@ -10,7 +10,8 @@
       </div>
       <div class="  cajaRedesLogin" style="display: flex;justify-content: end;margin:0 1.2rem;align-items: center;">
           <app-redes-sociales></app-redes-sociales>
-          <button type="button" class="btn btn-outline-secondary  btn-sm btnBg"  style="text-decoration:none; color:grey ;" (click)="login()" *ngIf="!isLogged">
+          <button type="button" class="btn btn-outline-secondary  btn-sm"
+          style="text-decoration:none; color:white" (click)="login()" *ngIf="!isLogged">
             Login
           </button>
           <button type="button" class="btn btn-outline-secondary  btn-sm btnBg"  style="text-decoration:none; color:grey ;" (click)="onLogOut()" *ngIf="isLogged">

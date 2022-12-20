@@ -20,6 +20,7 @@ export class NewExperienciaComponent implements OnInit {
   cityE: string = '';
   isLogged!: boolean;
 
+
   constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService,private router: Router) { }
 
   ngOnInit(): void {
@@ -36,15 +37,24 @@ export class NewExperienciaComponent implements OnInit {
 
   onCreate(): void {
     const expe = new Experiencia(this.nombreE,this.cargoE, this.descripcionE, this.startE, this.endE, this.cityE);
-    this.sExperiencia.save(expe).subscribe(
-      data => {
-        alert("Experiencia añadida");
-        this.router.navigate(['']);
-      }, err => {
-        alert("Falló");
-        this.router.navigate(['']);
-      }
-    )
+
+    this.sExperiencia.save(expe).subscribe({
+      next: (a) => {console.log("Experiencia añadida"),
+                  alert("Experiencia añadida"),
+                  this.router.navigate(['']);},
+      error: (e) => {console.error("Falló"), alert("Falló");},
+      complete: () => console.info('complete')
+  })
+
+    // subscribe(
+    //   data => {
+    //     alert("Experiencia añadida");
+    //     // this.router.navigate(['']);
+    //   }, err  => {
+    //     alert("Falló");
+    //     this.router.navigate(['/nuevaexp']);
+    //   }
+    // )
   }
 
 }

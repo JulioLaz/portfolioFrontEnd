@@ -41,6 +41,10 @@ nav{
   /* width: calc(100vw - 15px); */
 }
 
+.btnBg:hover{
+  color: white;
+
+}
 @media screen and (min-width:850px){
       .navBarMy{
         align-items: center;

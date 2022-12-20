@@ -1,9 +1,10 @@
 <div class="container" *ngIf="expLab">
    <div class="row">
        <div style="display: flex;justify-content: center;">
-           <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="margin-top: 5rem; width: 50vw;padding: 2rem; border:2px solid grey; border-radius: .5rem;">
-            <div>
+           <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
+            <div >
                <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">Modifique los campos</h2>
+               <button class="btn btn-outline-success btn-sm btn_position_home" routerLink="/">Volver</button>
             </div>
                <div class="input-group mb-3">
                   <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >Empresa:</span>
