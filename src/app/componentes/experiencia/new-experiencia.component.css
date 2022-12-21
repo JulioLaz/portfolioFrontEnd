@@ -1,3 +1,6 @@
+body{
+  background: #000
+}
 .texto_casillero{
    width: 6rem;
    justify-content: flex-end;

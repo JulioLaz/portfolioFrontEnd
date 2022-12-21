@@ -33,7 +33,7 @@ div.card{
   /* background-color: grey; */
   font-size: calc(.7rem + .8vw);
   /* height: 6.5rem; */
-  width: 80vw;
+  /* width: 400px; */
   color: black;
   padding-top: .5rem;
 }
@@ -86,7 +86,7 @@ p{
 .btnBgEditCard{
   fill: #0d6efd;
   color: #0d6efd;
-  background: white;
+  /* background: rgba(255, 255, 255,.5); */
 }
 .btnBgEditCard:hover{
   background: rgb(234, 232, 232);
@@ -141,8 +141,8 @@ p{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-
 }
+
 @media screen and (min-width:450px){
   .h3Center{
 justify-content: center;

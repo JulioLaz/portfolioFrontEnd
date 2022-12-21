@@ -1,1 +1,53 @@
-<p>edit-educacion works!</p>
+<body>
+<div class="container" *ngIf="educacion">
+  <div class="row">
+      <div style="display: flex;justify-content: center">
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
+           <div >
+              <h1 class="text-center fs-3 fw-bolder">FORMACION</h1>
+              <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">Modifique los campos</h2>
+              <button class="btn btn-outline-primary btn-sm btn_position_home" routerLink="/">Volver</button>
+           </div>
+              <div class="input-group mb-3">
+                 <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >Institución:</span>
+                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                 id="schoolE" name="schoolE" [(ngModel)]="educacion.schoolE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)">
+              </div>
+              <div class="input-group mb-3">
+                 <span class="texto_casillero input-group-text" id="inputGroup-sizing-default">Título:</span>
+                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                 id="titleE" name="titleE" [(ngModel)]="educacion.titleE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)">
+              </div>
+              <div class=" input-group mb-3">
+                 <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Duración:</span>
+                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                 id="timeE" name="timeE" [(ngModel)]="educacion.timeE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)">
+              </div>
+              <div class=" input-group mb-3">
+                 <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Inicio:</span>
+                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                 id="startE" name="startE" [(ngModel)]="educacion.startE" required onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5">
+              </div>
+              <div class=" input-group mb-3">
+                 <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Fin:</span>
+                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                 id="endE" name="endE" [(ngModel)]="educacion.endE" required onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5">
+              </div>
+              <div class=" input-group mb-3">
+                 <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Ciudad:</span>
+                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                 id="cityE" name="cityE" [(ngModel)]="educacion.cityE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
+              </div>
+              <div class=" input-group mb-3">
+                 <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >URL img:</span>
+                 <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                 id="imgE" name="imgE" [(ngModel)]="educacion.imgE" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
+              </div>
+              <div style="display: flex;justify-content: center;">
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+              </div>
+          </form>
+      </div>
+  </div>
+</div>
+</body>
