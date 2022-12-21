@@ -11,8 +11,6 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ExperienciaComponent implements OnInit {
 expe: Experiencia[]=[];
-// expLab: Experiencia;
-
 
  worksList: any;
  name:any;
@@ -72,13 +70,21 @@ cargarExperiencia(): void {
 
 delete(id?: number){
   if(id != undefined){
-    this.sExperienciaService.delete(id).subscribe(
-      data => {
-        this.cargarExperiencia();
-      }, err => {
-        alert("No se pudo borrar la experiencia");
-      }
-      )
+    this.sExperienciaService.delete(id).subscribe({
+      next: () => {this.cargarExperiencia(), console.log("Experiencias cargadas"+ this.expe),alert(this.expe)},
+      error: () => {alert("No se pudo borrar la experiencia")},
+      complete: () => {console.info('complete')}})
+
+    }
     }
   }
-}
+
+
+// this.sExperiencia.save(expe).subscribe({
+//   next: (a) => {console.log("Experiencia añadida"),
+//               alert("Experiencia añadida"),
+//               this.router.navigate(['']);},
+//   error: (e) => {console.error("Falló"), alert("Falló");},
+//    //     this.router.navigate(['/nuevaexp']);
+//   complete: () => console.info('complete')
+// })

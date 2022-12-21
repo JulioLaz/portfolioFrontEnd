@@ -10,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./new-experiencia.component.css']
 })
 export class NewExperienciaComponent implements OnInit {
-  exp: Experiencia = new Experiencia("","","","","","");
+  expe: Experiencia = new Experiencia("","","","","","");
   // id!: any;
   nombreE: string = '';
   cargoE: string = '';
@@ -43,18 +43,10 @@ export class NewExperienciaComponent implements OnInit {
                   alert("Experiencia añadida"),
                   this.router.navigate(['']);},
       error: (e) => {console.error("Falló"), alert("Falló");},
+       //     this.router.navigate(['/nuevaexp']);
       complete: () => console.info('complete')
   })
 
-    // subscribe(
-    //   data => {
-    //     alert("Experiencia añadida");
-    //     // this.router.navigate(['']);
-    //   }, err  => {
-    //     alert("Falló");
-    //     this.router.navigate(['/nuevaexp']);
-    //   }
-    // )
   }
 
 }
