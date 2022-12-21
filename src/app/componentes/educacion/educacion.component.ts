@@ -15,7 +15,7 @@ export class EducacionComponent implements OnInit {
   educacionList: any;
   miPortfolio: any;
   frases: any;
-  id:any=0;
+  // id:any=0;
   idCard:number=0;
   deleteCards:boolean=true;
   currentYear=new Date();
@@ -27,7 +27,7 @@ export class EducacionComponent implements OnInit {
   miSchool:any;
   newMiSchool:any;
   disabledFlag:boolean=false;
-  isLogged!: boolean;
+  // isLogged!: boolean;
 
   checkFondo(){
     this.fondo=!this.fondo;
@@ -44,7 +44,18 @@ export class EducacionComponent implements OnInit {
       this.miSchool=this.newMiSchool;
     }
 
-  constructor(private sEducacion: SEducacionService,private tokenService: TokenService,private datosPortfolio:PortfolioService) { }
+  constructor(private sEducacion: SEducacionService,private tokenService: TokenService,private datosPortfolio:PortfolioService) {
+    this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
+      this.educacionList=data.education;
+      this.frases=data.frases});
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  isLogged = false;
   ngOnInit(): void {
     this.cargarEducacion();
     if(this.tokenService.getToken()){
@@ -68,14 +79,5 @@ export class EducacionComponent implements OnInit {
       };
 
 
-    this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
-      this.educacionList=data.education;
-      this.frases=data.frases;
-    });
-    if (this.tokenService.getToken()) {
-      this.isLogged = true;
-    } else {
-      this.isLogged = false;
-    };
+    }
   }
-}

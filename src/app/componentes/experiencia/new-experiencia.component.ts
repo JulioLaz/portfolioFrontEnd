@@ -25,7 +25,6 @@ export class NewExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     this.sExperiencia.lista().subscribe((data)=> {
-      // this.exp = data;
 
       if (this.tokenService.getToken()) {
         this.isLogged = true;
@@ -39,10 +38,10 @@ export class NewExperienciaComponent implements OnInit {
     const expe = new Experiencia(this.nombreE,this.cargoE, this.descripcionE, this.startE, this.endE, this.cityE);
 
     this.sExperiencia.save(expe).subscribe({
-      next: (a) => {console.log("Experiencia añadida"),
+      next: () => {console.log("Experiencia añadida"),
                   alert("Experiencia añadida"),
                   this.router.navigate(['']);},
-      error: (e) => {console.error("Falló"), alert("Falló");},
+      error: () => {console.error("Falló"), alert("Falló");},
        //     this.router.navigate(['/nuevaexp']);
       complete: () => console.info('complete')
   })

@@ -91,22 +91,12 @@ p{
 .btnBgEditCard:hover{
   background: rgb(234, 232, 232);
 }
-.btnBgEdit{
-  fill: grey;
-  background: white;
 
-}
-
-.btnBgEdit:hover{
-  fill: blue;
-  background: grey;
-}
 .btnBgDelete{
   fill: red;
   color: red;
 }
 .btnBgDelete:hover{
-
   background: rgb(234, 232, 232);
 }
 
@@ -115,11 +105,7 @@ p{
   top: 0.5rem;
   right: 5.5rem;
 }
-/* .btn_delete_position_Title{ */
-  /* position:absolute;
-  top: 0.5rem;
-  right: 0.5rem; */
-/* } */
+
 .btn_edit_position_Title{
   position:absolute;
   top: .5rem;

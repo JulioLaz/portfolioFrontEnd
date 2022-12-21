@@ -17,6 +17,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  height: auto;
 
 }
 .centrado{
@@ -29,7 +30,7 @@
 }
 .cardImg{
   display: flex;
-  margin-top: 5px;
+  margin: 8px 0;
   width: auto;
   height: 230px;
   border: 1px solid grey;
@@ -42,12 +43,7 @@
   height: 230px;
   border-radius: .5rem;
 }
-.logo_alura_latam{
-  padding: 1rem;
-  width: 242px;
-  height: 230px;
 
-}
 .h3Center{
   font-size: calc(1rem + .7vw);
   text-align: start;
@@ -65,56 +61,20 @@
   margin-top: 1rem;
   padding-top: .5rem;
 }
-.autor{
-  color: whitesmoke;
-  display: flex;
-  justify-content: end;
-  padding:.5rem;
-  font-size: calc(.8rem + .6vw);
-  font-style: normal;
-}
-.btnBgEdit{
-  fill: grey;
-}
 
-.btnBgEdit:hover{
-  fill: blue;
-  background-color: darkgrey;
+.btn_Edit_Card{
+  fill: #0d6efd;
+  color: #0d6efd;
 }
-.btnBgEditCard{
-  fill: grey;
-  background: white;
+.btn_Edit_Card:hover{
+  background: rgb(234, 232, 232);
 }
-.btnBgEditCard_diskette{
-  fill: blue;
-  background: white;
-}
-.btnBgEditCard_diskette:hover{
-background-color:gainsboro;
-}
-
-.btnBgEditCard:hover{
-  fill: blue;
-}
-.btnBgDelete{
-  fill: grey;
-  background-color: rgba(0, 0, 0, .6);
-  background: #000;
-}
-.btnBgDelete:hover{
+.btn_Delete_card{
   fill: red;
-  background-color: rgba(65, 46, 46, 0.9);
-  background: grey;
+  color: red;
 }
-
-.btnBgDelCard{
-  fill: red;
-  background-color: white;
-}
-.btnBgDelCard:hover{
- fill: red;
- background-color:gainsboro;
-
+.btn_Delete_card:hover{
+  background:white;
 }
 
 @media screen and (min-width:450px){
@@ -124,66 +84,15 @@ background-color:gainsboro;
   }
 
 }
-.imgEdit{
-  position: absolute;
-  right: 1.5rem;
-  top: 1rem;
-  border-radius: 5px;
-  background-color: rgba(0, 0, 0, .8);
 
-}
-.imgDelete{
-  right: 2rem;
-  position: absolute;
-  top: 3.5rem;
-  border-radius: 5px;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, .8);
-}
-.btn_delete_position_Title{
-  position:absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-}
-.btn_delete_position_Card{
-  position:absolute;
-  top: 3.5rem;
-  right: 1.5rem;
-}
-.btn_position_edit_title{
+.btn_edit_position_Title{
   position:absolute;
   top: .5rem;
-  right: 3rem;
-}
-.bg_edit_card {
-  background-color:rgb(215, 123, 123);
-}
-.edit_Card_Years{
-  display: flex;
-  justify-content: space-evenly;
-}
-.edit_Card_YearStarEnd{
-text-align: center;
-width: 60px;
-border-radius: 5px;
-background-color: black;
-margin: 3px 0;
-color: yellow;
-cursor: pointer;
-}
-.edit_Card_YearDatos{
-text-align: center;
-width: 100%;
-border-radius: 5px;
-background-color: black;
-margin: 3px 0;
-color: yellow;
-cursor: pointer;
-}
-.btn_position_edit_exit{
-  position:absolute;
-  border: 1px solid black;
-  top: 1rem;
-  left: 1rem;
+  right: 1rem;
 }
 
+.btn_addFormancion{
+  font-size: 1rem;
+  height: 2.5rem;
+  padding: 0 .8rem;
+}

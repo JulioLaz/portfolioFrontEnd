@@ -1,154 +1,87 @@
 <div class="card bgCardFondo">
   <div class="card-header" style="background-color: transparent;border: none; ">
+
+      <!-- boton en TITULO Add educacion-->
+        <div class="btn_edit_position_Title" *ngIf="isLogged">
+          <button type="button" class=" btn btn-outline-primary btn_addFormancion"
+            routerLink="/nuevaedu">
+            Add formacion
+          </button>
+        </div>
+
+
+    <div>
+      <div>
         <div>
-          <div>
-            <div *ngIf="editCards || editCardItem">
-              <!-- botones en el TITULO -->
-                  <!-- btn Delete: con Dropdown para elimira todas las cards-->
-                  <div class="editDelete" *ngIf="isLogged">
-                    <div class="btn_delete_position_Title btn btn-outline-secondary btn-sm  btnBgDelete" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="deleteCards" >
-                      <svg class="delete btnWidth" id="imgdelete" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;"  xml:space="preserve"><g><path d="M229.5,0C102.751,0,0,102.751,0,229.5S102.751,459,229.5,459S459,356.249,459,229.5S356.249,0,229.5,0z M307.105,271.629    c9.797,9.797,9.797,25.68,0,35.477c-4.898,4.898-11.318,7.347-17.738,7.347c-6.42,0-12.84-2.449-17.738-7.347L229.5,264.977    l-42.128,42.129c-4.898,4.898-11.318,7.347-17.738,7.347c-6.42,0-12.84-2.449-17.738-7.347c-9.797-9.796-9.797-25.68,0-35.477    l42.129-42.129l-42.129-42.129c-9.797-9.797-9.797-25.68,0-35.477s25.68-9.797,35.477,0l42.128,42.129l42.128-42.129    c9.797-9.797,25.68-9.797,35.477,0c9.797,9.796,9.797,25.68,0,35.477l-42.13,42.129L307.105,271.629z"/></g></svg>
-                    </div>
-                    <div class="btn_delete_position_Title btn btn-outline-secondary btn-sm  btnBgDelete" role="button" data-bs-toggle="dropdown" aria-expanded="false" *ngIf="!deleteCards">
-                      <svg class="delete btnWidth" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve"><path style="fill:#8AE9FF;" d="M402.855,147.257c-33.057-33.057-75.295-53.596-120.964-59.24l22.054-22.054  c12.762-12.762,12.762-33.452,0-46.213c-12.762-12.762-33.452-12.762-46.213,0l-79.303,79.303  c-12.762,12.762-12.762,33.452,0,46.213l79.303,79.303c6.381,6.381,14.744,9.571,23.107,9.571c8.363,0,16.726-3.19,23.107-9.571  c12.762-12.762,12.762-33.452,0-46.213L279.29,153.7c67.44,11.149,119.04,69.864,119.04,140.414  c0,78.481-63.85,142.33-142.33,142.33s-142.33-63.85-142.33-142.33c0-18.047-14.63-32.677-32.678-32.677  s-32.678,14.63-32.678,32.677c0,55.476,21.603,107.629,60.83,146.856c39.227,39.227,91.381,60.83,146.856,60.83  s107.629-21.603,146.856-60.83c39.227-39.227,60.831-91.381,60.831-146.856S442.083,186.484,402.855,147.257z"/><g><path style="fill:#248A9C;" d="M255.999,511.999c-58.2,0-112.916-22.665-154.069-63.818   c-41.153-41.152-63.817-95.868-63.817-154.068c0-23.643,19.234-42.877,42.878-42.877s42.878,19.234,42.878,42.877   c0,72.858,59.274,132.131,132.131,132.131s132.131-59.274,132.131-132.131c0-51.341-29.045-96.356-72.845-118.191   c12.455,16.774,11.078,40.653-4.127,55.858c-8.098,8.098-18.866,12.559-30.319,12.559c-11.453,0-22.22-4.46-30.319-12.559   l-79.302-79.302c-8.098-8.098-12.559-18.866-12.559-30.319s4.46-22.221,12.559-30.319l79.302-79.302   c16.718-16.717,43.921-16.717,60.639,0c8.099,8.098,12.559,18.866,12.559,30.319s-4.46,22.22-12.559,30.319l-8.108,8.107   c40.479,8.822,77.159,28.903,107.017,58.762c41.153,41.153,63.817,95.869,63.817,154.069s-22.665,112.916-63.818,154.069   C368.915,489.335,314.199,511.999,255.999,511.999z M80.99,271.635c-12.395,0-22.479,10.083-22.479,22.478   c0,52.751,20.542,102.344,57.842,139.644c37.3,37.301,86.894,57.843,139.645,57.843s102.344-20.542,139.644-57.842   c37.301-37.3,57.843-86.894,57.843-139.645s-20.542-102.344-57.842-139.644l0,0c-31.437-31.438-71.206-50.916-115.003-56.329   c-3.869-0.478-7.126-3.119-8.394-6.805c-1.268-3.686-0.323-7.773,2.433-10.529l22.054-22.054c4.246-4.245,6.584-9.891,6.584-15.894   c0-6.005-2.338-11.649-6.584-15.894c-8.764-8.765-23.025-8.765-31.789,0l-79.302,79.302c-4.246,4.246-6.585,9.891-6.585,15.894   c0,6.005,2.338,11.649,6.584,15.894l79.303,79.302c4.245,4.246,9.89,6.584,15.894,6.584c6.005,0,11.649-2.338,15.894-6.584   c8.764-8.764,8.764-23.025,0-31.789l-24.656-24.656c-3.133-3.133-3.885-7.932-1.859-11.873c2.025-3.942,6.367-6.123,10.735-5.402   c35.221,5.823,67.501,24.062,90.892,51.358c23.656,27.606,36.685,62.807,36.685,99.12c0,84.105-68.424,152.53-152.53,152.53   s-152.53-68.425-152.53-152.53C103.469,281.719,93.385,271.635,80.99,271.635z"/><path style="fill:#248A9C;" d="M246.82,185.141c-2.61,0-5.221-0.995-7.212-2.987l-1.57-1.57c-3.983-3.983-3.983-10.441,0-14.425   c3.983-3.983,10.441-3.983,14.425,0l1.57,1.57c3.983,3.983,3.983,10.441,0,14.425C252.041,184.145,249.43,185.141,246.82,185.141z"/><path style="fill:#248A9C;" d="M223.198,161.583c-2.611,0-5.22-0.995-7.212-2.987l-25.948-25.949   c-3.983-3.983-3.983-10.441,0-14.424c3.983-3.982,10.441-3.983,14.424,0l25.948,25.949c3.983,3.983,3.983,10.441,0,14.424   C228.419,160.586,225.808,161.583,223.198,161.583z"/></g></svg>
-                    </div>
-                    <div *ngIf="deleteCards">
-                      <button type="button" class="dropdown-menu btn btn-danger" style="width:auto; padding: 0.5rem;text-align: center;" (click)="deleteCards=!deleteCards;" >Eliminar tarjetas</button>
-                    </div>
-                    <div *ngIf="!deleteCards">
-                      <button type="button" class="dropdown-menu btn btn-primary" style="width:auto; padding: 0.5rem;text-align: center;" (click)="deleteCards=!deleteCards">Restaurar tarjetas</button>
-                    </div>
-                  </div>
+        </div>
 
-                  <!-- Btn Edit del titulo: muestra los botones en tarjetas-->
-                  <div class="btn_position_edit_title"*ngIf="isLogged">
-                    <!-- lapiz -->
-                    <button class="btn btn-outline-secondary btn-sm  btnBgEdit"
-                            (click)="
-                            editCards=!editCards;
-                            editCardItem=!editCardItem;
-                            checkFondo()"
-                            *ngIf="editCards"
-                            >
-                      <svg id="imgedit" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 494.936 494.936" style="enable-background:new 0 0 494.936 494.936;" xml:space="preserve"><g><path d="M389.844,182.85c-6.743,0-12.21,5.467-12.21,12.21v222.968c0,23.562-19.174,42.735-42.736,42.735H67.157    c-23.562,0-42.736-19.174-42.736-42.735V150.285c0-23.562,19.174-42.735,42.736-42.735h267.741c6.743,0,12.21-5.467,12.21-12.21    s-5.467-12.21-12.21-12.21H67.157C30.126,83.13,0,113.255,0,150.285v267.743c0,37.029,30.126,67.155,67.157,67.155h267.741    c37.03,0,67.156-30.126,67.156-67.155V195.061C402.054,188.318,396.587,182.85,389.844,182.85z"/><path d="M483.876,20.791c-14.72-14.72-38.669-14.714-53.377,0L221.352,229.944c-0.28,0.28-3.434,3.559-4.251,5.396l-28.963,65.069    c-2.057,4.619-1.056,10.027,2.521,13.6c2.337,2.336,5.461,3.576,8.639,3.576c1.675,0,3.362-0.346,4.96-1.057l65.07-28.963    c1.83-0.815,5.114-3.97,5.396-4.25L483.876,74.169c7.131-7.131,11.06-16.61,11.06-26.692    C494.936,37.396,491.007,27.915,483.876,20.791z M466.61,56.897L257.457,266.05c-0.035,0.036-0.055,0.078-0.089,0.107    l-33.989,15.131L238.51,247.3c0.03-0.036,0.071-0.055,0.107-0.09L447.765,38.058c5.038-5.039,13.819-5.033,18.846,0.005    c2.518,2.51,3.905,5.855,3.905,9.414C470.516,51.036,469.127,54.38,466.61,56.897z"/></g></svg>
-                    </button>
-                    <!-- retorno -->
-                    <button class="btn btn-outline-secondary btn-sm  btnBgEdit"
-                            (click)="editCards=!editCards;
-                            editCardItem=!editCardItem;
-                            idCard=999;
-                            checkFondo()"
-                            *ngIf="!editCards">
-                      <svg class="delete btnWidth"  x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve"><path style="fill:#8AE9FF;" d="M402.855,147.257c-33.057-33.057-75.295-53.596-120.964-59.24l22.054-22.054  c12.762-12.762,12.762-33.452,0-46.213c-12.762-12.762-33.452-12.762-46.213,0l-79.303,79.303  c-12.762,12.762-12.762,33.452,0,46.213l79.303,79.303c6.381,6.381,14.744,9.571,23.107,9.571c8.363,0,16.726-3.19,23.107-9.571  c12.762-12.762,12.762-33.452,0-46.213L279.29,153.7c67.44,11.149,119.04,69.864,119.04,140.414  c0,78.481-63.85,142.33-142.33,142.33s-142.33-63.85-142.33-142.33c0-18.047-14.63-32.677-32.678-32.677  s-32.678,14.63-32.678,32.677c0,55.476,21.603,107.629,60.83,146.856c39.227,39.227,91.381,60.83,146.856,60.83  s107.629-21.603,146.856-60.83c39.227-39.227,60.831-91.381,60.831-146.856S442.083,186.484,402.855,147.257z"/><g><path style="fill:#248A9C;" d="M255.999,511.999c-58.2,0-112.916-22.665-154.069-63.818   c-41.153-41.152-63.817-95.868-63.817-154.068c0-23.643,19.234-42.877,42.878-42.877s42.878,19.234,42.878,42.877   c0,72.858,59.274,132.131,132.131,132.131s132.131-59.274,132.131-132.131c0-51.341-29.045-96.356-72.845-118.191   c12.455,16.774,11.078,40.653-4.127,55.858c-8.098,8.098-18.866,12.559-30.319,12.559c-11.453,0-22.22-4.46-30.319-12.559   l-79.302-79.302c-8.098-8.098-12.559-18.866-12.559-30.319s4.46-22.221,12.559-30.319l79.302-79.302   c16.718-16.717,43.921-16.717,60.639,0c8.099,8.098,12.559,18.866,12.559,30.319s-4.46,22.22-12.559,30.319l-8.108,8.107   c40.479,8.822,77.159,28.903,107.017,58.762c41.153,41.153,63.817,95.869,63.817,154.069s-22.665,112.916-63.818,154.069   C368.915,489.335,314.199,511.999,255.999,511.999z M80.99,271.635c-12.395,0-22.479,10.083-22.479,22.478   c0,52.751,20.542,102.344,57.842,139.644c37.3,37.301,86.894,57.843,139.645,57.843s102.344-20.542,139.644-57.842   c37.301-37.3,57.843-86.894,57.843-139.645s-20.542-102.344-57.842-139.644l0,0c-31.437-31.438-71.206-50.916-115.003-56.329   c-3.869-0.478-7.126-3.119-8.394-6.805c-1.268-3.686-0.323-7.773,2.433-10.529l22.054-22.054c4.246-4.245,6.584-9.891,6.584-15.894   c0-6.005-2.338-11.649-6.584-15.894c-8.764-8.765-23.025-8.765-31.789,0l-79.302,79.302c-4.246,4.246-6.585,9.891-6.585,15.894   c0,6.005,2.338,11.649,6.584,15.894l79.303,79.302c4.245,4.246,9.89,6.584,15.894,6.584c6.005,0,11.649-2.338,15.894-6.584   c8.764-8.764,8.764-23.025,0-31.789l-24.656-24.656c-3.133-3.133-3.885-7.932-1.859-11.873c2.025-3.942,6.367-6.123,10.735-5.402   c35.221,5.823,67.501,24.062,90.892,51.358c23.656,27.606,36.685,62.807,36.685,99.12c0,84.105-68.424,152.53-152.53,152.53   s-152.53-68.425-152.53-152.53C103.469,281.719,93.385,271.635,80.99,271.635z"/><path style="fill:#248A9C;" d="M246.82,185.141c-2.61,0-5.221-0.995-7.212-2.987l-1.57-1.57c-3.983-3.983-3.983-10.441,0-14.425   c3.983-3.983,10.441-3.983,14.425,0l1.57,1.57c3.983,3.983,3.983,10.441,0,14.425C252.041,184.145,249.43,185.141,246.82,185.141z"/><path style="fill:#248A9C;" d="M223.198,161.583c-2.611,0-5.22-0.995-7.212-2.987l-25.948-25.949   c-3.983-3.983-3.983-10.441,0-14.424c3.983-3.982,10.441-3.983,14.424,0l25.948,25.949c3.983,3.983,3.983,10.441,0,14.424   C228.419,160.586,225.808,161.583,223.198,161.583z"/></g></svg>
-                    </button>
-                  </div>
-            </div>
+        <!-- TITULO -->
+        <div class="titulo">
+          <h3 class="h3Center">Qué formación tengo:</h3>
+        </div>
 
-                  <!-- TITULO -->
-                  <div class="titulo">
-                    <h3 class="h3Center">Qué formación tengo:</h3>
-                  </div>
+        <!-- Cards -->
+        <div class="card" style="background-color: transparent;border: none;">
+          <div class="card-body">
+            <div>
+              <blockquote class="blockquote mb-0" style="background-color: transparent;display: flex;flex-wrap: wrap;justify-content: space-evenly; "
+              *ngFor="let item of educacion">
+                <div class="collapse.show">
+                  <div class="container-centrado row centrado">
+                    <div class="card bgCard cardBase">
 
-<!-- Cards -->
-  <div class="card" style="background-color: transparent;border: none;">
-    <div class="card-body"  >
-      <div *ngIf="deleteCards" >
-      <blockquote class="blockquote mb-0" style="background-color: transparent;display: flex;flex-wrap: wrap;justify-content: space-evenly; ">
-        <div *ngFor="let item of educacionList" class="collapse.show" >
-        <div class="container-centrado row centrado" *ngIf="item.id" >
-          <div class="card bgCard cardBase"  [ngClass]="asignaClases()">
+                      <div class="cardImg">
+                        <img src={{item.imgE}} class="card-img imagen" alt={{item.imgE}}>
+                      </div>
 
-                <div class="cardImg">
-                  <img src={{item.img}} class="card-img imagen {{item.alt}}" alt={{item.alt}} [ngClass]="asignaClases()">
+                        <p class="card-text text-center fs-4" >{{item.schoolE}}</p>
+                        <p class="card-text text-center fs-6" >{{item.titleE}}</p>
+                        <p class="card-text text-center" >{{item.timeE}}</p>
+                        <p class="card-text text-center fs-6" >{{item.startE}}-{{item.endE}} </p>
+                        <p class="card-text text-center fs-6" >{{item.cityE}}</p>
+                        <p class="card-text text-center fs-6" >{{item.estadoE}}</p>
 
-                  <!-- btn Delete con Dropdown in the card-->
-                  <div *ngIf="!editCards">
-                          <div class="btn_delete_position_Card btn btn-outline-secondary btn-sm  btnBgDelCard" role="button" data-bs-toggle="dropdown" aria-expanded="false"  *ngIf="idCard==item.id">
-                            <svg (click)="borrar=false" *ngIf="borrar" class="delete btnWidth" x="0px" y="0px" width="calc(.8rem + .5vw)" height="calc(.8rem + .5vw)" viewBox="0 0 482.428 482.429" style="enable-background:new 0 0 482.428 482.429;" xml:space="preserve"><g><path d="M381.163,57.799h-75.094C302.323,25.316,274.686,0,241.214,0c-33.471,0-61.104,25.315-64.85,57.799h-75.098    c-30.39,0-55.111,24.728-55.111,55.117v2.828c0,23.223,14.46,43.1,34.83,51.199v260.369c0,30.39,24.724,55.117,55.112,55.117    h210.236c30.389,0,55.111-24.729,55.111-55.117V166.944c20.369-8.1,34.83-27.977,34.83-51.199v-2.828    C436.274,82.527,411.551,57.799,381.163,57.799z M241.214,26.139c19.037,0,34.927,13.645,38.443,31.66h-76.879    C206.293,39.783,222.184,26.139,241.214,26.139z M375.305,427.312c0,15.978-13,28.979-28.973,28.979H136.096    c-15.973,0-28.973-13.002-28.973-28.979V170.861h268.182V427.312z M410.135,115.744c0,15.978-13,28.979-28.973,28.979H101.266    c-15.973,0-28.973-13.001-28.973-28.979v-2.828c0-15.978,13-28.979,28.973-28.979h279.897c15.973,0,28.973,13.001,28.973,28.979    V115.744z"/><path d="M171.144,422.863c7.218,0,13.069-5.853,13.069-13.068V262.641c0-7.216-5.852-13.07-13.069-13.07    c-7.217,0-13.069,5.854-13.069,13.07v147.154C158.074,417.012,163.926,422.863,171.144,422.863z"/><path d="M241.214,422.863c7.218,0,13.07-5.853,13.07-13.068V262.641c0-7.216-5.854-13.07-13.07-13.07    c-7.217,0-13.069,5.854-13.069,13.07v147.154C228.145,417.012,233.996,422.863,241.214,422.863z"/><path d="M311.284,422.863c7.217,0,13.068-5.853,13.068-13.068V262.641c0-7.216-5.852-13.07-13.068-13.07    c-7.219,0-13.07,5.854-13.07,13.07v147.154C298.213,417.012,304.067,422.863,311.284,422.863z"/></g></svg>
-                            <span (click)="borrar=true" *ngIf="!borrar"  class="delete btnWidth">🔼</span>
-                            <!-- <svg (click)="borrar=true" *ngIf="!borrar"  class="delete btnWidth" fill="green" x="2px" y="2px"  width="calc(.8rem + .5vw)" height="calc(.8rem + .5vw)" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve"><g><path d="M32,0C14.355,0,0,14.355,0,32c0,17.645,14.355,32,32,32c17.646,0,32-14.355,32-32C64,14.355,49.646,0,32,0z M32,62    C15.458,62,2,48.542,2,32S15.458,2,32,2s30,13.458,30,30S48.542,62,32,62z"/><path d="M32.896,12.809c-0.336-0.686-1.458-0.686-1.794,0l-12.5,25.5c-0.152,0.313-0.133,0.681,0.049,0.974    c0.182,0.293,0.503,0.471,0.849,0.471h7v5.5c0,0.556,0.448,1,1,1h9c0.552,0,1-0.444,1-1v-5.5h7c0.346,0,0.666-0.178,0.85-0.471    c0.186-0.293,0.2-0.659,0.049-0.974L32.896,12.809z M36.5,37.75c-0.552,0-1,0.447-1,1v5.5h-7v-5.5c0-0.553-0.448-1-1-1h-6.396    L32,15.521L42.896,37.75H36.5z"/></g></svg> -->
+                        <div *ngIf="isLogged" style="display: flex; justify-content: space-between;">
+                          <!-- btn Delete con Dropdown in the card-->
+                          <div>
+                            <button style="margin: .3rem;" class=" btn btn-outline-secondary btn-sm  btn_Delete_card" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" *ngIf="deleteCards">
+                            <svg class="delete btnWidth" id="imgdelete" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve">
+                              <g><path d="M229.5,0C102.751,0,0,102.751,0,229.5S102.751,459,229.5,459S459,356.249,459,229.5S356.249,0,229.5,0z M307.105,271.629    c9.797,9.797,9.797,25.68,0,35.477c-4.898,4.898-11.318,7.347-17.738,7.347c-6.42,0-12.84-2.449-17.738-7.347L229.5,264.977    l-42.128,42.129c-4.898,4.898-11.318,7.347-17.738,7.347c-6.42,0-12.84-2.449-17.738-7.347c-9.797-9.796-9.797-25.68,0-35.477    l42.129-42.129l-42.129-42.129c-9.797-9.797-9.797-25.68,0-35.477s25.68-9.797,35.477,0l42.128,42.129l42.128-42.129    c9.797-9.797,25.68-9.797,35.477,0c9.797,9.796,9.797,25.68,0,35.477l-42.13,42.129L307.105,271.629z" /></g>
+                            </svg>
+                            DEL
+                          </button>
+                          <button type="button" class="dropdown-menu btn btn-danger"
+                          style="width:auto; padding: 0.5rem;text-align: center;"
+                          (click)="delete(item.id)">
+                          Eliminar
+                        </button>
                           </div>
-                        <div>
-                          <!-- Dropdown  ELIMINAR-->
-                          <button type="button" class="dropdown-menu btn btn-danger" style="width:auto; padding: 0.5rem;text-align: center;opacity: .9;"
-                                (click)="editCards=!editCards;
-                                borrar=true;
-                                checkFondo();
-                                item.id=0"
-                                >
-                                <span style="color:black;font-weight: bold;" >ELIMINAR: </span> {{item.school}}</button>
+                          <!-- Btn Edit in the card -->
+                          <div>
+                            <button style="margin: .3rem;" class="btn btn-outline-secondary btn-sm  btn_Edit_Card "
+                            routerLink="/editexp/{{item.id}}">
+                            <svg id="imgedit" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 494.936 494.936"style="enable-background:new 0 0 494.936 494.936;" xml:space="preserve"><g><path d="M389.844,182.85c-6.743,0-12.21,5.467-12.21,12.21v222.968c0,23.562-19.174,42.735-42.736,42.735H67.157    c-23.562,0-42.736-19.174-42.736-42.735V150.285c0-23.562,19.174-42.735,42.736-42.735h267.741c6.743,0,12.21-5.467,12.21-12.21    s-5.467-12.21-12.21-12.21H67.157C30.126,83.13,0,113.255,0,150.285v267.743c0,37.029,30.126,67.155,67.157,67.155h267.741    c37.03,0,67.156-30.126,67.156-67.155V195.061C402.054,188.318,396.587,182.85,389.844,182.85z" />      <path d="M483.876,20.791c-14.72-14.72-38.669-14.714-53.377,0L221.352,229.944c-0.28,0.28-3.434,3.559-4.251,5.396l-28.963,65.069    c-2.057,4.619-1.056,10.027,2.521,13.6c2.337,2.336,5.461,3.576,8.639,3.576c1.675,0,3.362-0.346,4.96-1.057l65.07-28.963    c1.83-0.815,5.114-3.97,5.396-4.25L483.876,74.169c7.131-7.131,11.06-16.61,11.06-26.692    C494.936,37.396,491.007,27.915,483.876,20.791z M466.61,56.897L257.457,266.05c-0.035,0.036-0.055,0.078-0.089,0.107    l-33.989,15.131L238.51,247.3c0.03-0.036,0.071-0.055,0.107-0.09L447.765,38.058c5.038-5.039,13.819-5.033,18.846,0.005    c2.518,2.51,3.905,5.855,3.905,9.414C470.516,51.036,469.127,54.38,466.61,56.897z" /></g>
+                            </svg>
+                            Edit</button>
+                          </div>
+
+
                         </div>
-                  </div>
-
-                  <!-- Btn Edit in the card -->
-                  <div class="imgEdit" *ngIf="!editCards" >
-                      <!-- lapiz -->
-                      <button class="btn btn-outline-secondary btn-sm  btnBgEditCard"
-                              (click)="idCard=item.id;
-                              editCardItem=!editCardItem"
-                              *ngIf="editCardItem">
-                        <svg class="edit btnWidth"  x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 494.936 494.936" style="enable-background:new 0 0 494.936 494.936;" xml:space="preserve"><g><path d="M389.844,182.85c-6.743,0-12.21,5.467-12.21,12.21v222.968c0,23.562-19.174,42.735-42.736,42.735H67.157    c-23.562,0-42.736-19.174-42.736-42.735V150.285c0-23.562,19.174-42.735,42.736-42.735h267.741c6.743,0,12.21-5.467,12.21-12.21    s-5.467-12.21-12.21-12.21H67.157C30.126,83.13,0,113.255,0,150.285v267.743c0,37.029,30.126,67.155,67.157,67.155h267.741    c37.03,0,67.156-30.126,67.156-67.155V195.061C402.054,188.318,396.587,182.85,389.844,182.85z"/><path d="M483.876,20.791c-14.72-14.72-38.669-14.714-53.377,0L221.352,229.944c-0.28,0.28-3.434,3.559-4.251,5.396l-28.963,65.069    c-2.057,4.619-1.056,10.027,2.521,13.6c2.337,2.336,5.461,3.576,8.639,3.576c1.675,0,3.362-0.346,4.96-1.057l65.07-28.963    c1.83-0.815,5.114-3.97,5.396-4.25L483.876,74.169c7.131-7.131,11.06-16.61,11.06-26.692    C494.936,37.396,491.007,27.915,483.876,20.791z M466.61,56.897L257.457,266.05c-0.035,0.036-0.055,0.078-0.089,0.107    l-33.989,15.131L238.51,247.3c0.03-0.036,0.071-0.055,0.107-0.09L447.765,38.058c5.038-5.039,13.819-5.033,18.846,0.005    c2.518,2.51,3.905,5.855,3.905,9.414C470.516,51.036,469.127,54.38,466.61,56.897z"/></g></svg>
-                      </button>
-                      <!-- diskette -->
-                      <button class="btn btn-secondary btn-sm  btnBgEditCard_diskette"
-                              (click)="idCard=999;
-                              borrar=true;
-                              editCard=!editCard;
-                              editCardItem=!editCardItem;"
-                              *ngIf="idCard==item.id;">
-                        <svg class="delete btnWidth" fill="green" x="0px" y="0px" width="calc(.8rem + .5vw)" height="calc(.8rem + .5vw)" viewBox="0 0 463 463" style="enable-background:new 0 0 463 463;" xml:space="preserve"><g>	<path d="M451.431,136.823L326.176,11.57C318.716,4.109,308.797,0,298.245,0H31.5C14.131,0,0,14.131,0,31.5v400 C0,448.869,14.131,463,31.5,463h400c17.369,0,31.5-14.131,31.5-31.5V164.755C463,154.205,458.892,144.285,451.431,136.823z M71,15	h209v104.5c0,13.51-10.991,24.5-24.5,24.5h-160C81.991,144,71,133.01,71,119.5V15z M392,448H71V279.5	c0-13.51,10.991-24.5,24.5-24.5h272c13.509,0,24.5,10.99,24.5,24.5V448z M448,431.5c0,9.099-7.402,16.5-16.5,16.5H407V279.5 c0-21.78-17.72-39.5-39.5-39.5h-272C73.72,240,56,257.72,56,279.5V448H31.5c-9.098,0-16.5-7.401-16.5-16.5v-400	C15,22.401,22.402,15,31.5,15H56v104.5c0,21.78,17.72,39.5,39.5,39.5h160c21.78,0,39.5-17.72,39.5-39.5V15h3.245 c6.544,0,12.697,2.549,17.324,7.177L440.824,147.43c4.627,4.629,7.176,10.781,7.176,17.325V431.5z"/><path d="M207.5,127h48c4.142,0,7.5-3.357,7.5-7.5v-80c0-4.143-3.358-7.5-7.5-7.5h-48c-4.142,0-7.5,3.357-7.5,7.5v80 C200,123.643,203.358,127,207.5,127z M215,47h33v65h-33V47z"/><path d="M343.5,312H199.501c-4.142,0-7.5,3.357-7.5,7.5s3.358,7.5,7.5,7.5H343.5c4.142,0,7.5-3.357,7.5-7.5S347.642,312,343.5,312z"/><path d="M119.5,327h48.002c4.142,0,7.5-3.357,7.5-7.5s-3.358-7.5-7.5-7.5H119.5c-4.142,0-7.5,3.357-7.5,7.5S115.358,327,119.5,327z"/><path d="M343.5,376h-224c-4.142,0-7.5,3.357-7.5,7.5s3.358,7.5,7.5,7.5h224c4.142,0,7.5-3.357,7.5-7.5S347.642,376,343.5,376z"/></g></svg>
-                      </button>
                     </div>
-                    <button class="btn btn-light btn-sm  btn_position_edit_exit"
-                    (click)="
-                    borrar=true;
-                    idCard=999;
-                    editCards=!editCards;
-                    checkFondo()"
-                     *ngIf="idCard==item.id">SALIR
-                    </button>
-
+                  </div>
                 </div>
-
-              <div class="card-body fsCalc">
-                <input class="edit_Card_YearDatos"  [(ngModel)]='item.school'  *ngIf="item.id==idCard" onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)">
-                <p  class="card-text text-center fw-bolder" *ngIf="item.id!==idCard">{{item.school}}</p>
-
-                <input class="edit_Card_YearDatos" [(ngModel)]='item.title' *ngIf="item.id==idCard" onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
-                <p class="card-text text-center "  *ngIf="item.id!==idCard">{{item.title}}</p>
-
-                <div class="edit_Card_Years">
-                  <input class="edit_Card_YearStarEnd" [(ngModel)]='item.start' *ngIf="item.id==idCard" onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4">
-                  <input class="edit_Card_YearStarEnd" [(ngModel)]='item.end' *ngIf="item.id==idCard"  onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4">
-                </div>
-                <p class="card-text text-center" *ngIf="item.id!==idCard">{{item.start}}-{{item.end}} </p>
-
-                <p class="card-text text-center" *ngIf="item.estado.completado; else nocompletado">COMPLETADO</p>
-                <ng-template #nocompletado><p class="card-text text-center" *ngIf="item.estado.enCurso; else porcentaje">Cursando - {{currentYear|date}}</p></ng-template>
-                <ng-template #porcentaje><p class="card-text text-center" >{{item.estado.porcentaje}} de la carrera</p></ng-template>
-
-
-                <input class="edit_Card_YearDatos" [(ngModel)]='item.city' *ngIf="item.id==idCard"  onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
-                <p class="card-text text-center" *ngIf="item.id!==idCard">{{item.city}} </p>
-              </div>
-
+              </blockquote>
+            </div>
+          </div>
+        </div>
+        <div class="" style="border-top:1px solid grey;width:100%">
+          <footer *ngFor="let item of frases">
+            <cite class="text" title="Source Title">"{{item.educacion}}"</cite>
+            <cite class="autor"> - {{item.educacionAutor}}</cite>
+          </footer>
         </div>
       </div>
-      </div>
-    </blockquote>
-  </div>
+    </div>
   </div>
 </div>
-<div class="" style="border-top:1px solid grey;width:100%">
-  <footer *ngFor="let item of frases"  >
-    <cite class="text" title="Source Title">"{{item.educacion}}"</cite>
-    <cite class="autor"> - {{item.educacionAutor}}</cite>
-  </footer>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-
-
