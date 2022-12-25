@@ -10,6 +10,8 @@ import { HomeComponent } from './componentes/home/home.component';
 import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.component';
 import { NewIdiomasComponent } from './componentes/idiomas/new-idiomas.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
+import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +23,9 @@ const routes: Routes = [
   { path: 'newskill', component: NewHardSoftSkillComponent},
   { path: 'editskill/:id', component: EditHardSoftSkillComponent},
   { path: 'newidioma', component: NewIdiomasComponent},
-  { path: 'editidioma/:id', component: EditIdiomasComponent}
+  { path: 'editidioma/:id', component: EditIdiomasComponent},
+  { path: 'newproyecto/', component: NewProyectoComponent},
+  { path: 'editproyecto/:id', component: EditProyectoComponent},
 
 ];
 

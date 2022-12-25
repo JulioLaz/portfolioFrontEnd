@@ -32,6 +32,8 @@ import { EditHardSoftSkillComponent } from './componentes/hard-soft-skills/edit-
 import { NewHardSoftSkillComponent } from './componentes/hard-soft-skills/new-hard-soft-skill.component';
 import { NewIdiomasComponent } from './componentes/idiomas/new-idiomas.component';
 import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.component';
+import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
+import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +61,8 @@ import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.compone
     NewHardSoftSkillComponent,
     NewIdiomasComponent,
     EditIdiomasComponent,
+    NewProyectoComponent,
+    EditProyectoComponent,
 
 
   ],
