@@ -15,7 +15,6 @@ import { LogoAppComponent } from './componentes/logo-app/logo-app.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { RedesSocialesComponent } from './componentes/redes-sociales/redes-sociales.component';
 import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
-import { BarraProgramacionComponent } from './componentes/barra-programacion/barra-programacion.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { DropdownsHeaderComponent } from './componentes/dropdowns-header/dropdowns-header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,6 +27,11 @@ import { NewExperienciaComponent } from './componentes/experiencia/new-experienc
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
 import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
+import { HardSoftSkillsComponent } from './componentes/hard-soft-skills/hard-soft-skills.component';
+import { EditHardSoftSkillComponent } from './componentes/hard-soft-skills/edit-hard-soft-skill.component';
+import { NewHardSoftSkillComponent } from './componentes/hard-soft-skills/new-hard-soft-skill.component';
+import { NewIdiomasComponent } from './componentes/idiomas/new-idiomas.component';
+import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,6 @@ import { NewEducacionComponent } from './componentes/educacion/new-educacion.com
     ProyectosComponent,
     RedesSocialesComponent,
     IdiomasComponent,
-    BarraProgramacionComponent,
     FooterComponent,
     DropdownsHeaderComponent,
     LoginComponent,
@@ -51,6 +54,11 @@ import { NewEducacionComponent } from './componentes/educacion/new-educacion.com
     NewEducacionComponent,
     EditExperienciaComponent,
     EditEducacionComponent,
+    HardSoftSkillsComponent,
+    EditHardSoftSkillComponent,
+    NewHardSoftSkillComponent,
+    NewIdiomasComponent,
+    EditIdiomasComponent,
 
 
   ],

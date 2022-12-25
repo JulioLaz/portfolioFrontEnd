@@ -1,0 +1,33 @@
+<body>
+  <div class="container" *ngIf="hardsskills">
+    <div class="row">
+        <div style="display: flex;justify-content: center">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
+             <div >
+                <h1 class="text-center fs-3 fw-bolder">Editar: Hard y Soft Skills</h1>
+                <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">Modifique los campos</h2>
+                <button class="btn btn-outline-primary btn-sm btn_position_home" routerLink="/">Volver</button>
+             </div>
+                <div class="input-group mb-3">
+                   <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >idiomas:</span>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="nombre" name="nombre" [(ngModel)]="hardsskills.nombre" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)">
+                </div>
+                <div class="input-group mb-3">
+                   <span class="texto_casillero input-group-text" id="inputGroup-sizing-default">Porcentaje:</span>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="porcentaje" name="porcentaje" [(ngModel)]="hardsskills.porcentaje" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú% ]/i.test(event.key)">
+                </div>
+                <div class=" input-group mb-3">
+                   <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >URL img:</span>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="imgURL" name="imgURL" [(ngModel)]="hardsskills.imgURL" required >
+                </div>
+                <div style="display: flex;justify-content: center;">
+                  <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  </body>

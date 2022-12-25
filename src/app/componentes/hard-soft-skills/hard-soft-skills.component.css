@@ -52,7 +52,7 @@
   display: flex;
    width: 80vw;
    height: calc(3rem + 1vw);
-   border: 1px solid blue;
+   border: 1px solid #eb7260;
    border-radius: 5px;
   }
   .experiencia{
@@ -110,8 +110,8 @@ justify-content: end;
 
 
 .inicio{
-  animation: crece 1s ease-in-out infinite;
-  background: linear-gradient(90deg, whitesmoke 30%, rgb(50, 71, 187) 100%);
+  animation: crece 1.5s ease-in-out infinite;
+  background: linear-gradient(90deg, rgba(238,250,2,1) 30%, rgba(245,18,2,1) 100%);
   border-radius: 5px;
   margin: 5px;
   padding: .5rem;

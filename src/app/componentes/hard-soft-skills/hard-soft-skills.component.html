@@ -3,7 +3,7 @@
 
     <!-- boton en TITULO Add skills-->
     <div class="btn_position_new_title" *ngIf="isLogged">
-      <button type="button" class=" btn btn-outline-primary btn_addFormancion" routerLink="/newidioma">
+      <button type="button" class=" btn btn-outline-primary btn_addFormancion" routerLink="/newskill">
         Add formacion
       </button>
     </div>
@@ -26,17 +26,19 @@
                       <div class="barra texto_barra inicio text-end"
                         style=" display: flex;justify-content: end;margin: 8px;height: 2.2rem;">
                         <img style="width: 2rem;" src="{{item.imgURL}}" alt="">
+                        <!-- alt="{{item.imgURL}}"> -->
                         {{(item.porcentaje)}}
                       </div>
                     </div>
                   </div>
                 </div>
+                <!-- src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png" -->
 
                 <div *ngIf="isLogged" style="display: flex; justify-content: space-between;">
                   <!-- btn lapiz editar -->
                   <div>
                     <button style="margin: .3rem;" class="btn btn-outline-secondary btn-sm  btn_Edit_Card "
-                      routerLink="/editidioma/{{item.id}}">
+                      routerLink="/editskill/{{item.id}}">
                       <svg id="imgedit" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 494.936 494.936"
                         style="enable-background:new 0 0 494.936 494.936;" xml:space="preserve">
                         <g>
@@ -67,14 +69,14 @@
                     </div>
                   </div>
                 </div>
-
+                
               </div>
             </div>
           </div>
           <div class="" style="border-top:1px solid grey;width:100%;margin-top: 1rem;">
             <footer *ngFor="let item of frases">
-              <cite class="text" title="Source Title">"{{item.idiomas}}"</cite>
-              <cite class="autor"> - {{item.idiomasAutor}}</cite>
+              <cite class="text" title="Source Title">"{{item.educacion}}"</cite>
+              <cite class="autor"> - {{item.programacionAutor}}</cite>
             </footer>
           </div>
         </blockquote>
@@ -82,6 +84,3 @@
     </div>
   </div>
 </div>
-
-
-

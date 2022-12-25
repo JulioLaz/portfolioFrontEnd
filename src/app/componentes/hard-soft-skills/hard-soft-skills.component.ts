@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Idiomas } from 'src/app/model/idiomas';
-import { SIdiomasService } from 'src/app/service/s-idiomas.service';
+import { Hardsskills } from 'src/app/model/hardsskills';
+import { SHardSSkillsService } from 'src/app/service/s-hard-sskills.service';
 import { TokenService } from 'src/app/service/token.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
-  selector: 'app-idiomas',
-  templateUrl: './idiomas.component.html',
-  styleUrls: ['./idiomas.component.css']
+  selector: 'app-hard-soft-skills',
+  templateUrl: './hard-soft-skills.component.html',
+  styleUrls: ['./hard-soft-skills.component.css']
 })
-export class IdiomasComponent implements OnInit {
-  hardsskills: Idiomas[] = [];
+export class HardSoftSkillsComponent implements OnInit {
+  hardsskills: Hardsskills[] = [];
   educacionList: any;
   frases: any;
 
-  constructor(private sIdiomasService: SIdiomasService, private tokenService: TokenService,private datosPortfolio:PortfolioService) {
+  constructor(private sHardSSkillsService: SHardSSkillsService, private tokenService: TokenService,private datosPortfolio:PortfolioService) {
     this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
       this.educacionList=data.programacion;
       this.frases=data.frases});
@@ -33,7 +33,7 @@ export class IdiomasComponent implements OnInit {
   }
 
   cargarSkills(): void{
-    this.sIdiomasService.lista().subscribe(
+    this.sHardSSkillsService.lista().subscribe(
       data => {
         this.hardsskills = data;
       }
@@ -43,11 +43,12 @@ export class IdiomasComponent implements OnInit {
 
           delete(id?: number){
             if( id != undefined){
-              this.sIdiomasService.delete(id).subscribe(
+              this.sHardSSkillsService.delete(id).subscribe(
                 {
                 next:() => {this.cargarSkills()},
                 error: () => {alert("No se pudo eliminar")},
                 complete: () => {console.info('complete')}})
                   };
                 }
+
 }

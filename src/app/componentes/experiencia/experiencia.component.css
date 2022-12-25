@@ -162,3 +162,7 @@ margin: .5rem 0;
   height: 2rem;
 }
 
+.btn_position_new_title{
+  display: flex;
+  justify-content: end;
+  }

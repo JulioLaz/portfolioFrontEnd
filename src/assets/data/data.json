@@ -96,36 +96,43 @@
 ,
 "programacion":[
 {
+  "id":1,
   "program":"JS",
   "porcentaje":"65%"
 }
 ,
 {
+  "id":2,
   "program":"HTML",
   "porcentaje":"80%"
 }
 ,
 {
+  "id":3,
   "program":"CSS",
   "porcentaje":"90%"
 }
 ,
 {
+  "id":4,
   "program":"MySQL",
   "porcentaje":"40%"
 }
 ,
 {
+  "id":5,
   "program":"ANGULAR",
   "porcentaje":"60%"
 }
 ,
 {
+  "id":6,
   "program":"GitHub",
   "porcentaje":"80%"
 }
 ,
 {
+  "id":7,
   "program":"BOOTSTRAP",
   "porcentaje":"80%"
 }

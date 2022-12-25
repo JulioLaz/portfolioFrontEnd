@@ -4,9 +4,9 @@
     <div *ngIf="isLogged">
       <!-- botones en el TITULO -->
 
-      <div class="editDelete">
-        <div style="height: 2rem;" class="btn_edit_position_Title" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false" *ngIf="deleteCards">
+      <div>
+        <div style="height: 2rem;" class="btn_position_new_title" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
           <button type="button" class=" btn btn-outline-primary"
             style="font-size: 1rem;height: 2.5rem; padding: 0 .8rem;" routerLink="/nuevaexp" *ngIf="isLogged">
             Add experiencia
@@ -44,12 +44,12 @@
                   <!-- btn delete -->
                   <div>
                     <button style="margin: .3rem;" class=" btn btn-outline-secondary btn-sm  btnBgDelete" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false" *ngIf="deleteCards">
+                      data-bs-toggle="dropdown" aria-expanded="false">
                       <svg class="delete btnWidth" id="imgdelete" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve">
                         <g><path d="M229.5,0C102.751,0,0,102.751,0,229.5S102.751,459,229.5,459S459,356.249,459,229.5S356.249,0,229.5,0z M307.105,271.629    c9.797,9.797,9.797,25.68,0,35.477c-4.898,4.898-11.318,7.347-17.738,7.347c-6.42,0-12.84-2.449-17.738-7.347L229.5,264.977    l-42.128,42.129c-4.898,4.898-11.318,7.347-17.738,7.347c-6.42,0-12.84-2.449-17.738-7.347c-9.797-9.796-9.797-25.68,0-35.477    l42.129-42.129l-42.129-42.129c-9.797-9.797-9.797-25.68,0-35.477s25.68-9.797,35.477,0l42.128,42.129l42.128-42.129    c9.797-9.797,25.68-9.797,35.477,0c9.797,9.796,9.797,25.68,0,35.477l-42.13,42.129L307.105,271.629z" /></g>
                       </svg>
                       DEL</button>
-                    <div *ngIf="deleteCards">
+                    <div>
                       <button type="button" class="dropdown-menu btn btn-danger"
                         style="width:auto; padding: 0.5rem;text-align: center;"
                         (click)="delete(item.id)">Eliminar</button>
