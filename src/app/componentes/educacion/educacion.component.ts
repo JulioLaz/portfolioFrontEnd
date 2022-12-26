@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
+import { Frases } from 'src/app/model/frases';
 import { SEducacionService } from 'src/app/service/s-educacion.service';
+import { SFrasesService } from 'src/app/service/s-frases.service';
 import { TokenService } from 'src/app/service/token.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 @Component({
@@ -10,26 +12,33 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class EducacionComponent implements OnInit {
   educacion: Educacion[] = [];
+  frases:Frases[]=[];
   educacionList: any;
-  frases: any;
+  // id:number;
 
-
-  constructor(private sEducacion: SEducacionService,private tokenService: TokenService,private datosPortfolio:PortfolioService) {
-    this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
-      this.educacionList=data.education;
-      this.frases=data.frases});
+  constructor(private sFrases: SFrasesService, private sEducacion: SEducacionService,private tokenService: TokenService,private datosPortfolio:PortfolioService) {
+    // this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
+    //   this.educacionList=data.education;
+    //   this.frases=data.frases});
   }
 
   isLogged = false;
 
   ngOnInit(): void {
     this.cargarEducacion();
+    this.cargarFrase();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
   };
+cargarFrase():void{
+  this.sFrases.lista().subscribe(
+    data =>{this.frases = data}
+  )
+
+}
 
   cargarEducacion(): void{
       this.sEducacion.lista().subscribe(

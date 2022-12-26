@@ -34,8 +34,10 @@ export class ProyectosComponent implements OnInit {
 
   cargarProyectos(): void{
       this.sProyectos.lista().subscribe(
-      data =>{this.proyectos = data}
-    )};
+      data =>{this.proyectos = data})
+      // alert("inicio cargar proyectos")
+
+  };
 
   delete(id?: number){
     if( id != undefined){

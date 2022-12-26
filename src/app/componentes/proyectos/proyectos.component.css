@@ -6,11 +6,11 @@
 }
 .bgCard{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   color: antiquewhite;
   background: rgba(60, 60, 60, 0.7);
   width: 350px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   border: 1px solid grey;
   padding: 0;
@@ -86,7 +86,7 @@ cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: .5rem .5rem .5rem 0;
+  padding: .5rem;
 }
 .btn_delete_position_Title{
   position:absolute;
@@ -117,3 +117,21 @@ cursor: pointer;
   fill: blue;
   background-color: darkgrey;
 }
+.btn_Edit_Card{
+  fill: #0d6efd;
+  color: #0d6efd;
+}
+.btn_Edit_Card:hover{
+  background: rgb(234, 232, 232);
+}
+.btn_Delete_card{
+  fill: red;
+  color: red;
+}
+.btn_Delete_card:hover{
+  background:white;
+}
+.btn_position_new_title{
+  display: flex;
+  justify-content: end;
+  }

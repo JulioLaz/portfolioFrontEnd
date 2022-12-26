@@ -11,7 +11,6 @@ import { BannerComponent } from './componentes/banner/banner.component';
 import { ButtonComponent } from './componentes/button/button.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
-import { LogoAppComponent } from './componentes/logo-app/logo-app.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { RedesSocialesComponent } from './componentes/redes-sociales/redes-sociales.component';
 import { IdiomasComponent } from './componentes/idiomas/idiomas.component';
@@ -34,6 +33,7 @@ import { NewIdiomasComponent } from './componentes/idiomas/new-idiomas.component
 import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.component';
 import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
+import { EditFrasesComponent } from './componentes/frases/edit-frases.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,6 @@ import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.com
     ButtonComponent,
     EducacionComponent,
     ExperienciaComponent,
-    LogoAppComponent,
     ProyectosComponent,
     RedesSocialesComponent,
     IdiomasComponent,
@@ -63,6 +62,7 @@ import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.com
     EditIdiomasComponent,
     NewProyectoComponent,
     EditProyectoComponent,
+    EditFrasesComponent,
 
 
   ],

@@ -10,8 +10,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls:['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-
-persona: Persona = new Persona("","","");
+  // persona: Persona[] = [];
+persona: Persona = new Persona("","","","","","","","");
 
   miPortfolio:any;
   miHistoria:any;

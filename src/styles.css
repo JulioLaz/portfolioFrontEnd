@@ -1,4 +1,21 @@
-/* body.modal-open {
-  overflow: hidden;
-  position: fixed;
-} */
+body{background: #000;}
+
+.btn_position_home{
+  position:absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.btn_Edit_Card{
+  fill: #0d6efd;
+  color: #0d6efd;
+}
+.btn_Edit_Card:hover{
+  background: rgb(234, 232, 232);
+}
+.btn_Delete_card{
+  fill: red;
+  color: red;
+}
+.btn_Delete_card:hover{
+  background:white;
+}

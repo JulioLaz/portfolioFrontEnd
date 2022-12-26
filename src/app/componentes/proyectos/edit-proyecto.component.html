@@ -1,1 +1,49 @@
-<p>edit-proyecto works!</p>
+<body>
+  <div class="container" *ngIf="proyectos">
+    <div class="row">
+        <div style="display: flex;justify-content: center">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
+             <div >
+                <h1 class="text-center fs-3 fw-bolder">PROYECTOS</h1>
+                <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">Modifique los campos</h2>
+                <button class="btn btn-outline-primary btn-sm btn_position_home" routerLink="/">Volver</button>
+             </div>
+                <div class="input-group mb-3">
+                   <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >Proyectos:</span>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="proyectos" name="proyectos" [(ngModel)]="proyectos.proyectos">
+                </div>
+                <div class="input-group mb-3">
+                   <span class="texto_casillero input-group-text" id="inputGroup-sizing-default">Descripción:</span>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="descripcion" name="descripcion" [(ngModel)]="proyectos.descripcion" >
+                </div>
+                <div class=" input-group mb-3">
+                   <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Fecha:</span>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="fecha" name="fecha" [(ngModel)]="proyectos.fecha" required >
+                </div>
+                <div class=" input-group mb-3">
+                   <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Imagen del Proyecto:</span>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="imgProyecto" name="imgProyecto" [(ngModel)]="proyectos.imgProyecto" required >
+                </div>
+                <div class=" input-group mb-3">
+                   <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Imagen de lenguajes:</span>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="imgLenguajes" name="imgLenguajes" [(ngModel)]="proyectos.imgLenguajes" required >
+                </div>
+                <div class=" input-group mb-3">
+                   <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >URL del Proyecto:</span>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="urlProyecto" name="urlProyecto" [(ngModel)]="proyectos.urlProyecto" required >
+                </div>
+
+                <div style="display: flex;justify-content: center;">
+                  <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  </body>
