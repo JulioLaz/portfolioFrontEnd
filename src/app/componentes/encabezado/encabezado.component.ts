@@ -9,9 +9,8 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-miPortfolio:any;
 isLogged=false;
-  constructor(private router: Router, private tokenservice: TokenService,private datosPortfolio: PortfolioService) { }
+  constructor(private router: Router, private tokenservice: TokenService) { }
 
   ngOnInit(): void {
     if(this.tokenservice.getToken()){
@@ -19,10 +18,6 @@ isLogged=false;
     }else{
       this.isLogged=false
     }
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{console.log('DATA',data);
-    this.miPortfolio=data;
-
-  })
   }
   onLogOut():void{
     this.tokenservice.logOut();

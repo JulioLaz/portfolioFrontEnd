@@ -7,6 +7,7 @@ import { __values } from 'tslib';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  bg!:any;
   constructor() {
 
   }

@@ -1,5 +1,5 @@
 .bgCardFondo{
-  background-color: rgba(245, 245, 220,0.5);
+  background-color: rgba(217, 217, 186, 0.9);
   color: antiquewhite;
   border: 1px solid grey;
 }
@@ -16,10 +16,13 @@
   font-size: calc(.9rem + .6vw);
 }
 .h3Center{
-  font-size: calc(1rem + .7vw);
+  font-size: calc(1rem + 1vw);
   text-align: center;
-  margin: 0;
-  border-bottom: 1px solid grey;
+  color: black;
+  font-weight: 500;
+  padding-bottom: 8px;
+  border-bottom: 1px solid black;
+  margin: 1rem 0;
 }
 .h5Center{
   font-size: calc(.8rem + .7vw);
@@ -36,16 +39,16 @@
   justify-content: center;
   font-size: calc(.8rem + .6vw);
   text-align: center;
-  color: rgb(189, 186, 182);
+  color: black;
   margin-top: 1rem;
   padding-top: .5rem;
 }
 .autor{
-  color: whitesmoke;
+  color:rgba(19, 18, 18);
   display: flex;
   justify-content: end;
   padding:.5rem;
-  font-size: calc(.8rem + .6vw);
+  font-size: calc(.6rem + 1vw);
   font-style: normal;
 }
 .contenedor{

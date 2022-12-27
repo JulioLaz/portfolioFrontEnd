@@ -1,5 +1,5 @@
 .bgCardFondo{
-  background-color: rgba(245, 245, 220,0.5);
+  background-color: rgba(217, 217, 186, 0.9);
   border: 1px solid grey;
   color: antiquewhite;
   margin: 0 1rem;
@@ -38,15 +38,13 @@ div.card{
   padding-top: .5rem;
 }
 .h3Center{
-  display: flex;
-  align-items: flex-end;
-  justify-content: start;
-  font-size: calc(1rem + .7vw);
+  font-size: calc(1rem + 1vw);
   text-align: center;
-  color: antiquewhite;
+  color: black;
+  font-weight: 500;
   padding-bottom: 8px;
-  border-bottom: 1px solid grey;
-  margin: 0;
+  border-bottom: 1px solid black;
+  margin: 1rem 0;
 }
 .btn{
   border: 1px solid grey;
@@ -56,16 +54,16 @@ div.card{
   justify-content: center;
   font-size: calc(.8rem + .6vw);
   text-align: center;
-  color: rgb(189, 186, 182);
+  color: black;
   margin-top: 1rem;
   padding-top: .5rem;
 }
 .autor{
-  color: whitesmoke;
+  color:rgba(19, 18, 18);
   display: flex;
   justify-content: end;
   padding:.5rem;
-  font-size: calc(.8rem + .6vw);
+  font-size: calc(.6rem + 1vw);
   font-style: normal;
 }
 .cajaExperiencia{
@@ -166,3 +164,5 @@ margin: .5rem 0;
   display: flex;
   justify-content: end;
   }
+  .card_experienciaLaboral{
+    background-color: rgb(78, 95, 140);height: 3rem;display: flex;align-items: center;justify-content: center;}
