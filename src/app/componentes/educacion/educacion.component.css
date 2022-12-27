@@ -1,5 +1,5 @@
 .bgCardFondo{
-  background: rgba(22, 22, 22, 0.6);
+  background-color: rgba(245, 245, 220,0.5);
   border: 1px solid grey;
   margin: 0 1rem;
   font-family:sans-serif;
@@ -60,6 +60,14 @@
   color: rgb(189, 186, 182);
   margin-top: 1rem;
   padding-top: .5rem;
+}
+.autor{
+  color: whitesmoke;
+  display: flex;
+  justify-content: end;
+  padding:.5rem;
+  font-size: calc(.8rem + .6vw);
+  font-style: normal;
 }
 
 .btn_Edit_Card{

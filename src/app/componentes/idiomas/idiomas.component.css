@@ -1,5 +1,5 @@
 .bgCardFondo{
-  background: rgba(22, 22, 22, 0.6);
+  background-color: rgba(245, 245, 220,0.5);
   color: antiquewhite;
   border: 1px solid grey;
 }
@@ -110,7 +110,7 @@ justify-content: end;
 
 
 .inicio{
-  animation: crece 1s ease-in-out infinite;
+  animation: crece 1.5s ease-in-out infinite;
   background: linear-gradient(90deg, whitesmoke 30%, rgb(50, 71, 187) 100%);
   border-radius: 5px;
   margin: 5px;
@@ -119,7 +119,7 @@ justify-content: end;
   width: 0;
   align-items: center;
   display: flex;
-  color: rgba(60, 60, 60, 0.8);
+  color: black;
   font-weight: 700;
 
 }

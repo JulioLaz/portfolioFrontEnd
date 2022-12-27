@@ -11,10 +11,17 @@ import { Persona } from '../model/persona.model';
   export class PersonaService {
     URL = environment.URL + 'personas/';
 
-    constructor(private http: HttpClient) { }
+    constructor(private httpClient: HttpClient) { }
 
     public getPersona(): Observable<Persona>{
       console.log("el servicio persona funciona: "+ Persona);
-      return this.http.get<Persona>(this.URL+ 'traer/perfil');
+      return this.httpClient.get<Persona>(this.URL+ 'traer/perfil');
+    }
+
+    public update(id: number, persona: Persona): Observable<any>{
+      // return this.httpClient.put<any>(this.URL + 'editar/1', persona);
+      return this.httpClient.put<any>(this.URL + `editar/${id}`, persona);
     }
   }
+
+

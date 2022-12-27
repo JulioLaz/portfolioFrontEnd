@@ -1,5 +1,5 @@
 .cajaAbout{
-  background-color: rgba(22, 22, 22, 0.6);
+  background-color: rgba(245, 245, 220,0.5);
   border:1px solid grey;
   border-radius: .5rem;
   color: antiquewhite;
@@ -31,19 +31,20 @@
   display: flex;
   justify-content: center;
 }
-@media screen and (min-width:850px){
+@media screen and (min-width:851px){
          .cajaAbout{
           margin-top: 100px;
         }
-}
-@media screen and (max-width:760px){
-         .divCenter{
-           border-top: 1px solid grey;
-           border-bottom: 1px solid grey;
-           display: flex;
+      }
+      @media screen and (max-width:850px){
+        .divCenter{
+          border-top: 1px solid grey;
+          border-bottom: 1px solid grey;
+          display: flex;
 
-          }
-          .cajaAbout{
+        }
+        .cajaAbout{
+            margin-top: 160px;
           flex-direction: column;
           justify-content: center;
           }

@@ -6,8 +6,8 @@
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
              <div >
                 <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">NUEVO IDIOMA</h2>
-                <button class="btn btn-outline-primary btn-sm btn_position_home" routerLink="/">Volver</button>
-             </div>
+                <button type="button" class="btn-close btn_position_home"  aria-label="Close" routerLink="/"></button>
+              </div>
                 <div class="input-group mb-3">
                    <label class="texto_casillero input-group-text" id="inputGroup-sizing-default" for="nombreE">Idioma:</label>
                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"

@@ -31,4 +31,6 @@ export class SFrasesService {
   public delete(id: number): Observable<any>{
     return this.httpClient.delete(this.URL + `delete/${id}`);
   }
+
+
 }

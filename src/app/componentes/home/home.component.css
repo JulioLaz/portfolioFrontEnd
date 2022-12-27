@@ -8,7 +8,8 @@
      overflow-x:hidden;
      /* background: url(../assets/matrixrojo.gif);
      background-size: contain; */
-     background-color: rgb(127, 166, 198);
+     background-color:rgb(38, 82, 121);
+     /* background-color: rgb(250, 251, 245); */
    }
    [id]{
      scroll-margin-top: 130px;
@@ -18,3 +19,4 @@
      scroll-margin-top: 105px;
     }
    }
+

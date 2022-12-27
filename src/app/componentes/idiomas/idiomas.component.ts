@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Idiomas } from 'src/app/model/idiomas';
+import { SFrasesService } from 'src/app/service/s-frases.service';
 import { SIdiomasService } from 'src/app/service/s-idiomas.service';
 import { TokenService } from 'src/app/service/token.service';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
   selector: 'app-idiomas',
@@ -11,13 +11,15 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class IdiomasComponent implements OnInit {
   hardsskills: Idiomas[] = [];
-  educacionList: any;
-  frases: any;
+  id: number = 4;
+  frases!: any;
 
-  constructor(private sIdiomasService: SIdiomasService, private tokenService: TokenService,private datosPortfolio:PortfolioService) {
-    this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
-      this.educacionList=data.programacion;
-      this.frases=data.frases});
+  constructor(
+    private sIdiomasService: SIdiomasService,
+    private sFrases: SFrasesService,
+    private tokenService: TokenService,
+  ) {
+
   }
 
   isLogged = false;
@@ -25,14 +27,17 @@ export class IdiomasComponent implements OnInit {
   ngOnInit(): void {
     this.cargarSkills();
 
-    if(this.tokenService.getToken()){
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
+    this.sFrases.detail(this.id).subscribe((data) => {
+      this.frases = data;
+    })
   }
 
-  cargarSkills(): void{
+  cargarSkills(): void {
     this.sIdiomasService.lista().subscribe(
       data => {
         this.hardsskills = data;
@@ -40,14 +45,14 @@ export class IdiomasComponent implements OnInit {
     )
   }
 
-
-          delete(id?: number){
-            if( id != undefined){
-              this.sIdiomasService.delete(id).subscribe(
-                {
-                next:() => {this.cargarSkills()},
-                error: () => {alert("No se pudo eliminar")},
-                complete: () => {console.info('complete')}})
-                  };
-                }
+  delete(id?: number) {
+    if (id != undefined) {
+      this.sIdiomasService.delete(id).subscribe(
+        {
+          next: () => { this.cargarSkills() },
+          error: () => { alert("No se pudo eliminar") },
+          complete: () => { console.info('complete') }
+        })
+    };
+  }
 }

@@ -243,7 +243,7 @@
     "alt":"ahorcadito_julio_Lazarte",
     "descripcion": "Juego para adivinar palabras según lineamientos de proyecto",
     "fecha":"2022-09-01",
-    "img": "../../../assets/imghorcadito.png",
+    "img": "https://i.imgur.com/gvniyaq.jpeg",
     "imgLenguajes": "../../../assets/lenguajeAhorcadito.png",
     "url": "https://juliolaz.github.io/juego-ahorcadito"
   }

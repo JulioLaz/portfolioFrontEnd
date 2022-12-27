@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
+import { SFrasesService } from 'src/app/service/s-frases.service';
 import { TokenService } from 'src/app/service/token.service';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
@@ -11,40 +11,14 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class ExperienciaComponent implements OnInit {
 expe: Experiencia[]=[];
+id: number = 2;
+frases!: any;
 
- worksList: any;
- name:any;
- frases:any;
- educacionList: any;
- miPortfolio: any;
-//  id!:number;
- idCard:number=0;
- deleteCards:boolean=true;
- currentYear=new Date();
- editCards:boolean=true;
- editCard:boolean=true;
- borrar:boolean=true;
- editCardItem:any=false;
- fondo:boolean=false;
- miSchool:any;
- newMiSchool:any;
- disabledFlag:boolean=false;
- borrarExperiencia:boolean=true;
-
-
-  checkFondo(){
-    this.fondo=!this.fondo;
-    }
-
-  asignaClases(){
-    let classes = {
-    bg_edit_card: this.fondo,
-    };
-    return classes;
-    }
-
-
-  constructor(private sExperienciaService: SExperienciaService, private tokenService: TokenService,private datosPortfolio:PortfolioService,private activatedRouter: ActivatedRoute) { }
+  constructor(
+    private sExperienciaService: SExperienciaService,
+    private tokenService: TokenService,
+    private sFrases: SFrasesService,
+    ) { }
   isLogged = false;
 
   ngOnInit(): void {
@@ -55,13 +29,9 @@ expe: Experiencia[]=[];
       this.isLogged = false;
     }
 
-
-  this.datosPortfolio.obtenerDatos().subscribe((data: any) =>{
-    this.worksList=data.works;
-    this.name=data;
-    this.frases=data.frases
-
-  });
+  this.sFrases.detail(this.id).subscribe((data) => {
+    this.frases = data;
+  })
 }
 
 cargarExperiencia(): void {
@@ -78,3 +48,4 @@ delete(id?: number){
     }
     }
   }
+
