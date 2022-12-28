@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
+import { Frases } from 'src/app/model/frases';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { SFrasesService } from 'src/app/service/s-frases.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -12,7 +13,8 @@ import { TokenService } from 'src/app/service/token.service';
 export class ExperienciaComponent implements OnInit {
 expe: Experiencia[]=[];
 id: number = 2;
-frases!: any;
+frase:String;
+autor:String;
 
   constructor(
     private sExperienciaService: SExperienciaService,
@@ -23,14 +25,19 @@ frases!: any;
 
   ngOnInit(): void {
     this.cargarExperiencia();
+    this.cargarFrase();
+
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
+}
 
+cargarFrase(): void {
   this.sFrases.detail(this.id).subscribe((data) => {
-    this.frases = data;
+    this.frase = data.frases;
+    this.autor = data.autor;
   })
 }
 

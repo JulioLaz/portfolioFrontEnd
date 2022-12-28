@@ -13,14 +13,25 @@ import { Persona } from '../model/persona.model';
 
     constructor(private httpClient: HttpClient) { }
 
-    public getPersona(): Observable<Persona>{
-      console.log("el servicio persona funciona: "+ Persona);
-      return this.httpClient.get<Persona>(this.URL+ 'traer/perfil');
+    public lista(): Observable<Persona[]>{
+      return this.httpClient.get<Persona[]>(this.URL + 'lista');
+    }
+
+    public detail(id: number): Observable<Persona>{
+      return this.httpClient.get<Persona>(this.URL + `detail/${id}`);
+    }
+
+    public save(persona: Persona): Observable<any>{
+      return this.httpClient.post<any>(this.URL + 'create', persona);
     }
 
     public update(id: number, persona: Persona): Observable<any>{
-      // return this.httpClient.put<any>(this.URL + 'editar/1', persona);
-      return this.httpClient.put<any>(this.URL + `editar/${id}`, persona);
+      console.log("servicio de editar funciona"+persona)
+      return this.httpClient.put<any>(this.URL + `update/${id}`, persona);
+    }
+
+    public delete(id: number): Observable<any>{
+      return this.httpClient.delete<any>(this.URL + `delete/${id}`);
     }
   }
 

@@ -34,6 +34,7 @@ import { EditIdiomasComponent } from './componentes/idiomas/edit-idiomas.compone
 import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 import { EditFrasesComponent } from './componentes/frases/edit-frases.component';
+import { EditAboutComponent } from './componentes/about/edit-about.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { EditFrasesComponent } from './componentes/frases/edit-frases.component'
     NewProyectoComponent,
     EditProyectoComponent,
     EditFrasesComponent,
+    EditAboutComponent,
 
 
   ],

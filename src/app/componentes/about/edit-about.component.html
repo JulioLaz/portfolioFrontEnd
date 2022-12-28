@@ -1,0 +1,59 @@
+<body>
+  <div class="container" *ngIf="personas">
+    <div class="row">
+        <div style="display: flex;justify-content: center">
+<form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
+  <div >
+     <h1 class="text-center fs-3 fw-bolder">PERSONA</h1>
+     <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">Modifique los campos</h2>
+     <button type="button" class="btn-close btn_position_home"  aria-label="Close" routerLink="/"></button>
+
+  </div>
+     <div class="input-group mb-3">
+        <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >Nombres:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+        id="schoolE" name="schoolE" [(ngModel)]="personas.nombre" required >
+     </div>
+     <div class="input-group mb-3">
+        <span class="texto_casillero input-group-text" id="inputGroup-sizing-default">Apellidos:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+        id="titleE" name="titleE" [(ngModel)]="personas.apellido" required >
+     </div>
+     <div class=" input-group mb-3">
+        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >URL de foto:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+        id="img" name="img" [(ngModel)]="personas.img" required >
+     </div>
+     <div class=" input-group mb-3">
+        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Título:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+        id="title" name="title" [(ngModel)]="personas.title" required>
+     </div>
+     <div class=" input-group mb-3">
+        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Edad:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+        id="edad" name="edad" [(ngModel)]="personas.edad" required >
+     </div>
+     <div class=" input-group mb-3">
+        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Ciudad:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+        id="city" name="city" [(ngModel)]="personas.city" required >
+     </div>
+     <div class=" input-group mb-3">
+        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Título Acerca de mi:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+        id="titleAbout" name="titleAbout" [(ngModel)]="personas.titleAbout" required >
+     </div>
+     <div class=" input-group mb-3">
+        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Acerca de mi:</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+        id="about" name="about" [(ngModel)]="personas.about" required >
+     </div>
+     <div style="display: flex;justify-content: center;">
+       <button type="submit" class="btn btn-primary">Guardar cambios</button>
+     </div>
+    </form>
+  </div>
+  </div>
+  </div>
+</body>

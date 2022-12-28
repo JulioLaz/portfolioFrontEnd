@@ -148,3 +148,8 @@ justify-content: end;
 .btn_Delete_card:hover{
   background:white;
 }
+.div_btn_edit_frase {
+  display: flex;
+  justify-content: end;
+  margin: 8px;
+}

@@ -95,7 +95,7 @@
 
 .caja_sobre_mi_vida {
   position: relative;
-  
+
 }
 
 div {
@@ -118,7 +118,11 @@ div {
   align-items: center;
   margin-top: 170px;
 }
-
+.btn_posicion{
+  position:absolute;
+  top:10.5rem;
+  right: 2.4rem;
+}
 
 @media screen and (min-width:850px) {
   .divCenter {
@@ -138,15 +142,19 @@ div {
     margin-top: 95px;
 
   }
-
-  .btnBgEdit {
-    top: -2px;
-  }
-
-  .btn_edit_titulo {
-    right: -4px;
+  .btn_posicion{
+    position:absolute;
+    top:6rem;
+    right: 2.4rem;
   }
 }
-/* .caja_about_completa{
-  width: calc(100%-2rem);
-} */
+.div_btn_edit_frase{
+  display: flex;
+   justify-content:end;
+   margin: 8px;
+}
+.btn_Edit_Card{
+  fill: #0d6efd;
+  color: #0d6efd;
+}
+

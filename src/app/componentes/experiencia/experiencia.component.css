@@ -1,35 +1,39 @@
-.bgCardFondo{
+.bgCardFondo {
   background-color: rgba(217, 217, 186, 0.9);
   border: 1px solid grey;
   color: antiquewhite;
   margin: 0 1rem;
-  width:initial;
+  width: initial;
 }
 
-.bgCard{
+.bgCard {
   background: rgba(22, 22, 22, 0.1);
   padding: 5px;
   border: none;
 }
-.cardFlex{
+
+.cardFlex {
   display: flex;
   justify-content: start;
   margin-bottom: .5rem;
 }
-div.card{
+
+div.card {
   width: 100rem;
 }
-.accordionWidth{
+
+.accordionWidth {
   margin: .2rem;
 }
-#btnShow{
+
+#btnShow {
   font-size: calc(.5rem + .9vw);
   height: 6.5rem;
   width: 26vw;
   margin: 5px .5rem;
 }
 
-#hiddenCard{
+#hiddenCard {
   /* background-color: grey; */
   font-size: calc(.7rem + .8vw);
   /* height: 6.5rem; */
@@ -37,7 +41,8 @@ div.card{
   color: black;
   padding-top: .5rem;
 }
-.h3Center{
+
+.h3Center {
   font-size: calc(1rem + 1vw);
   text-align: center;
   color: black;
@@ -46,10 +51,12 @@ div.card{
   border-bottom: 1px solid black;
   margin: 1rem 0;
 }
-.btn{
+
+.btn {
   border: 1px solid grey;
 }
-.text{
+
+.text {
   display: flex;
   justify-content: center;
   font-size: calc(.8rem + .6vw);
@@ -58,64 +65,71 @@ div.card{
   margin-top: 1rem;
   padding-top: .5rem;
 }
-.autor{
-  color:rgba(19, 18, 18);
+
+.autor {
+  color: rgba(19, 18, 18);
   display: flex;
   justify-content: end;
-  padding:.5rem;
+  padding: .5rem;
   font-size: calc(.6rem + 1vw);
   font-style: normal;
 }
-.cajaExperiencia{
+
+.cajaExperiencia {
   margin: 0;
   padding: 1rem 0;
 }
-.cajaBotones{
+
+.cajaBotones {
   background-color: transparent;
   border: none;
   width: auto;
   display: flex;
   justify-content: center;
 }
-p{
+
+p {
   margin: 0;
 }
 
-.btnBgEditCard{
+.btnBgEditCard {
   fill: #0d6efd;
   color: #0d6efd;
   /* background: rgba(255, 255, 255,.5); */
 }
-.btnBgEditCard:hover{
+
+.btnBgEditCard:hover {
   background: rgb(234, 232, 232);
 }
 
-.btnBgDelete{
+.btnBgDelete {
   fill: red;
   color: red;
 }
-.btnBgDelete:hover{
+
+.btnBgDelete:hover {
   background: rgb(234, 232, 232);
 }
 
-.btn_new_experiencia_position_Title{
-  position:absolute;
+.btn_new_experiencia_position_Title {
+  position: absolute;
   top: 0.5rem;
   right: 5.5rem;
 }
 
-.btn_edit_position_Title{
-  position:absolute;
+.btn_edit_position_Title {
+  position: absolute;
   top: .5rem;
   right: 3rem;
 }
 
 .bg_edit_card {
-  background-color:rgb(215, 123, 123);
+  background-color: rgb(215, 123, 123);
   border-radius: .5rem;
 
 }
-.edit_card_years_city{
+
+.edit_card_years_city {
   display: flex;
   align-items: center;
   margin-top: 5px;
@@ -123,46 +137,68 @@ p{
   justify-content: center;
 
 }
-.label_edit_card{
+
+.label_edit_card {
   height: auto;
   margin: .5rem 5px;
 }
-.edit_card_empresa{
+
+.edit_card_empresa {
   display: flex;
   margin-top: 5px;
   flex-direction: column;
   align-items: center;
   justify-content: start;
 }
-.card_Row{
+
+.card_Row {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-@media screen and (min-width:450px){
-  .h3Center{
-justify-content: center;
-margin: .5rem 0;
-}
-.edit_card_empresa{
-  flex-direction: row;
-}
-.edit_card_years_city{
-  flex-direction: row;
-}
+@media screen and (min-width:450px) {
+  .h3Center {
+    justify-content: center;
+    margin: .5rem 0;
+  }
+
+  .edit_card_empresa {
+    flex-direction: row;
+  }
+
+  .edit_card_years_city {
+    flex-direction: row;
+  }
 }
 
-.edit_Card_YearDatos{
+.edit_Card_YearDatos {
   text-align: center;
   width: 70%;
   height: 2rem;
 }
 
-.btn_position_new_title{
+.btn_position_new_title {
   display: flex;
   justify-content: end;
-  }
-  .card_experienciaLaboral{
-    background-color: rgb(78, 95, 140);height: 3rem;display: flex;align-items: center;justify-content: center;}
+}
+
+.card_experienciaLaboral {
+  background-color: rgb(78, 95, 140);
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div_btn_edit_frase {
+  display: flex;
+  justify-content: end;
+  margin: 8px;
+}
+
+.btn_Edit_Card {
+  fill: #0d6efd;
+  color: #0d6efd;
+}

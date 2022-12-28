@@ -12,8 +12,8 @@ import { TokenService } from 'src/app/service/token.service';
 export class IdiomasComponent implements OnInit {
   hardsskills: Idiomas[] = [];
   id: number = 4;
-  frases!: any;
-
+  frase: String;
+  autor: String;
   constructor(
     private sIdiomasService: SIdiomasService,
     private sFrases: SFrasesService,
@@ -26,14 +26,18 @@ export class IdiomasComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarSkills();
+    this.cargarFrase();
 
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
+  }
+  cargarFrase(): void {
     this.sFrases.detail(this.id).subscribe((data) => {
-      this.frases = data;
+      this.frase = data.frases;
+      this.autor = data.autor;
     })
   }
 

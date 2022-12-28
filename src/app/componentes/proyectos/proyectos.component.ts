@@ -12,7 +12,8 @@ import { TokenService } from 'src/app/service/token.service';
 export class ProyectosComponent implements OnInit {
   proyectos: Proyectos[] = [];
   id: number = 5;
-  frases!: any;
+  frase: String;
+  autor: String;
 
   constructor(
     private sFrases: SFrasesService,
@@ -24,13 +25,18 @@ export class ProyectosComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarProyectos();
+    this.cargarFrase();
+
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
+  }
+  cargarFrase(): void {
     this.sFrases.detail(this.id).subscribe((data) => {
-      this.frases = data;
+      this.frase = data.frases;
+      this.autor = data.autor;
     })
   }
 

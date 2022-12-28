@@ -11,24 +11,33 @@ import { SEducacionService } from 'src/app/service/s-educacion.service';
 export class EditEducacionComponent implements OnInit {
   educacion: Educacion = null;
 
-  constructor(private sEducacion: SEducacionService,private activatedRouter : ActivatedRoute,private router: Router) { }
+  constructor(
+    private sEducacion: SEducacionService,
+    private activatedRouter : ActivatedRoute,
+    private router: Router
+    ) {}
 
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.sEducacion.detail(id).subscribe(
-      data =>{
-        this.educacion = data;
-      }, err =>{
-         alert("Error al modificar");
-         this.router.navigate(['']);
-      }
-    )
+    this.cargarEducacion();
   }
+
+cargarEducacion(){
+  const id = this.activatedRouter.snapshot.params['id'];
+  this.sEducacion.detail(id).subscribe(
+    data =>{
+      this.educacion = data;
+    }, err =>{
+       alert("Error al cargar educacion");
+       this.router.navigate(['']);
+    }
+  )
+}
 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.sEducacion.update(id, this.educacion).subscribe(
       data => {
+        console.log("Educacion editada: "+this.educacion.schoolE );
         this.router.navigate(['']);
       }, err => {
         alert("Error al modificar la educacion");

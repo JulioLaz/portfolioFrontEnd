@@ -26,6 +26,7 @@ export class SEducacionService {
   }
 
   public update(id: number, educacion: Educacion): Observable<any>{
+    console.log("servicio de editar funciona"+educacion)
     return this.httpClient.put<any>(this.URL + `update/${id}`, educacion);
   }
 

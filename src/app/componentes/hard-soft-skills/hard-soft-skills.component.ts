@@ -12,8 +12,9 @@ import { TokenService } from 'src/app/service/token.service';
 export class HardSoftSkillsComponent implements OnInit {
   hardsskills: Hardsskills[] = [];
   id: number =3 ;
-  frases!: any;
-
+  frase: String;
+  autor: String;
+  
   constructor(
     private sFrases: SFrasesService,
     private sHardSSkillsService: SHardSSkillsService,
@@ -25,14 +26,18 @@ export class HardSoftSkillsComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargarSkills();
+    this.cargarFrase();
 
     if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
+  }
+  cargarFrase(): void {
     this.sFrases.detail(this.id).subscribe((data) => {
-      this.frases = data;
+      this.frase = data.frases;
+      this.autor = data.autor;
     })
   }
 

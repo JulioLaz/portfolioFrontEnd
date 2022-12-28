@@ -71,10 +71,7 @@
   font-style: normal;
 }
 
-.btn_Edit_Card{
-  fill: #0d6efd;
-  color: #0d6efd;
-}
+
 .btn_Edit_Card:hover{
   background: rgb(234, 232, 232);
 }
@@ -121,3 +118,12 @@
   display: flex;
   justify-content: end;
   }
+.div_btn_edit_frase{
+  display: flex;
+   justify-content:end;
+   margin: 8px;
+}
+.btn_Edit_Card{
+  fill: #0d6efd;
+  color: #0d6efd;
+}

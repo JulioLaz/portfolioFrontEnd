@@ -134,3 +134,8 @@
   display: flex;
   justify-content: end;
   }
+  .div_btn_edit_frase {
+    display: flex;
+    justify-content: end;
+    margin: 8px;
+  }
