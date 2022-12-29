@@ -9,14 +9,14 @@
                 <button type="button" class="btn-close btn_position_home"  aria-label="Close" routerLink="/"></button>
               </div>
                 <div class="input-group mb-3">
-                   <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >frases:</span>
+                   <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >Autor:</span>
                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                    id="autor" name="autor" [(ngModel)]="frases.autor" required >
                 </div>
                 <div class=" input-group mb-3">
-                   <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >URL img:</span>
-                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                   id="frases" name="frases" [(ngModel)]="frases.frases" required >
+                   <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Frase:</span>
+                   <textarea type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="frases" name="frases" [(ngModel)]="frases.frases" required ></textarea>
                 </div>
                 <div style="display: flex;justify-content: center;">
                   <button type="submit" class="btn btn-primary">Guardar cambios</button>
