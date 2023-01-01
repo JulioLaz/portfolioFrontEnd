@@ -11,7 +11,7 @@
 <hr style="border-color:black !important;border-width: 2px !important ;width: 100% !important">
 
 <!-- TITULO -->
-<div class=" col-md-3 col-lg-3  divCenter centrado">
+<div class=" col-md-3 col-lg-3  divCenter centrado" style="height: 30vh;">
     <div>
     <div class="caja_about_titulo ">
       <div class="caja_titulo">
@@ -30,7 +30,7 @@
       <div class="caja_sobre_mi_vida">
           <h3 class="text-center fs-5 " style="margin: .5rem 0">{{persona.titleAbout}}</h3>
       </div>
-      <p class="text-center" style="padding:0 1rem;">{{persona.about}}</p>
+      <p style="padding:0 1rem;text-align: justify;">{{persona.about}}</p>
     </div>
     <!-- Btn Edit in the card -->
     <div *ngIf="isLogged" class="div_btn_edit_frase btn_posicion">

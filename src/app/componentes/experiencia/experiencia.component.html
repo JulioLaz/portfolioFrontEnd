@@ -17,14 +17,14 @@
     </div>
 
     <div class="card_Row">
-        <div class=" "  *ngFor="let item of expe" style="display: flex; align-items: center;height:20rem;margin: 1rem 0 0 0;" >
-          <div class="text-center" id="hiddenCard" style="padding: 5px;background-color:darkgrey ;border-radius: 5px;display: flex; justify-content: center;border: 1px solid black">
+        <div class=" "  *ngFor="let item of expe" style="display: flex; align-items: center;height:50vh;margin: 1rem 0 0 0;" >
+          <div class="text-center" id="hiddenCard" style="padding: 5px;background-color:darkgrey ;border-radius: 5px;display: flex; justify-content: center;border: 1px solid black;height: inherit;">
             <!--targeta de datos  -->
-            <div class="card" style="width: 320px;border: 1px solid black; background-color: lightgray;">
+            <div class="card" style="width: 320px;border: 1px solid black; background-color: lightgray;height: 100%;">
               <div class="card-header fw-bolder card_experienciaLaboral" >
                 {{item.nombreE}}
               </div>
-              <div class="card-body" style="margin: 1rem">
+              <div class="card-body" style="margin: 1rem;display: flex;flex-direction: column;justify-content: space-between;">
                 <h5 class=" text-uppercase fs-4">{{item.cargoE}}</h5>
                 <p class="fs-5 lh-base">{{item.descripcionE}}</p>
                 <p class="fs-5 lh-base">{{item.startE}}-{{item.endE}}</p>
