@@ -8,7 +8,8 @@ import { Hardsskills } from '../model/hardsskills';
   providedIn: 'root'
 })
 export class SHardSSkillsService {
-  URL = environment.URL + 'skill/';
+  URL = 'http://localhost:8080/' + 'skill/';
+  // URL = environment.URL + 'skill/';
 
   constructor(private httpClient: HttpClient) { }
 

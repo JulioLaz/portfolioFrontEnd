@@ -135,6 +135,11 @@
   "id":7,
   "program":"BOOTSTRAP",
   "porcentaje":"80%"
+},
+{
+  "id":8,
+  "program":"JAVA",
+  "porcentaje":"50%"
 }
 ]
 ,
@@ -191,7 +196,7 @@
     ,
     {
       "id":2,
-      "empresa":"Cia. Azucarera Los Balcanes",
+      "empresa":"Cia. Azucarera Los Balcanes.",
       "puesto":"Químico",
       "tarea":"Químico de control de calidad de azucar tipo A.",
       "start":"2004",
@@ -206,7 +211,7 @@
     "tarea":"Mantenimiento en laboratorio de fitoterápicos y cremas.",
     "start":"2002",
     "end":"2003",
-    "city":"El Siambon - TUCUMAN"
+    "city":"El Siambon, Tucumán, Argentina"
   }
 ]
 ,

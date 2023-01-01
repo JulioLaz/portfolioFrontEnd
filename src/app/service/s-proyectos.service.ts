@@ -9,7 +9,8 @@ import { Proyectos } from '../model/proyectos';
 })
 export class SProyectosService {
 
-  URL = environment.URL + 'proyectos/';
+  URL ='http://localhost:8080/'  + 'proyectos/';
+  // URL = environment.URL + 'proyectos/';
 
   constructor(private httpClient : HttpClient) { }
 

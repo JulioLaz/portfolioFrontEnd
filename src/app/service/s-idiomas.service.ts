@@ -8,7 +8,8 @@ import { Idiomas } from '../model/idiomas';
   providedIn: 'root'
 })
 export class SIdiomasService {
-  URL = environment.URL + 'idiomas/';
+  URL = 'http://localhost:8080/'+ 'idiomas/';
+  // URL = environment.URL + 'idiomas/';
 
   constructor(private httpClient: HttpClient) { }
 

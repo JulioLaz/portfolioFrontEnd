@@ -8,7 +8,8 @@ import { Frases } from '../model/frases';
   providedIn: 'root'
 })
 export class SFrasesService {
-  URL = environment.URL + 'frases/';
+  URL = 'http://localhost:8080/' + 'frases/';
+  // URL = environment.URL + 'frases/';
 
   constructor(private httpClient: HttpClient) { }
 
