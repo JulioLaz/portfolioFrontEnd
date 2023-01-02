@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class NewExperienciaComponent implements OnInit {
   expe: Experiencia = new Experiencia("","","","","","");
-  // id!: any;
+  spinerBtn:boolean=true;
   nombreE: string = '';
   cargoE: string = '';
   descripcionE: string = '';

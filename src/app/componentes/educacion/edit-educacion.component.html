@@ -2,7 +2,7 @@
 <div class="container" *ngIf="educacion">
   <div class="row">
       <div style="display: flex;justify-content: center">
-          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
+          <form (ngSubmit)="onUpdate();spinerBtn = false" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
            <div >
               <h1 class="text-center fs-3 fw-bolder">FORMACION</h1>
               <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">Modifique los campos</h2>
@@ -12,17 +12,17 @@
               <div class="input-group mb-3">
                  <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >Institución:</span>
                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                 id="schoolE" name="schoolE" [(ngModel)]="educacion.schoolE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)">
+                 id="schoolE" name="schoolE" [(ngModel)]="educacion.schoolE" required >
               </div>
               <div class="input-group mb-3">
                  <span class="texto_casillero input-group-text" id="inputGroup-sizing-default">Título:</span>
                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                 id="titleE" name="titleE" [(ngModel)]="educacion.titleE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)">
+                 id="titleE" name="titleE" [(ngModel)]="educacion.titleE" required >
               </div>
               <div class=" input-group mb-3">
                  <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Duración:</span>
                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                 id="timeE" name="timeE" [(ngModel)]="educacion.timeE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)">
+                 id="timeE" name="timeE" [(ngModel)]="educacion.timeE" required >
               </div>
               <div class=" input-group mb-3">
                  <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Inicio:</span>
@@ -37,31 +37,23 @@
               <div class=" input-group mb-3">
                  <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Ciudad:</span>
                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                 id="cityE" name="cityE" [(ngModel)]="educacion.cityE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
+                 id="cityE" name="cityE" [(ngModel)]="educacion.cityE" >
               </div>
               <div class=" input-group mb-3">
                  <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >URL img:</span>
                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                 id="imgE" name="imgE" [(ngModel)]="educacion.imgE" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
+                 id="imgE" name="imgE" [(ngModel)]="educacion.imgE" required>
               </div>
-
-
                 <div style="display: flex;justify-content: center;">
                   <button type="submit" class="btn btn-primary"
-                  *ngIf="spinerBtn"
-                  (click)="spinerBtn = !spinerBtn"
-                  >
-                    Guardar cambios
-                  </button>
-                  <button *ngIf="!spinerBtn" class="btn btn-primary" type="button" disabled style="display: flex;justify-content: center;"
-
-                  >
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    Loading...
-                  </button>
-
+                    ngClick="Submit"                 >
+                    <span *ngIf="spinerBtn">Guardar cambios</span>
+                    <div *ngIf="!spinerBtn">
+                      <span  class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    enviando...
+                      </div>
+                    </button>
                 </div>
-
           </form>
       </div>
   </div>

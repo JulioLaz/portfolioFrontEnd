@@ -15,6 +15,7 @@ export class NewProyectoComponent implements OnInit {
   imgProyecto: string;
   imgLenguajes: string;
   urlProyecto: string;
+  spinerBtn:boolean=true;
 
   constructor(private sProyectosService: SProyectosService, private router: Router) { }
 

@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row">
         <div style="display: flex;justify-content: center;">
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
+            <form (ngSubmit)="onCreate();spinerBtn = false" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
              <div >
                 <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">Nueva experiencia laboral</h2>
                 <button type="button" class="btn-close btn_position_home"  aria-label="Close" routerLink="/"></button>
@@ -38,7 +38,14 @@
                    id="cityE" name="cityE" [(ngModel)]="cityE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú, ]/i.test(event.key)" placeholder="Tucumán, Argentina">
                 </div>
                 <div style="display: flex;justify-content: center;">
-                  <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                  <button type="submit" class="btn btn-primary"
+                    ngClick="Submit"                 >
+                    <span *ngIf="spinerBtn">Guardar cambios</span>
+                    <div *ngIf="!spinerBtn">
+                      <span  class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    enviando...
+                      </div>
+                    </button>
                 </div>
             </form>
         </div>

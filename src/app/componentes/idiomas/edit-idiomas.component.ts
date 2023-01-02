@@ -10,6 +10,8 @@ import { SIdiomasService } from 'src/app/service/s-idiomas.service';
 })
 export class EditIdiomasComponent implements OnInit {
   idiomas: Idiomas=null;
+  spinerBtn:boolean=true;
+
   constructor(
     private sIdiomasService:SIdiomasService,
     private activatedRouter: ActivatedRoute,

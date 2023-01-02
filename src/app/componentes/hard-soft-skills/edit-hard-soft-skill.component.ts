@@ -10,6 +10,8 @@ import { SHardSSkillsService } from 'src/app/service/s-hard-sskills.service';
 })
 export class EditHardSoftSkillComponent implements OnInit {
   hardsskills: Hardsskills=null;
+  spinerBtn:boolean=true;
+  
   constructor(
     private sHardSSkillsService:SHardSSkillsService,
     private activatedRouter: ActivatedRoute,

@@ -17,7 +17,7 @@ export class NewEducacionComponent implements OnInit {
   estadoE: string;
   cityE: string;
   imgE: string;
-
+  spinerBtn:boolean=true;
   constructor(private sEducacion: SEducacionService, private router: Router) { }
 
   ngOnInit(): void {}

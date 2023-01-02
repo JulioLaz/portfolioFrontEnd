@@ -10,6 +10,7 @@ import { SProyectosService } from 'src/app/service/s-proyectos.service';
 })
 export class EditProyectoComponent implements OnInit {
   proyectos: Proyectos = null;
+  spinerBtn:boolean=true;
 
   constructor(private sProyectosService: SProyectosService,private activatedRouter : ActivatedRoute,private router: Router) { }
 

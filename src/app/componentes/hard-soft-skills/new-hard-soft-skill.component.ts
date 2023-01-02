@@ -9,7 +9,7 @@ import { SHardSSkillsService } from 'src/app/service/s-hard-sskills.service';
   styleUrls: ['./new-hard-soft-skill.component.css']
 })
 export class NewHardSoftSkillComponent implements OnInit {
-
+  spinerBtn:boolean=true;
   nombre: string;
   porcentaje: string;
   imgURL: string;

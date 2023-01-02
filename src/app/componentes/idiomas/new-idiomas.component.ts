@@ -12,7 +12,8 @@ export class NewIdiomasComponent implements OnInit {
   nombre: string;
   porcentaje: string;
   imgURL: string;
-
+  spinerBtn:boolean=true;
+  
   constructor(private sIdiomasService: SIdiomasService, private router: Router) { }
 
   ngOnInit(): void {
