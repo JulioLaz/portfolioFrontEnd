@@ -45,19 +45,23 @@
                  id="imgE" name="imgE" [(ngModel)]="educacion.imgE" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
               </div>
 
-              <div>
-                  <button class="btn btn-primary" type="button" disabled style="display: flex;justify-content: center;">
-                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                    <span class="visually-hidden">Loading...</span>
+
+                <div style="display: flex;justify-content: center;">
+                  <button type="submit" class="btn btn-primary"
+                  *ngIf="spinerBtn"
+                  (click)="spinerBtn = !spinerBtn"
+                  >
+                    Guardar cambios
                   </button>
-                  <button class="btn btn-primary" type="button" disabled style="display: flex;justify-content: center;">
+                  <button *ngIf="!spinerBtn" class="btn btn-primary" type="button" disabled style="display: flex;justify-content: center;"
+
+                  >
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     Loading...
                   </button>
-              </div>
-              <!-- <div style="display: flex;justify-content: center;">
-                <button type="submit" class="btn btn-primary">Guardar cambios</button>
-              </div> -->
+
+                </div>
+
           </form>
       </div>
   </div>

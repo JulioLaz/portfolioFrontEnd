@@ -10,6 +10,7 @@ import { SEducacionService } from 'src/app/service/s-educacion.service';
 })
 export class EditEducacionComponent implements OnInit {
   educacion: Educacion = null;
+  spinerBtn:boolean=true;
 
   constructor(
     private sEducacion: SEducacionService,
