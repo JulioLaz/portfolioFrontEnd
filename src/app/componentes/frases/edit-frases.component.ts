@@ -10,6 +10,8 @@ import { SFrasesService } from 'src/app/service/s-frases.service';
 })
 export class EditFrasesComponent implements OnInit {
   frases: Frases=null;
+  spinerBtn:boolean=true;
+
   constructor(
     private sFrasesService:SFrasesService,
     private activatedRouter: ActivatedRoute,

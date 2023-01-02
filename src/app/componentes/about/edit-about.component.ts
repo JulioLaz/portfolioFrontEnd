@@ -10,10 +10,10 @@ import { PersonaService } from 'src/app/service/persona.service';
 })
 export class EditAboutComponent implements OnInit {
   personas: Persona = null;
+  spinerBtn:boolean=true;
   id:number=1;
   constructor(
     private personaService: PersonaService,
-    private activatedRouter : ActivatedRoute,
     private router: Router
 
   ) {}
