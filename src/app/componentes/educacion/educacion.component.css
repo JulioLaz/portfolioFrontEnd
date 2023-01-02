@@ -65,7 +65,7 @@
 .autor{
   color:rgba(19, 18, 18);
   display: flex;
-  justify-content: end;
+  justify-content:flex-end;
   padding:.5rem;
   font-size: calc(.6rem + 1vw);
   font-style: normal;
@@ -116,11 +116,11 @@
 }
 .btn_position_new_title{
   display: flex;
-  justify-content: end;
+  justify-content:flex-end;
   }
 .div_btn_edit_frase{
   display: flex;
-   justify-content:end;
+   justify-content:flex-end;
    margin: 8px;
 }
 .btn_Edit_Card{

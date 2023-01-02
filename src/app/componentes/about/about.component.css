@@ -159,7 +159,7 @@ div {
 
 .div_btn_edit_frase {
   display: flex;
-  justify-content: end;
+  justify-content:flex-end;
   margin: 8px;
 }
 

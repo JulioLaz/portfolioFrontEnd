@@ -14,7 +14,7 @@
 
 .cardFlex {
   display: flex;
-  justify-content: start;
+  justify-content:flex-start;
   margin-bottom: .5rem;
 }
 
@@ -34,10 +34,7 @@ div.card {
 }
 
 #hiddenCard {
-  /* background-color: grey; */
   font-size: calc(.7rem + .8vw);
-  /* height: 6.5rem; */
-  /* width: 400px; */
   color: black;
   padding-top: .5rem;
 }
@@ -69,23 +66,10 @@ div.card {
 .autor {
   color: rgba(19, 18, 18);
   display: flex;
-  justify-content: end;
+  justify-content:flex-end;
   padding: .5rem;
   font-size: calc(.6rem + 1vw);
   font-style: normal;
-}
-
-.cajaExperiencia {
-  margin: 0;
-  padding: 1rem 0;
-}
-
-.cajaBotones {
-  background-color: transparent;
-  border: none;
-  width: auto;
-  display: flex;
-  justify-content: center;
 }
 
 p {
@@ -95,7 +79,6 @@ p {
 .btnBgEditCard {
   fill: #0d6efd;
   color: #0d6efd;
-  /* background: rgba(255, 255, 255,.5); */
 }
 
 .btnBgEditCard:hover {
@@ -111,46 +94,6 @@ p {
   background: rgb(234, 232, 232);
 }
 
-.btn_new_experiencia_position_Title {
-  position: absolute;
-  top: 0.5rem;
-  right: 5.5rem;
-}
-
-.btn_edit_position_Title {
-  position: absolute;
-  top: .5rem;
-  right: 3rem;
-}
-
-.bg_edit_card {
-  background-color: rgb(215, 123, 123);
-  border-radius: .5rem;
-
-}
-
-.edit_card_years_city {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-  flex-direction: column;
-  justify-content: center;
-
-}
-
-.label_edit_card {
-  height: auto;
-  margin: .5rem 5px;
-}
-
-.edit_card_empresa {
-  display: flex;
-  margin-top: 5px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-}
-
 .card_Row {
   display: flex;
   flex-direction: row;
@@ -163,30 +106,16 @@ p {
     justify-content: center;
     margin: .5rem 0;
   }
-
-  .edit_card_empresa {
-    flex-direction: row;
-  }
-
-  .edit_card_years_city {
-    flex-direction: row;
-  }
-}
-
-.edit_Card_YearDatos {
-  text-align: center;
-  width: 70%;
-  height: 2rem;
 }
 
 .btn_position_new_title {
   display: flex;
-  justify-content: end;
+  justify-content:flex-end;
 }
 
 .card_experienciaLaboral {
   background-color: rgb(78, 95, 140);
-  height: 3rem;
+  height: 4.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,7 +123,7 @@ p {
 
 .div_btn_edit_frase {
   display: flex;
-  justify-content: end;
+  justify-content:flex-end;
   margin: 8px;
 }
 
