@@ -44,9 +44,20 @@
                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
                  id="imgE" name="imgE" [(ngModel)]="educacion.imgE" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" >
               </div>
-              <div style="display: flex;justify-content: center;">
-                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+
+              <div>
+                  <button class="btn btn-primary" type="button" disabled style="display: flex;justify-content: center;">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span class="visually-hidden">Loading...</span>
+                  </button>
+                  <button class="btn btn-primary" type="button" disabled style="display: flex;justify-content: center;">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </button>
               </div>
+              <!-- <div style="display: flex;justify-content: center;">
+                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+              </div> -->
           </form>
       </div>
   </div>
