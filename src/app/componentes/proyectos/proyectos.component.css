@@ -1,10 +1,11 @@
-.bgCardFondo{
+.bgCardFondo {
   background-color: rgba(217, 217, 186, 0.9);
   color: antiquewhite;
   border: 1px solid grey;
   margin: 0 1rem;
 }
-.bgCard{
+
+.bgCard {
   display: flex;
   flex-direction: column;
   color: antiquewhite;
@@ -16,17 +17,19 @@
   padding: 0;
 
 }
-.bgCard:hover{
+
+.bgCard:hover {
   background: rgba(141, 131, 131, 0.6);
-  transition:0.5s
-}
-.centrado{
-  display: flex;
-  justify-content: center;
-  align-items:center;
+  transition: 0.5s
 }
 
-.cardImg{
+.centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImg {
   display: flex;
   margin: .5rem .5rem;
   width: auto;
@@ -37,15 +40,16 @@
   align-items: center;
   background-color: rgba(22, 22, 22, 0.9);
 }
-.imagen{
+
+.imagen {
   /* padding:1px; */
   object-fit: fill;
-  width:100%;
-  height:250px;
+  width: 100%;
+  height: 250px;
   border-radius: .5rem;
 }
 
-.h3Center{
+.h3Center {
   font-size: calc(1rem + 1vw);
   text-align: center;
   color: black;
@@ -54,32 +58,36 @@
   border-bottom: 1px solid black;
   margin: 1rem 0;
 }
-.text{
+
+.text {
   display: flex;
   justify-content: center;
   font-size: calc(.8rem + .6vw);
   text-align: center;
-  color:black;
+  color: black;
   margin-top: 1rem;
   padding-top: .5rem;
 }
-.autor{
-  color:rgba(19, 18, 18);
+
+.autor {
+  color: rgba(19, 18, 18);
   display: flex;
-  justify-content:flex-end;
-  padding:.5rem;
+  justify-content: flex-end;
+  padding: .5rem;
   font-size: calc(.6rem + 1vw);
   font-style: normal;
 }
 
-.txtTituloProyecto{
+.txtTituloProyecto {
   font-size: calc(.6rem + .6vw);
   padding: 1rem 0;
 }
-.txtdecripcionProyecto{
+
+.txtdecripcionProyecto {
   font-size: calc(.6rem + .5vw);
 }
-.cajaTextos{
+
+.cajaTextos {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,56 +95,66 @@
   width: 100%;
   border-radius: 1rem;
 }
-.btn_delete_position_Title{
-  position:absolute;
+
+.btn_delete_position_Title {
+  position: absolute;
   top: 0.5rem;
   right: 0.5rem;
 }
-.btn_position_edit_title{
-  position:absolute;
+
+.btn_position_edit_title {
+  position: absolute;
   top: .5rem;
   right: 3rem;
 }
-.btnBgDelete{
+
+.btnBgDelete {
   fill: grey;
   background-color: rgba(0, 0, 0, .6);
   background: #000;
 }
-.btnBgDelete:hover{
+
+.btnBgDelete:hover {
   fill: red;
   background-color: rgba(65, 46, 46, 0.9);
   background: grey;
 }
-.btnBgEdit{
+
+.btnBgEdit {
   fill: white;
   background: none;
 }
 
-.btnBgEdit:hover{
+.btnBgEdit:hover {
   fill: blue;
   background-color: darkgrey;
 }
-.btn_Edit_Card{
+
+.btn_Edit_Card {
   fill: #0d6efd;
   color: #0d6efd;
 }
-.btn_Edit_Card:hover{
+
+.btn_Edit_Card:hover {
   background: rgb(234, 232, 232);
 }
-.btn_Delete_card{
+
+.btn_Delete_card {
   fill: red;
   color: red;
 }
-.btn_Delete_card:hover{
-  background:white;
+
+.btn_Delete_card:hover {
+  background: white;
 }
-.btn_position_new_title{
+
+.btn_position_new_title {
   display: flex;
-  justify-content:flex-end;
-  }
-  .div_btn_edit_frase {
-    display: flex;
-    justify-content:flex-endnpm run build
-    ;
-    margin: 8px;
-  }
+  justify-content: flex-end;
+}
+
+.div_btn_edit_frase {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px;
+}

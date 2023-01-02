@@ -18,7 +18,7 @@
   font-size: calc(.9rem + .6vw);
 }
 
-.h3Center{
+.h3Center {
   font-size: calc(1rem + 1vw);
   text-align: center;
   color: black;
@@ -44,11 +44,11 @@
   padding-top: .5rem;
 }
 
-.autor{
-  color:rgba(19, 18, 18);
+.autor {
+  color: rgba(19, 18, 18);
   display: flex;
-  justify-content:flex-end;
-  padding:.5rem;
+  justify-content: flex-end;
+  padding: .5rem;
   font-size: calc(.6rem + 1vw);
   font-style: normal;
 }
@@ -64,13 +64,13 @@
 .experiencia {
   display: flex;
   align-items: center;
-  justify-content:flex-start;
+  justify-content: flex-start;
   width: auto;
 }
 
 .btn_position_new_title {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
 
 .inicio {
@@ -114,9 +114,10 @@
 .btn_Delete_card:hover {
   background: white;
 }
+
 .div_btn_edit_frase {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
   margin: 8px;
 }
 
