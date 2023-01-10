@@ -9,8 +9,6 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls:['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  // persona: Persona[]=[];
-  // persona!:any;
 persona: Persona = new Persona("","","","","","","","");
   imagen:string;
   nombre:string;

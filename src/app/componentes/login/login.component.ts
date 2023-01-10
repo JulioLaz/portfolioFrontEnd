@@ -17,6 +17,7 @@ nombreUsuario!: string;
 password!: string;
 roles: string[]=[];
 errMsj!:string;
+spinerBtn:boolean=true;
 
   constructor(private tokenService: TokenService, private authService: AuthService, private router: Router) { }
 

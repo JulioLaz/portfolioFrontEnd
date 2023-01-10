@@ -63,26 +63,6 @@
   white-space: initial;
 }
 
-.spanTitleModal {
-  color: grey;
-  font-size: 1rem;
-  font-style: italic;
-}
-
-.modal_about_titulo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 5px;
-}
-
-.madal_label_edit {
-  width: 3.5rem;
-  height: 1.5rem;
-  margin: .3rem 0;
-  color: black;
-}
-
 .caja_titulo {
   height: 100%;
   width: 100%;
@@ -105,7 +85,6 @@ div {
 
 .divCenter {
   border: none;
-  /* width: 70%; */
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -120,9 +99,14 @@ div {
 }
 
 .btn_posicion {
-  /* position:absolute; */
   top: 10.5rem;
   right: 5rem;
+}
+p{
+  font-size: calc(1rem + .3vw);
+}
+h3{
+  font-size: calc(1rem + .6vw);
 }
 
 @media screen and (min-width:850px) {
@@ -131,9 +115,10 @@ div {
     border-right: 1px solid black;
     border-top: none;
     border-bottom: none;
-    /* width: auto; */
   }
-
+p{
+  font-size: 1rem;
+}
   .cajaAbout {
     display: flex;
     justify-content: center;
@@ -145,15 +130,12 @@ div {
   }
 
   .btn_posicion {
-    /* position:absolute; */
     top: 6rem;
     right: 5rem;
   }
   hr {
     border-color: black !important;
     border-width: 2px !important;
-    /* width: 100% !important */
-
   }
 }
 

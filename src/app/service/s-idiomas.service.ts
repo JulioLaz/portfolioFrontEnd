@@ -1,14 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Idiomas } from '../model/idiomas';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SIdiomasService {
-  URL = 'http://localhost:8080/'+ 'idiomas/';
+  URL = 'https://portafolio-back-juliolazarte.onrender.com/idiomas/';
   // URL = environment.URL + 'idiomas/';
 
   constructor(private httpClient: HttpClient) { }

@@ -1,14 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { Frases } from '../model/frases';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SFrasesService {
-  URL = 'http://localhost:8080/' + 'frases/';
+  URL = 'https://portafolio-back-juliolazarte.onrender.com/frases/';
   // URL = environment.URL + 'frases/';
 
   constructor(private httpClient: HttpClient) { }

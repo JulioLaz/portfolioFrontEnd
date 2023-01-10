@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { AboutComponent } from './componentes/about/about.component';
 import { BannerComponent } from './componentes/banner/banner.component';
-import { ButtonComponent } from './componentes/button/button.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
@@ -42,7 +41,6 @@ import { EditAboutComponent } from './componentes/about/edit-about.component';
     EncabezadoComponent,
     AboutComponent,
     BannerComponent,
-    ButtonComponent,
     EducacionComponent,
     ExperienciaComponent,
     ProyectosComponent,
