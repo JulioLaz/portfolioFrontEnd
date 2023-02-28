@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Experiencia } from '../model/experiencia';
 
 @Injectable({
@@ -8,8 +9,8 @@ import { Experiencia } from '../model/experiencia';
 })
 export class SExperienciaService {
 
-  URL =  'https://portafolio-back-juliolazarte.onrender.com/explab/';
-  // URL = environment.URL + 'explab/';
+  // URL =  'https://portafolio-back-juliolazarte.onrender.com/explab/';
+  URL = environment.URL + 'explab/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -31,5 +32,13 @@ export class SExperienciaService {
 
   public delete(id: number): Observable<any>{
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
+  }
+
+  public findAllUsuarioId(usuarioId: number): Observable<Experiencia>{
+    return this.httpClient.get<Experiencia>(this.URL + `usuarioId/${usuarioId}`);
+  }
+
+  public deleteUsuarioId(usuarioId: number): Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `deleteUsuarioId/${usuarioId}`);
   }
   }

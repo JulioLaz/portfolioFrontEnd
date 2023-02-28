@@ -1,0 +1,11 @@
+body{background: #000;}
+.btn_position_home{
+  position:absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.btnBgDelete {
+  fill: red;
+  color: red;
+  margin: .5rem 1rem;
+}

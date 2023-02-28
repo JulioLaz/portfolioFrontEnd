@@ -1,7 +1,7 @@
 <body>
 <div class="container">
     <div class="row">
-        <div style="display: flex;justify-content: center;">
+        <div style="display: flex;justify-content: center">
             <form (ngSubmit)="onCreate();spinerBtn = false" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
              <div >
                 <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">Nueva experiencia laboral</h2>
@@ -10,32 +10,32 @@
                 <div class="input-group mb-3">
                    <label class="texto_casillero input-group-text" id="inputGroup-sizing-default" for="nombreE">Empresa:</label>
                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                   id="nombreE" name="nombreE" [(ngModel)]="nombreE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="SALÓN UNISEX">
+                   id="nombreE" name="nombreE" [(ngModel)]="nombreE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="SALÓN UNISEX" required="true">
                 </div>
                 <div class="input-group mb-3">
                    <label class="texto_casillero input-group-text" id="inputGroup-sizing-default" for="cargoE">Cargo:</label>
                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                   id="cargoE" name="cargoE" [(ngModel)]="cargoE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="Onwer">
+                   id="cargoE" name="cargoE" [(ngModel)]="cargoE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="Onwer" required="true">
                 </div>
                 <div class=" input-group mb-3">
                    <label class=" texto_casillero input-group-text" id="inputGroup-sizing-default" for="descripcionE">Función:</label>
                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                   id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="Administration">
+                   id="descripcionE" name="descripcionE" [(ngModel)]="descripcionE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="Administration" required="true">
                 </div>
                 <div class=" input-group mb-3">
                    <label class=" texto_casillero input-group-text" id="inputGroup-sizing-default" for="startE">Inicio:</label>
                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                   id="startE" name="startE" [(ngModel)]="startE" required onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5" placeholder="1978">
+                   id="startE" name="startE" [(ngModel)]="startE" required onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5" placeholder="1978" required="true">
                 </div>
                 <div class=" input-group mb-3">
                    <label class=" texto_casillero input-group-text" id="inputGroup-sizing-default" for="endE">Fin:</label>
                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                   id="endE" name="endE" [(ngModel)]="endE" required onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5" placeholder="2022">
+                   id="endE" name="endE" [(ngModel)]="endE" required onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="4" size="5" placeholder="2022" required="true">
                 </div>
                 <div class=" input-group mb-3">
                    <label class=" texto_casillero input-group-text" id="inputGroup-sizing-default" for="cityE">Ciudad:</label>
                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                   id="cityE" name="cityE" [(ngModel)]="cityE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú, ]/i.test(event.key)" placeholder="Tucumán, Argentina">
+                   id="cityE" name="cityE" [(ngModel)]="cityE" required onkeydown="return /[a-zA-ZñÑá-úÁ-Ú, ]/i.test(event.key)" placeholder="Tucumán, Argentina" required="true">
                 </div>
                 <div style="display: flex;justify-content: center;">
                   <button type="submit" class="btn btn-primary"

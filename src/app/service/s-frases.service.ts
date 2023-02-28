@@ -1,14 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Frases } from '../model/frases';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SFrasesService {
-  URL = 'https://portafolio-back-juliolazarte.onrender.com/frases/';
-  // URL = environment.URL + 'frases/';
+  // URL = 'https://portafolio-back-juliolazarte.onrender.com/frases/';
+  // URL = environment.production + 'frases/';
+  URL = environment.URL + 'frases/';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -16,6 +18,9 @@ export class SFrasesService {
     return this.httpClient.get<Frases[]>(this.URL + 'lista');
   }
 
+  public findAllUsuarioId(usuarioId: number): Observable<Frases>{
+    return this.httpClient.get<Frases>(this.URL + `usuarioId/${usuarioId}`);
+  }
   public detail(id: number): Observable<Frases>{
     return this.httpClient.get<Frases>(this.URL + `detail/${id}`);
   }
@@ -32,5 +37,8 @@ export class SFrasesService {
     return this.httpClient.delete(this.URL + `delete/${id}`);
   }
 
+  public deleteUsuarioId(usuarioId: number): Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `deleteUsuarioId/${usuarioId}`);
+  }
 
 }

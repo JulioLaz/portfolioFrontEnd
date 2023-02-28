@@ -2,7 +2,6 @@
   <div class="container">
     <div class="row">
         <div style="display: flex;justify-content: center;">
-            <!-- <form (ngSubmit)="onCreate()" novalidate  style="position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;"> -->
             <form (ngSubmit)="onCreate();spinerBtn = false" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
              <div >
               <button type="button" class="btn-close btn_position_home"  aria-label="Close" routerLink="/"></button>
@@ -11,7 +10,7 @@
                 <div class="input-group mb-3">
                    <label class="texto_casillero input-group-text" id="inputGroup-sizing-default" for="proyectos">Proyecto:</label>
                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-                   id="proyectos" name="proyectos" [(ngModel)]="proyectos" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="E-Commerce">
+                   id="proyectos" name="proyectos" [(ngModel)]="proyecto" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="E-Commerce">
                 </div>
                 <div class="input-group mb-3">
                    <label class="texto_casillero input-group-text" id="inputGroup-sizing-default" for="descripcion">Descripcion:</label>

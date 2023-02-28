@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Educacion } from '../model/educacion';
 
 @Injectable({
@@ -8,9 +9,9 @@ import { Educacion } from '../model/educacion';
 })
 export class SEducacionService {
 
-  URL = 'https://portafolio-back-juliolazarte.onrender.com/educacion/';
+  // URL = 'https://portafolio-back-juliolazarte.onrender.com/educacion/';
   // URL = 'http://localhost:8080/'+ 'educacion/';
-  // URL = environment.URL + 'educacion/';
+  URL = environment.URL + 'educacion/';
 
   constructor(private httpClient : HttpClient) { }
 
@@ -34,4 +35,13 @@ export class SEducacionService {
   public delete(id: number): Observable<any>{
     return this.httpClient.delete<any>(this.URL + `delete/${id}`);
   }
+
+  public deleteUsuarioId(usuarioId: number): Observable<any>{
+    return this.httpClient.delete<any>(this.URL + `deleteUsuarioId/${usuarioId}`);
+  }
+
+  public findAllUsuarioId(usuarioId: number): Observable<Educacion>{
+    return this.httpClient.get<Educacion>(this.URL + `usuarioId/${usuarioId}`);
+  }
 }
+// deleteUsuarioId

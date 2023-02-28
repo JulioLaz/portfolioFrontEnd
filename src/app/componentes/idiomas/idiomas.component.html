@@ -4,7 +4,7 @@
     <!-- boton en TITULO Add skills-->
     <div class="btn_position_new_title" *ngIf="isLogged">
       <button type="button" class=" btn btn-outline-primary btn_addFormancion" routerLink="/newidioma">
-        Add formacion
+        Add idioma
       </button>
     </div>
 
@@ -12,14 +12,18 @@
       <h5 class="h5Center">* % de conocimientos</h5>
     </h3>
 
-    <div class="card" style="background-color: transparent;border: none; ">
+    <div class="card" style="background-color: transparent;border: none; " >
       <div class="card-body">
         <blockquote class="blockquote mb-0 " style="background-color: transparent ">
           <div>
-            <div class="container-centrado row centrado">
-              <div class=" card bgCard" style=" margin: 8px .5rem;" *ngFor="let item of hardsskills">
-                <div class="card-body fsCalc">
+            <div class="container-centrado row centrado" >
+              <!-- <div class=" card bgCard" style=" margin: 8px .5rem;"> -->
+              <!-- <div class=" card bgCard" style=" margin: 8px .5rem;"> -->
+              <div class=" card bgCard" style=" margin: 8px .5rem;"  *ngFor="let item of idioma">
+
+                <div class="card-body fsCalc" >
                   <p class="card-text text-center fw-bolder"><img style="width: 2rem">
+                    <!-- <img style="width: 3rem;" src="{{urlImg}}" alt="url bandera"> -->
                     <img style="width: 3rem;" src="{{item.imgURL}}" alt="url bandera">
                      {{item.nombre}}
                   </p>
@@ -33,12 +37,13 @@
                     </div>
                   </div>
                 </div>
-
-                <div *ngIf="isLogged" style="display: flex; justify-content: space-between;">
+                <!-- *ngIf="item.usuario_id == usuarioId" -->
+                <div *ngIf="isLogged" style="display: flex; justify-content: space-between;" >
                   <!-- btn lapiz editar -->
                   <div>
                     <button style="margin: .3rem;" class="btn btn-outline-secondary btn-sm  btn_Edit_Card "
                       routerLink="/editidioma/{{item.id}}">
+                      <!-- routerLink="/editidioma/{{item.id}}"> -->
                       <svg id="imgedit" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 494.936 494.936"
                         style="enable-background:new 0 0 494.936 494.936;" xml:space="preserve">
                         <g>
@@ -66,6 +71,7 @@
                       <button type="button" class="dropdown-menu btn btn-danger"
                         style="width:auto; padding: 0.5rem;text-align: center;"
                         (click)="delete(item.id)">Eliminar</button>
+                        <!-- (click)="delete(item.id)">Eliminar</button> -->
                     </div>
                   </div>
                 </div>
@@ -78,7 +84,7 @@
                 <!-- Btn Edit in the card -->
                 <div *ngIf="isLogged" class="div_btn_edit_frase">
                   <button style="margin: .3rem;" class="btn btn-outline-secondary btn-sm  btn_Edit_Card "
-                    routerLink="/editfrases/{{id}}">
+                    routerLink="/editfrases/{{idFrases}}">
                     <svg id="imgedit" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 494.936 494.936"
                       style="enable-background:new 0 0 494.936 494.936;" xml:space="preserve">
                       <g>
@@ -92,7 +98,7 @@
                   </button>
                 </div>
 
-              <cite class="text" title="Source Title">"{{frase}}"</cite>
+              <cite class="text" title="Source Title">{{frase}}</cite>
               <cite class="autor"> - {{autor}}</cite>
             </footer>
           </div>

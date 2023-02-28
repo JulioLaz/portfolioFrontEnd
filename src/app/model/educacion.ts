@@ -8,8 +8,9 @@ export class Educacion {
    estadoE:string;
    cityE:string;
    imgE:string;
+   usuarioId:number;
 
-   constructor(schoolE: string,titleE: string, timeE: string, startE: string, endE:string,estadoE:string, cityE:string,imgE:string){
+   constructor(schoolE: string,titleE: string, timeE: string, startE: string, endE:string,estadoE:string, cityE:string,imgE:string,usuarioId:number){
       this.schoolE=schoolE;
        this.titleE = titleE;
        this.timeE=timeE;
@@ -18,5 +19,6 @@ export class Educacion {
        this.estadoE = estadoE;
        this.cityE=cityE;
        this.imgE=imgE;
+       this.usuarioId=usuarioId
    }
 }

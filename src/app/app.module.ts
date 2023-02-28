@@ -34,6 +34,12 @@ import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.compo
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 import { EditFrasesComponent } from './componentes/frases/edit-frases.component';
 import { EditAboutComponent } from './componentes/about/edit-about.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NewUsuarioComponent } from './componentes/about/new-usuario.component';
+import { DeleteUsuarioComponent } from './componentes/about/delete-usuario.component';
+
 
 @NgModule({
   declarations: [
@@ -63,6 +69,8 @@ import { EditAboutComponent } from './componentes/about/edit-about.component';
     EditProyectoComponent,
     EditFrasesComponent,
     EditAboutComponent,
+    NewUsuarioComponent,
+    DeleteUsuarioComponent,
 
 
   ],
@@ -75,6 +83,8 @@ import { EditAboutComponent } from './componentes/about/edit-about.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
   ],
   providers: [
     interceptorProvider

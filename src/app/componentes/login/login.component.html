@@ -16,11 +16,13 @@
           <div class="card shadow-2-strong" style="border-radius: 1rem">
             <div class="card-body p-5 text-center">
               <p class="mb-2">Ingrese su usuario y clave</p>
+              <button type="button" class="btn-close btn_position_home"  aria-label="Close" routerLink="/"></button>
+
               <hr class="my-4" />
 
               <form #f="ngForm" (ngSubmit)="onLogin();spinerBtn = false" novalidate>
                 <div class="form-outline mb-4">
-                  <label class="form-label" for="nombreUsuario">Usuario</label>
+                  <label class="form-label" for="nombreUsuario">Usuario o Email</label>
                   <input type="text" id="nombreUsuario" class="form-control form-control-lg" name="nombreUsuario"
                     [(ngModel)]="nombreUsuario" required />
                 </div>
@@ -31,9 +33,8 @@
                     [(ngModel)]="password" required />
                 </div>
 
-
                 <div style="display: flex;justify-content: center;">
-                  <button type="submit" class="btn btn-primary" ngClick="Submit">
+                  <button type="submit" style="width: 10rem;" class="btn btn-outline-primary btn-lg" ngClick="Submit">
                     <span *ngIf="spinerBtn">Login</span>
                     <div *ngIf="!spinerBtn">
                       <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>

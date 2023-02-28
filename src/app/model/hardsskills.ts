@@ -3,10 +3,12 @@ export class Hardsskills {
   nombre: string;
   porcentaje: string;
   imgURL:string;
+  usuarioId:number;
 
-  constructor(nombre:string, porcentaje: string, imgURL:string){
+  constructor(nombre:string, porcentaje: string, imgURL:string, usuarioId: number){
       this.nombre = nombre;
       this.porcentaje = porcentaje;
       this.imgURL=imgURL;
+      this.usuarioId=usuarioId;
   }
 }

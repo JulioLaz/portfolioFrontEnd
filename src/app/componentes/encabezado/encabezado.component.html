@@ -1,13 +1,14 @@
 <nav class=" bg-black ">
   <div class="navBarMy">
-    <div class="">
-      <a href="https://argentinaprograma.inti.gob.ar/" target="_blank" class="">
+      <div class="" style="display: flex; align-items: center;height: auto;">
+        <span class="text-white ms-5 text-uppercase fs-3 ">{{persona.nombre}} {{persona.apellido}} </span>
+      <!-- <a href="https://argentinaprograma.inti.gob.ar/" target="_blank" class="">
         <img src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1668983675/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2817%29.png/" alt="">
-      </a>
+      </a> -->
       </div>
-      <div class="yoProg centrar">
+      <!-- <div class="yoProg centrar">
         <p class="pulso">#Yo Programo</p>
-      </div>
+      </div> -->
       <div class="  cajaRedesLogin" style="display: flex;justify-content: end;margin:0 1.2rem;align-items: center;">
           <app-redes-sociales></app-redes-sociales>
           <button type="button" class="btn btn-outline-secondary  btn-sm"
@@ -16,6 +17,13 @@
           </button>
           <button type="button" class="btn btn-outline-secondary  btn-sm btnBg"  style="text-decoration:none; color:white ;" (click)="onLogOut()" *ngIf="isLogged">
             Cerrar sesión
+          </button>
+          <button type="button" class=" btn btn-outline-secondary btn-sm btnBg" style="text-decoration:none; color:white ;margin-left: .5rem;" (click)="newUser()" *ngIf="!isLogged">
+            New User
+          </button>
+          <button type="button" class=" btn btn-outline-secondary btn-sm btnBg" style="text-decoration:none; color:white ;margin-left: .5rem;" (click)="delUser()" *ngIf="isLogged && isLoggedDel">
+          <!-- <button type="button" class=" btn btn-outline-secondary btn-sm btnBg" style="text-decoration:none; color:white ;margin-left: .5rem;" (click)="delUser()"> -->
+            Del User
           </button>
           <app-dropdowns-header></app-dropdowns-header>
       </div>
