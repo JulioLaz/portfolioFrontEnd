@@ -38,13 +38,15 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* width: calc(100vw - 15px); */
 }
 
 .btnBg:hover{
   color: white;
-
 }
+.encabezado_nombre{
+  margin-top: 1rem;
+}
+
 @media screen and (min-width:850px){
       .navBarMy{
         align-items: center;
@@ -58,6 +60,9 @@ nav{
           max-width: 320px;
           margin: .5rem .5rem;
         }
+        .encabezado_nombre{
+          margin: 1rem 2rem;
+        }
 }
 .yoProg{
   font-size: 2rem;
@@ -68,4 +73,13 @@ nav{
 }
 #cajaRedesLogin{
 display: flex;
+justify-content: end;
+margin:1rem;align-items: center;
+/* flex-direction: column; */
+}
+
+.red:hover svg path,
+.red:hover svg polyline,
+.red:hover svg circle {
+  stroke: #89c5e9;
 }

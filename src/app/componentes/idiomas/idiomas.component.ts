@@ -1,16 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Frases } from 'src/app/model/frases';
 import { Idiomas } from 'src/app/model/idiomas';
 import { NuevoUsuario } from 'src/app/model/nuevo-usuario';
 import { AuthService } from 'src/app/service/auth.service';
+import { EnvioUsuarioIdService } from 'src/app/service/envio-usuario-id.service';
 import { SFrasesService } from 'src/app/service/s-frases.service';
 import { SIdiomasService } from 'src/app/service/s-idiomas.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-idiomas',
   templateUrl: './idiomas.component.html',
   styleUrls: ['./idiomas.component.css']
 })
+
 export class IdiomasComponent implements OnInit {
   idioma: Idiomas[] = [];
   allIdiomas: Idiomas[] = [];
@@ -34,9 +38,11 @@ export class IdiomasComponent implements OnInit {
 
   constructor(
     private sIdiomasService: SIdiomasService,
+    private router: Router,
     private sFrases: SFrasesService,
     private tokenService: TokenService,
     private authService: AuthService,
+    public envioUsuarioIdService: EnvioUsuarioIdService,
   ) { }
 
   isLogged = false;
@@ -44,8 +50,14 @@ export class IdiomasComponent implements OnInit {
   ngOnInit(): void {
     this.token();
     this.cargarUsuarioId();
+    this.envioUsuarioIdService.cargadorUsuarioId.subscribe(
+      data=>{
+        this.cargarIdioma(data.data);
+        this.cargarFraseUsuarioId(data.data);
+      }
+    )
   }
-  
+
   token() {
     if (this.tokenService.getToken()) {
       this.isLogged = true
@@ -70,7 +82,7 @@ export class IdiomasComponent implements OnInit {
             this.frase = x.frases;
             this.autor = x.autor;
             this.idFrases = x.id;
-            console.log("frases: " + x.frases + " autor: " + x.autor + " id: " + x.id + "  seccionID: " + x.seccionId + "  usuarioId: " + x.usuarioId)
+            // console.log("frases: " + x.frases + " autor: " + x.autor + " id: " + x.id + "  seccionID: " + x.seccionId + "  usuarioId: " + x.usuarioId)
           }
         })
       })
@@ -94,15 +106,42 @@ export class IdiomasComponent implements OnInit {
       })
   }
 
-  delete(id?: number) {
+  delete(nombres: string,id?: number) {
     if (id != undefined) {
-      this.sIdiomasService.delete(id).subscribe(
-        {
-          next: () => { this.cargarIdioma(this.usuarioId) },
-          error: () => { alert("No se pudo eliminar") },
-          complete: () => { console.info('complete') }
+      Swal.fire({
+        title: 'Quieres borrar '+ nombres + '?',
+        text: "Esto será irreversible! ",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, borrar '+nombres + '!'
+      })
+        .then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire(
+              'Borrado!',
+              nombres+ ' ha sido eliminado.',
+              'success'
+            )
+            this.sIdiomasService.delete(id).subscribe(
+              {
+                next: () => {
+                  { this.cargarIdioma(this.usuarioId) }
+                  this.router.navigate([''])
+                },
+                error: (e) => {
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'No se pudo eliminar!',
+                    footer: 'error: '+e
+                  })
+                },
+                complete: () => { console.log('complete') }
+              })
+          }
         })
     }
   }
-
 }

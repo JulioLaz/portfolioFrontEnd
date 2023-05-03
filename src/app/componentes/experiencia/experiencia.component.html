@@ -17,7 +17,7 @@
         </div>
 
         <div class="card_Row">
-          <div *ngFor="let item of expe" style="display: flex; align-items: center;height:55vh;margin: 1rem;">
+          <div *ngFor="let item of expe" style="display: flex; align-items: center;height:40vh">
             <div class="text-center" id="hiddenCard"
               style="padding: 5px;background-color:darkgrey ;border-radius: 5px;display: flex; justify-content: center;border: 1px solid black;height: inherit;">
               <!--targeta de datos  -->
@@ -63,7 +63,7 @@
                       <div>
                         <button type="button" class="dropdown-menu btn btn-danger"
                           style="width:auto; padding: 0.5rem;text-align: center;"
-                          (click)="delete(item.id)">Eliminar</button>
+                          (click)="delete(item.nombreE,item.id)">Eliminar</button>
                       </div>
                     </div>
                   </div>

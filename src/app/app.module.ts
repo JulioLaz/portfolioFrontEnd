@@ -39,8 +39,15 @@ import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NewUsuarioComponent } from './componentes/about/new-usuario.component';
 import { DeleteUsuarioComponent } from './componentes/about/delete-usuario.component';
-
-
+import { ChangePasswordComponent } from './componentes/changepassword/change-password.component';
+import { SendEmailComponent } from './componentes/changepassword/send-email.component';
+import { CursosComponent } from './componentes/cursos/cursos.component';
+import { NewCursoComponent } from './componentes/cursos/new-curso.component';
+import { EditCursoComponent } from './componentes/cursos/edit-curso.component';
+import { PdfComponent } from './componentes/pdf/pdf.component';
+import { ModalInicioComponent } from './componentes/modal-inicio/modal-inicio.component';
+// import { ColorPickerModule  } from 'ngx-color-picker';
+// import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,8 +78,13 @@ import { DeleteUsuarioComponent } from './componentes/about/delete-usuario.compo
     EditAboutComponent,
     NewUsuarioComponent,
     DeleteUsuarioComponent,
-
-
+    ChangePasswordComponent,
+    SendEmailComponent,
+    CursosComponent,
+    NewCursoComponent,
+    EditCursoComponent,
+    PdfComponent,
+    ModalInicioComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,12 +95,17 @@ import { DeleteUsuarioComponent } from './componentes/about/delete-usuario.compo
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
+    
+    // ColorPickerModule,
+    // NgxColorPickerModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
+
   ],
   providers: [
     interceptorProvider
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  // schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

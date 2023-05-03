@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { Frases } from 'src/app/model/frases';
 import { NuevoUsuario } from 'src/app/model/nuevo-usuario';
 import { AuthService } from 'src/app/service/auth.service';
+import { EnvioUsuarioIdService } from 'src/app/service/envio-usuario-id.service';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { SFrasesService } from 'src/app/service/s-frases.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
@@ -29,6 +32,9 @@ export class ExperienciaComponent implements OnInit {
     private tokenService: TokenService,
     private sFrases: SFrasesService,
     private authService: AuthService,
+    public envioUsuarioIdService: EnvioUsuarioIdService,
+    private router: Router,
+
   ) { }
 
   isLogged = false;
@@ -36,6 +42,12 @@ export class ExperienciaComponent implements OnInit {
   ngOnInit(): void {
     this.token();
     this.cargarUsuarioId();
+    this.envioUsuarioIdService.cargadorUsuarioId.subscribe(
+      data=>{
+        this.cargarExperiencia(data.data);
+        this.cargarFraseUsuarioId(data.data);
+      }
+    )
   }
 
   token() {
@@ -62,7 +74,6 @@ export class ExperienciaComponent implements OnInit {
             this.frase = x.frases;
             this.autor = x.autor;
             this.idFrases = x.id;
-            console.log("frases: "+x.frases+" autor: "+x.autor+ " id: "+ x.id+"  seccionID: "+ x.seccionId+"  usuarioId: "+x.usuarioId)
           }
         })
       })
@@ -86,28 +97,43 @@ export class ExperienciaComponent implements OnInit {
       })
   }
 
-  delete(id?: number) {
+  delete(nombres: string,id?: number) {
     if (id != undefined) {
-      this.sExperienciaService.delete(id).subscribe({
-        next: () => { this.cargarExperiencia(this.usuarioId) },
-        error: () => { alert("No se pudo borrar la experiencia") },
-        complete: () => { console.info('complete') }
+      Swal.fire({
+        title: 'Quieres borrar '+ nombres + '?',
+        text: "Esto será irreversible! ",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
       })
+        .then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire(
+              'Borrado!',
+              nombres+ ' ha sido eliminado.',
+              'success'
+            )
+            this.sExperienciaService.delete(id).subscribe(
+              {
+                next: () => {
+                  { this.cargarExperiencia(this.usuarioId) }
+                  this.router.navigate([''])
+                },
+                error: (e) => {
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'No se pudo eliminar!',
+                    footer: 'error: '+e
+                  })
+                },
+                complete: () => { console.log('complete') }
+              })
+          }
+        })
     }
-  }
-
-
-
-
-  //SIN USO
-  cargarExperienciaXXX(): void {
-    this.sExperienciaService.lista().subscribe(data => { this.expe = data })
-  }
-  cargarFrase(): void {
-    this.sFrases.detail(this.id).subscribe((data) => {
-      this.frase = data.frases;
-      this.autor = data.autor;
-    })
   }
 }
 

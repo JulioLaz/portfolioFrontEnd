@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { DeleteUsuarioComponent } from './componentes/about/delete-usuario.component';
 import { EditAboutComponent } from './componentes/about/edit-about.component';
 import { NewUsuarioComponent } from './componentes/about/new-usuario.component';
+import { ChangePasswordComponent } from './componentes/changepassword/change-password.component';
+import { SendEmailComponent } from './componentes/changepassword/send-email.component';
 import { EditEducacionComponent } from './componentes/educacion/edit-educacion.component';
 import { NewEducacionComponent } from './componentes/educacion/new-educacion.component';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
@@ -18,6 +20,9 @@ import { LoginComponent } from './componentes/login/login.component';
 import { EditProyectoComponent } from './componentes/proyectos/edit-proyecto.component';
 import { NewProyectoComponent } from './componentes/proyectos/new-proyecto.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { EditCursoComponent } from './componentes/cursos/edit-curso.component';
+import { NewCursoComponent } from './componentes/cursos/new-curso.component';
+import { ModalInicioComponent } from './componentes/modal-inicio/modal-inicio.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +30,7 @@ const routes: Routes = [
   { path: 'nuevaexp', component: NewExperienciaComponent },
   { path: 'editexp/:id', component: EditExperienciaComponent },
   { path: 'experiencia', component: ExperienciaComponent },
+  { path: 'exp/:id', component: ExperienciaComponent },
   { path: 'nuevaedu', component: NewEducacionComponent},
   { path: 'editedu/:id', component: EditEducacionComponent},
   { path: 'newskill', component: NewHardSoftSkillComponent},
@@ -38,7 +44,11 @@ const routes: Routes = [
   { path: 'editabout/:id', component: EditAboutComponent},
   { path: 'nuevousuario', component: NewUsuarioComponent},
   { path: 'delusuario', component: DeleteUsuarioComponent},
-
+  { path: 'sendemail', component: SendEmailComponent},
+  { path: 'email/changepassword/:tokenPassword', component: ChangePasswordComponent},
+  { path: 'editCurso/:id', component: EditCursoComponent},
+  { path: 'newCurso', component: NewCursoComponent},
+  { path: 'modal', component: ModalInicioComponent},
 ];
 
 @NgModule({

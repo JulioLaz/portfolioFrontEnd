@@ -1,12 +1,15 @@
 <body>
   <div class="container" style="display: flex;justify-content: center;width: 60vw;position: relative;top: 2rem;">
       <div class="list-group" style="width:inherit;">
-        <button type="button" class="list-group-item active" style="display: flex; justify-content: space-between;">
+        <div type="text" class="list-group-item active" style="display: flex; justify-content: space-between;">
           Delete usuario
           <button type="button" class="btn-close btn_position_hom" aria-label="Close" routerLink="/"></button>
-        </button>
+        </div>
         <div *ngFor="let item of usuario">
-          <button type="button" class="list-group-item list-group-item-action" role="button" data-bs-toggle="dropdown"
+          <button type="button" class="list-group-item list-group-item-action"
+          *ngIf="item.id!=1"
+          role="button"
+          data-bs-toggle="dropdown"
             aria-expanded="false">
             <svg class="btnBgDelete btnWidth" id="imgdelete" x="0px" y="0px" width="calc(.8rem + .5vw)" viewBox="0 0 459 459"
               style="enable-background:new 0 0 459 459;" xml:space="preserve">
@@ -21,12 +24,11 @@
             <button type="button" class="dropdown-menu btn btn-danger"
               style="width:auto; padding: 0.5rem;text-align: center;" (click)="delete(item.id)">
               Eliminar - {{item.id}} - {{item.nombre}}
-
             </button>
-
-
           </div>
         </div>
+        <div type="text" class="list-group-item active" style="text-align: center;">selecciona el usuario para eliminar</div>
       </div>
+
     </div>
   </body>

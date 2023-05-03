@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { LoginUsuario } from 'src/app/model/login-usuario';
 import { Persona } from 'src/app/model/persona.model';
 import { AuthService } from 'src/app/service/auth.service';
@@ -6,14 +6,20 @@ import { PersonaService } from 'src/app/service/persona.service';
 import { TokenService } from 'src/app/service/token.service';
 import { NuevoUsuario } from 'src/app/model/nuevo-usuario';
 import { Rol } from 'src/app/model/rol';
-import { SUsuarioService } from 'src/app/service/s-usuario.service';
 import { Usuario } from 'src/app/model/usuario';
-import Swal from 'sweetalert2';
+import { EnvioUsuarioIdService } from 'src/app/service/envio-usuario-id.service';
+
+import pdfMake from 'pdfmake/build/pdfmake';
+import pdfFonts from 'pdfmake/build/vfs_fonts';
+import { HttpClient } from '@angular/common/http';
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
+
 export class AboutComponent implements OnInit {
   persona: Persona = new Persona(null, "", "", "", "", "", "", "", "");
   nuevoUsuario: NuevoUsuario[] = [];
@@ -23,6 +29,8 @@ export class AboutComponent implements OnInit {
   id: number;
   rol: Rol[] = [];
   userId: Usuario[] = [];
+  img:string;
+  imgExist:boolean=true;
 
   //////
   isLogged = false;
@@ -34,21 +42,31 @@ export class AboutComponent implements OnInit {
   errMsj!: string;
   spinerBtn: boolean = true;
   /////
+  imagen_fondo:string='/assets/fondo_celeste.png';
+  imagen_user:string='/assets/julio.png';
+//////
 
   constructor(
     private tokenService: TokenService,
     public personaService: PersonaService,
     private authService: AuthService,
-    private usuarioService: SUsuarioService,
+    public envioUsuarioIdService: EnvioUsuarioIdService,
+    private http: HttpClient
   ) { }
 
 
   ngOnInit(): void {
     this.token();
     this.id = 1;
-    this.cargarPersona();
+    this.cargarPersona(1);
     this.cargarId();
     this.cargarUsuario();
+    this.envioUsuarioIdService.cargadorUsuarioId.subscribe(
+      data=>{
+        this.cargarPersona(data.data);
+        console.log("RECIBEINDO DATA DESDE ABOUT: "+data.data)
+      }
+      )
   }
 
   token() {
@@ -79,18 +97,39 @@ export class AboutComponent implements OnInit {
           if (nuevo.nombreUsuario == this.tokenService.getUserName()) {
             console.log(" desde if: " + nuevo.nombreUsuario + " -  id: " + nuevo.id);
             this.id = nuevo.id;
-            this.cargarPersona();
+            this.cargarPersona(this.id);
           }
         })
       }
     )
   };
 
-  cargarPersona(): void {
-    this.personaService.detail(this.id).subscribe((data) => {
+  cargarPersona(id: number): void {
+    this.personaService.detail(id).subscribe((data) => {
       this.persona = data;
+      this.img=(JSON.stringify(this.persona.img));
+      if((JSON.stringify(this.persona.img)).length<3){
+        this.img="../../../assets/julio.png";
+        this.imgExist=false;
+      }else{
+        this.img=this.persona.img;
+        // this.downloadImage(this.img)
+        // console.log('imagen  url'+ this.img);
+      }
     })
   }
+
+  downloadImage(imagenn) {
+    const imageUrl = imagenn;
+
+    this.http.get(imageUrl, { responseType: 'blob' }).subscribe((blob: Blob) => {
+      const downloadLink = document.createElement('a');
+      downloadLink.href = window.URL.createObjectURL(blob);
+      downloadLink.download = 'imagen.jpg';
+      downloadLink.click();
+    });
+  }
+
 
   cargarUsuario(): void {
     this.authService.lista().subscribe((data) => {
@@ -114,4 +153,5 @@ export class AboutComponent implements OnInit {
       }
     )
   }
+
 }

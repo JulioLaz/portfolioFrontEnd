@@ -1,0 +1,44 @@
+<body>
+  <div class="container">
+    <div class="row">
+        <div style="display: flex;justify-content: center;">
+            <form (ngSubmit)="onCreate();spinerBtn = false" novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 5rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
+
+             <div >
+              <button type="button" class="btn-close btn_position_home"  aria-label="Close" routerLink="/"></button>
+                <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding:.5rem 0;">NUEVO CURSO</h2>
+             </div>
+
+                <div class="input-group mb-3">
+                   <label class="texto_casillero input-group-text" id="inputGroup-sizing-default" for="cursos">Curso:</label>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="cursos" name="cursos" [(ngModel)]="curso" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="E-Commerce">
+                </div>
+
+                <div class="input-group mb-3">
+                   <label class="texto_casillero input-group-text" id="inputGroup-sizing-default" for="descripcion">Descripcion:</label>
+                   <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                   id="descripcion" name="descripcion" [(ngModel)]="descripcion" required onkeydown="return /[0-9a-zA-ZñÑá-úÁ-Ú ]/i.test(event.key)" placeholder="Tienda de Frutas">
+                </div>
+
+                <div class=" input-group mb-3">
+                  <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >URL Imagen</span>
+                  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                  id="imgCurso" name="imgCurso" [(ngModel)]="imgCurso" placeholder="https://app.aluracursos.com/user/julioalazarte/course/arquitectura-css-descomplicando-problemas/certificate" required >
+               </div>
+
+                <div style="display: flex;justify-content: center;">
+                  <button type="submit" class="btn btn-primary"
+                    ngClick="Submit"                 >
+                    <span *ngIf="spinerBtn">Guardar cambios</span>
+                    <div *ngIf="!spinerBtn">
+                      <span  class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    enviando...
+                      </div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+  </body>

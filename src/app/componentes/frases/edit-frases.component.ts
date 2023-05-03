@@ -26,7 +26,7 @@ export class EditFrasesComponent implements OnInit {
 
   constructor(
     private sFrasesService: SFrasesService,
-    private sFrases: SFrasesService,
+    // private sFrases: SFrasesService,
     private router: Router,
     private authService: AuthService,
     private tokenService: TokenService,

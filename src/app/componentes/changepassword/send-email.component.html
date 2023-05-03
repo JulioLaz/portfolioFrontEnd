@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>recuperar contraseña</title>
+</head>
+
+<body>
+  <section class="vh-100"
+  style="background-image: url(../../../assets/fondo.jpg);  background-size: cover;"
+  >
+  <!-- <section class="vh-100" style="background-color: #508bfc"> -->
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card shadow-2-strong" style="border-radius: 1rem">
+            <div class="card-body p-5 text-center">
+              <p class="mb-2 fs-3">RECUPERA TU CONTRASEÑA</p>
+              <button type="button" class="btn-close btn_position_home"  aria-label="Close" routerLink="/"></button>
+
+              <hr class="my-4" />
+
+              <form #f="ngForm" (ngSubmit)="onSendEmail();spinerBtn = false" novalidate>
+                <div class="form-outline mb-4">
+                  <!-- <label class="form-label" for="mailTo">Usuario o Email</label> -->
+                  <input type="text" id="mailTo" class="form-control form-control-lg" name="mailTo"
+                    [(ngModel)]="mailTo" placeholder="Ingresa tu usuario o email" style="cursor: pointer;" required />
+                </div>
+
+                <div style="display: flex;justify-content: center;">
+                  <button type="submit" style="width: 100%;" class="btn btn-outline-primary btn-lg" ngClick="Submit">
+                    <div style="display: flex;justify-content: space-evenly;">
+                      <div class="spinner-grow" *ngIf="spinerBtn"></div>
+                      <span class="sr-only">Haz click...</span>
+                      <span *ngIf="spinerBtn"> y te enviaremos un correo</span>
+                      <div *ngIf="!spinerBtn">
+                        <span class="spinner-border" role="status" aria-hidden="true"></span>
+                        Enviando correo...
+                      </div>
+                    </div>
+                  </button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+

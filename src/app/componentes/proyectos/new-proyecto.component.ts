@@ -5,12 +5,14 @@ import { Proyectos } from 'src/app/model/proyectos';
 import { AuthService } from 'src/app/service/auth.service';
 import { SProyectosService } from 'src/app/service/s-proyectos.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-new-proyecto',
   templateUrl: './new-proyecto.component.html',
   styleUrls: ['./new-proyecto.component.css']
 })
+
 export class NewProyectoComponent implements OnInit {
   proyecto: string="";
   descripcion: string="";
@@ -39,9 +41,26 @@ export class NewProyectoComponent implements OnInit {
   onCreate(): void{
     const proyectos = new Proyectos(this.proyecto, this.descripcion,this.fecha,this.imgProyecto,this.imgLenguajes,this.urlProyecto,this.usuarioId);
     this.sProyectosService.save(proyectos).subscribe({
-      next: () =>{alert("Proyecto añadido correctamente"), this.router.navigate([''])},
-      error: () =>{alert("falló al crear proyecto"),this.router.navigate([''])},
-      complete: () => console.info('complete proyecto')}
+      next: () =>{
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Proyecto creado correctamente',
+          showConfirmButton: false,
+          timer: 1500
+        }),
+        this.router.navigate([''])},
+      error: (e) =>{
+        console.log("Falló"),
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'No se pudo eliminar!',
+          footer: 'error: ' + e
+      }),
+        this.router.navigate([''])
+      },
+      complete: () => console.log('complete proyecto')}
     )
   }
 

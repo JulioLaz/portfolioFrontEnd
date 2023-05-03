@@ -35,7 +35,8 @@ cargarEducacion(){
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.sEducacion.update(id, this.educacion).subscribe({
-     next:()=>{console.log("Educacion editada: "+this.educacion.schoolE ),
+     next:()=>{
+      console.log("Educacion editada: "+this.educacion.schoolE ),
      Swal.fire({
       position: 'center',
       icon: 'success',

@@ -6,7 +6,6 @@ import { Storage, ref, uploadBytes, list, getDownloadURL, deleteObject, getStora
 })
 export class ImgService {
   url: string = "";
-  // isSpiner:boolean;
   constructor(
     private storage: Storage
   ) { }
@@ -14,9 +13,9 @@ export class ImgService {
   public uploadImg($event: any, name: string) {
 
     const file: File = $event.target.files[0];
-    console.log("desde img.service: " + file);
+    // console.log("desde img.service: " + file);
     const imgRef = ref(this.storage, `imagen/` + name);
-    console.log("desde img.service: " + name);
+    // console.log("desde img.service: " + name);
     console.log("desde img.service: " + imgRef);
     uploadBytes(imgRef, file)
     .then(_response => { this.getImagen(name) })
@@ -26,18 +25,10 @@ export class ImgService {
   async getImagen(name: string) {
     const imagenesRef = ref(this.storage, `imagen/` + name)
     console.log("desde img.service: " + imagenesRef);
-    // const imagenesRef = ref(this.storage, 'imagen')
-    // const imagenesRef = ref(this.storage, 'imagen')
 
     ref(imagenesRef)
-    // list(imagenesRef)
-      // .then(async response => {
-        // for (let item of response.items) {
           this.url = await getDownloadURL(imagenesRef);
-          // this.url = await getDownloadURL(item);
-          console.log("LA url es: " + this.url)
-        // }
-  //     })
-  //     .catch(error => console.log(error))
-  }
-}
+        }
+      }
+
+      // console.log("LA url es: " + this.url)

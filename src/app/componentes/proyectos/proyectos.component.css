@@ -9,7 +9,8 @@
   display: flex;
   flex-direction: column;
   color: antiquewhite;
-  background: rgba(60, 60, 60, 0.7);
+  background: rgb(233, 229, 229);
+  /* background: rgba(60, 60, 60, 0.7); */
   width: 350px;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -19,7 +20,9 @@
 }
 
 .bgCard:hover {
-  background: rgba(141, 131, 131, 0.6);
+  background: rgba(13,110,253,.25);
+  /* background: #86b7fe; */
+  /* background: rgba(141, 131, 131, 0.6); */
   transition: 0.5s
 }
 
@@ -76,11 +79,6 @@
   padding: .5rem;
   font-size: calc(.6rem + 1vw);
   font-style: normal;
-}
-
-.txtTituloProyecto {
-  font-size: calc(.6rem + .6vw);
-  padding: 1rem 0;
 }
 
 .txtdecripcionProyecto {

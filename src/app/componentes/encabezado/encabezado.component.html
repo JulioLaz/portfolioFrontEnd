@@ -1,32 +1,66 @@
 <nav class=" bg-black ">
   <div class="navBarMy">
-      <div class="" style="display: flex; align-items: center;height: auto;">
-        <span class="text-white ms-5 text-uppercase fs-3 ">{{persona.nombre}} {{persona.apellido}} </span>
-      <!-- <a href="https://argentinaprograma.inti.gob.ar/" target="_blank" class="">
-        <img src="https://argentinaprograma.inti.gob.ar/pluginfile.php/1/theme_moove/logo/1668983675/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%2817%29.png/" alt="">
-      </a> -->
-      </div>
-      <!-- <div class="yoProg centrar">
-        <p class="pulso">#Yo Programo</p>
-      </div> -->
-      <div class="  cajaRedesLogin" style="display: flex;justify-content: end;margin:0 1.2rem;align-items: center;">
-          <app-redes-sociales></app-redes-sociales>
-          <button type="button" class="btn btn-outline-secondary  btn-sm"
-          style="text-decoration:none; color:white" (click)="login()" *ngIf="!isLogged">
-            Login
-          </button>
-          <button type="button" class="btn btn-outline-secondary  btn-sm btnBg"  style="text-decoration:none; color:white ;" (click)="onLogOut()" *ngIf="isLogged">
-            Cerrar sesión
-          </button>
-          <button type="button" class=" btn btn-outline-secondary btn-sm btnBg" style="text-decoration:none; color:white ;margin-left: .5rem;" (click)="newUser()" *ngIf="!isLogged">
-            New User
-          </button>
-          <button type="button" class=" btn btn-outline-secondary btn-sm btnBg" style="text-decoration:none; color:white ;margin-left: .5rem;" (click)="delUser()" *ngIf="isLogged && isLoggedDel">
-          <!-- <button type="button" class=" btn btn-outline-secondary btn-sm btnBg" style="text-decoration:none; color:white ;margin-left: .5rem;" (click)="delUser()"> -->
-            Del User
-          </button>
-          <app-dropdowns-header></app-dropdowns-header>
-      </div>
+
+    <div class="encabezado_nombre" style="display: flex; align-items: center;height: auto">
+      <span class="text-white ms-5 text-uppercase fs-3 " style="margin: 0 !important;">Curriculum Vitae</span>
+    </div>
+
+<!-- Selector de usuario -->
+    <div class="dropdown" *ngIf="!isLogged">
+      <button class="btn btn-outline-secondary dropdown-toggle btn-lg" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" style="color: aliceblue;">{{valorPorDefecto}}</button>
+      <ul class="dropdown-menu dropdown-menu-dark"
+        style="border: 1px solid white; text-align: center; background-color: rgba(30, 28, 28, 0.8);">
+        <li *ngFor="let item of personas">
+          <a class="dropdown-item" (click)="onValue_new(item.id, item.nombre, item.apellido);" href="#">
+            {{item.nombre}} {{item.apellido}}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+<!-- nombre del usuario logeado -->
+    <div class="encabezado_nombre" style="display: flex; align-items: center;height: auto" *ngIf="isLogged">
+      <span class="text-white ms-5 fs-3 " style="margin-left:0rem !important;">{{persona.nombre}} {{persona.apellido}}
+      </span>
+    </div>
+
+
+    <div id="cajaRedesLogin">
+
+      <app-redes-sociales *ngIf="redes_up"></app-redes-sociales>
+
+      <!-- correo -->
+      <span class='red'
+        style="margin-right: 15px;" *ngIf="correo_up"
+        data-toggle="tooltip" data-placement="top" title="Email al usuario"
+        >
+        <a href="mailto:{{correo}}" target="_blank" rel="noopener">
+         <svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" width="30px" height="30px" fill="#0b0f7f"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#eaebe5;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} .st1{fill:none;stroke:#eaebe5;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:10;} </style> <polyline class="st0" points="3,8 16,16 29,8 "></polyline> <polyline class="st0" points="27,22 23,26 21,24 "></polyline> <circle class="st0" cx="24" cy="24" r="7"></circle> <path class="st0" d="M17.1,25H7c-2.2,0-4-1.8-4-4V7c0-2.2,1.8-4,4-4h18c2.2,0,4,1.8,4,4v12.1"></path> </g></svg>
+       </a>
+       </span>
+
+
+      <button type="button" class="btn btn-outline-secondary  btn-sm" style="text-decoration:none; color:white"
+        (click)="login()" *ngIf="!isLogged">
+        Login
+      </button>
+      <button type="button" class="btn btn-outline-secondary  btn-sm btnBg" style="text-decoration:none; color:white ;"
+        (click)="onLogOut()" *ngIf="isLogged">
+        Cerrar sesión
+      </button>
+      <button type="button" class=" btn btn-outline-secondary btn-sm btnBg"
+        style="text-decoration:none; color:white ;margin-left: .5rem;" (click)="delUser()"
+        *ngIf="isLogged && isLoggedDel">
+        Del User
+      </button>
+
+      <app-pdf  [valor_redes]="correo_up" [imagen_users]="imagen_user" *ngIf="!isLogged"></app-pdf>
+
+      <!-- Navegador en pagina -->
+      <app-dropdowns-header></app-dropdowns-header>
+
+
+    </div>
   </div>
 </nav>
-

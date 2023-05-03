@@ -6,9 +6,7 @@ export class Frases {
   usuarioId:number;
 
 
-  constructor(autor:string, frases: string,usuarioId:number,seccionId:number
-
-    ){
+  constructor(autor:string, frases: string,usuarioId:number,seccionId:number){
       this.autor = autor;
       this.frases = frases;
       this.seccionId = seccionId;

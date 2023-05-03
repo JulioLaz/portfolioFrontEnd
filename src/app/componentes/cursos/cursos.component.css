@@ -1,0 +1,162 @@
+.bgCardFondo {
+  background-color: rgba(217, 217, 186, 0.9);
+  color: antiquewhite;
+  border: 1px solid grey;
+  margin: 0 1rem;
+}
+
+.bgCard {
+  display: flex;
+  flex-direction: column;
+  color: antiquewhite;
+  background: rgb(233, 229, 229);
+  width:100%;
+  margin-bottom: 1rem 0;
+  /* width: 250px; */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border: 1px solid grey;
+  padding: 0;
+
+}
+
+.bgCard:hover {
+  background: rgba(13,110,253,.25);
+  transition: 0.5s
+}
+
+.centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardImg {
+  display: flex;
+  margin: .5rem .5rem;
+  width: auto;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: .5rem;
+  border-radius: .5rem;
+  align-items: center;
+  background-color: rgba(22, 22, 22, 0.9);
+}
+
+.imagen {
+  object-fit: fill;
+  width: 100%;
+  height: 70%;
+  border-radius: .5rem;
+}
+
+.h3Center {
+  font-size: calc(1rem + 1vw);
+  text-align: center;
+  color: black;
+  font-weight: 500;
+  padding-bottom: 8px;
+  border-bottom: 1px solid black;
+  margin: 1rem 0;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  font-size: calc(.8rem + .6vw);
+  text-align: center;
+  color: black;
+  margin-top: 1rem;
+  padding-top: .5rem;
+}
+
+.autor {
+  color: rgba(19, 18, 18);
+  display: flex;
+  justify-content: flex-end;
+  padding: .5rem;
+  font-size: calc(.6rem + 1vw);
+  font-style: normal;
+}
+
+.txtdecripcionProyecto {
+  font-size: calc(.6rem + .5vw);
+}
+
+.cajaTextos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: .5rem;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.btn_delete_position_Title {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+}
+
+.btn_position_edit_title {
+  position: absolute;
+  top: .5rem;
+  right: 3rem;
+}
+
+.btnBgDelete {
+  fill: grey;
+  background-color: rgba(0, 0, 0, .6);
+  background: #000;
+}
+
+.btnBgDelete:hover {
+  fill: red;
+  background-color: rgba(65, 46, 46, 0.9);
+  background: grey;
+}
+
+.btnBgEdit {
+  fill: white;
+  background: none;
+}
+
+.btnBgEdit:hover {
+  fill: blue;
+  background-color: darkgrey;
+}
+
+.btn_Edit_Card {
+  fill: #0d6efd;
+  color: #0d6efd;
+}
+
+.btn_Edit_Card:hover {
+  background: rgb(234, 232, 232);
+}
+
+.btn_Delete_card {
+  fill: red;
+  color: red;
+}
+
+.btn_Delete_card:hover {
+  background: white;
+}
+
+.btn_position_new_title {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.div_btn_edit_frase {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px;
+}
+@media screen and (min-width:850px) {
+  .bgCard {
+width:23%;
+margin: 1.8rem 1rem;
+  }
+}

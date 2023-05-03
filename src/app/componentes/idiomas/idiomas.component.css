@@ -10,7 +10,10 @@
   background: rgba(60, 60, 60, 0.5);
   flex-wrap: nowrap;
   justify-content: space-evenly;
+  margin-bottom: 1rem;
   border: 1px solid grey;
+  width: 100%;
+  /* height: 6.4rem; */
 
 }
 
@@ -62,7 +65,7 @@
 .contenedor {
   display: flex;
   width: 80vw;
-  height: calc(3rem + 1vw);
+  height: calc(1.9rem + 1vw);
   border: 1px solid blue;
   border-radius: 5px;
 }
@@ -130,4 +133,10 @@
   display: flex;
   justify-content: flex-end;
   margin: 8px;
+}
+@media screen and (min-width:850px) {
+  .bgCard {
+width:46%;
+margin: 1.8rem 1rem;
+  }
 }

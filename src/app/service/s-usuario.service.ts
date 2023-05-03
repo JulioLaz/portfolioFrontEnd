@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { NuevoUsuario } from '../model/nuevo-usuario';
+import { Usuario } from '../model/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ export class SUsuarioService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public lista(): Observable<NuevoUsuario[]>{
-    return this.httpClient.get<NuevoUsuario[]>(this.URL + 'lista');
+  public lista(): Observable<Usuario[]>{
+    return this.httpClient.get<Usuario[]>(this.URL + 'lista');
   }
 
   public detail(id: number): Observable<NuevoUsuario>{

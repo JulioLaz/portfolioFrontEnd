@@ -25,7 +25,6 @@ login:any;
     private tokenService: TokenService,
     private authService: AuthService,
     private router: Router,
-    // private afAuth: AngularFireAuth,
     ) { }
 
   ngOnInit(): void {
@@ -50,8 +49,8 @@ login:any;
         this.router.navigate(['']),
         this.login =  this.loginUsuario.password,
         this.nombreUsuario = data.nombreUsuario,
-        console.log("token: "+ JSON.stringify(data)),
-        console.log("token data.authorities: "+ JSON.stringify(data.authorities))
+        console.log("token: "+ JSON.stringify(data))
+        // console.log("token data.authorities: "+ JSON.stringify(data.authorities))
       },
 
     error: (err) => {
@@ -76,9 +75,15 @@ login:any;
         })
       }
     this.spinerBtn=true;
-
-      // location.reload();
     }
     })
+  }
+
+  newUser():void{
+    this.router.navigateByUrl('/nuevousuario');
+  }
+
+  sendEmail():void{
+    this.router.navigateByUrl('/sendemail');
   }
 }

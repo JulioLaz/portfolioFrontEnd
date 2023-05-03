@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Cursos } from 'src/app/model/cursos';
 import { Educacion } from 'src/app/model/educacion';
 import { Experiencia } from 'src/app/model/experiencia';
 import { Frases } from 'src/app/model/frases';
@@ -13,6 +14,7 @@ import { Roles } from 'src/app/model/roles';
 import { Usuario } from 'src/app/model/usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { PersonaService } from 'src/app/service/persona.service';
+import { SCursosService } from 'src/app/service/s-cursos.service';
 import { SEducacionService } from 'src/app/service/s-educacion.service';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { SFrasesService } from 'src/app/service/s-frases.service';
@@ -47,7 +49,7 @@ export class NewUsuarioComponent implements OnInit {
 
   //persona
   apellido: string = "Developer";
-  img: string = "../assets/julio.png";
+  img: string = "../assets/img_jovenes.png";
   title: string = "Mi titulo es...";
   city: string = "San Miguel de...";
   edad: string = "45 años";
@@ -55,9 +57,9 @@ export class NewUsuarioComponent implements OnInit {
   about: string = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsa vero, cupiditate at delectus debitis! Corrupti, deserunt voluptas placeat quos illo, consequatur doloremque provident accusamus earum commodi expedita error sapiente.";
 
   //frases
-  secciones: number[] = [1, 2, 3, 4, 5];
-  autor: string = "Handlet";
-  frase: string = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt ipsa vero, cupiditate at delectus debitis! Corrupti, deserunt voluptas placeat quos illo, consequatur doloremque provident accusamus earum commodi expedita error sapiente.";
+  secciones: number[] = [1, 2, 3, 4, 5, 6];
+  autor: string = "Ludwig Wittgenstein";
+  frase: string = "Los límites de mi idioma son los límites de mi mundo";
 
   //Educacion
   schoolE: string = "U. Harvard";
@@ -95,6 +97,11 @@ export class NewUsuarioComponent implements OnInit {
   imgLenguajesP: string = "https://i.imgur.com/MSvsCoR.png";
   urlProyecto: string = "https://juliolaz.github.io/juego-ahorcadito/";
 
+  //Cursos
+  curso : string='Alura';
+  descripcion : string='Bootcamp';
+  imgCurso: string='https://media.licdn.com/dms/image/C4D22AQE_il7NsVl5Kg/feedshare-shrink_1280/0/1676116177300?e=1684972800&v=beta&t=-8xXJq7yxI727oxSsVWxDcWQVJSIsw3H4AGaqxNDG5A';
+
   //onLogin
   loginUsuario!: LoginUsuario;
   isLogged = false;
@@ -113,6 +120,7 @@ export class NewUsuarioComponent implements OnInit {
     private sHardSSkillsService: SHardSSkillsService,
     private sIdiomasService: SIdiomasService,
     private sProyectosService: SProyectosService,
+    private sCursos: SCursosService,
   ) { }
 
   ngOnInit(): void {
@@ -120,7 +128,6 @@ export class NewUsuarioComponent implements OnInit {
   }
 
   onCreateUser(): void {
-    // const nombre:string=this.nombreUsuario;
     const usuario = new Usuario(this.nombre, this.nameUsuario, this.email, this.password, this.roles);
     this.authService.nuevoUser(usuario).subscribe(
       {
@@ -156,7 +163,6 @@ export class NewUsuarioComponent implements OnInit {
 
   onCreateFrasesSeccion(): void {
     this.secciones.forEach(i => {
-      i
       const fra = new Frases(this.autor, this.frase, this.id, i);
       this.sFrases.save(fra).subscribe({
         next: () => { console.log("frase añadida numero: " + i) },
@@ -210,8 +216,16 @@ export class NewUsuarioComponent implements OnInit {
       next: () => { console.log("Proyecto añadido correctamente") },
       error: () => { console.log("falló al crear proyecto") },
       complete: () => console.info('complete proyecto')
-    }
-    )
+    })
+  }
+
+  onCreateCurso(): void {
+    const cur = new Cursos(this.curso, this.descripcion, this.imgCurso, this.id);
+    this.sCursos.save(cur).subscribe({
+      next: () => { console.log("Curso añadido correctamente") },
+      error: () => { console.log("falló al crear Curso") },
+      complete: () => console.info('complete proyecto')
+    })
   }
 
   newPersona(id: number, nombre: string): void {
@@ -253,6 +267,7 @@ export class NewUsuarioComponent implements OnInit {
         this.onCreateHSS();
         this.onCreateIdiomas();
         this.onCreateProyecto();
+        this.onCreateCurso();
       })
   }
 

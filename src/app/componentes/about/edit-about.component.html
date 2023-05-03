@@ -1,78 +1,109 @@
-<body>
-  <div class="container" *ngIf="personas">
+<body style="display: flex;">
+  <div class="container" *ngIf="personas"
+    style="background-color: lightblue;position: relative;;margin-top: 1rem; width: 60vw;height: 90%;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
     <div class="row">
-        <div style="display: flex;justify-content: center">
-<form (ngSubmit)="onUpdate();spinerBtn = false"  novalidate #f="ngForm" style="background-color: lightblue;position: relative;;margin-top: 1rem; width: 60vw;padding: 2.5rem; border:2px solid grey; border-radius: .5rem;">
-  <div >
-     <h1 class="text-center fs-3 fw-bolder">USUARIO</h1>
-     <h2 style="text-align:center; border-bottom: 2px solid grey;font-size: 1.5rem;padding-bottom: .5rem;">Modifique los campos</h2>
-     <button type="button" class="btn-close btn_position_home"  aria-label="Close" routerLink="/"></button>
-
-  </div>
-     <div class="input-group mb-3">
-        <span class="texto_casillero input-group-text" id="inputGroup-sizing-default" >Nombres:</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-        id="schoolE" name="schoolE" [(ngModel)]="personas.nombre" required >
-     </div>
-     <div class="input-group mb-3">
-        <span class="texto_casillero input-group-text" id="inputGroup-sizing-default">Apellidos:</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-        id="titleE" name="titleE" [(ngModel)]="personas.apellido" required >
-     </div>
-     <div class=" input-group mb-3">
-        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Título:</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-        id="title" name="title" [(ngModel)]="personas.title" required>
-     </div>
-     <div class=" input-group mb-3">
-        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Edad:</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-        id="edad" name="edad" [(ngModel)]="personas.edad" required >
-     </div>
-     <div class=" input-group mb-3">
-        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Ciudad:</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-        id="city" name="city" [(ngModel)]="personas.city" required >
-     </div>
-     <div class=" input-group mb-3">
-        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Título Acerca de mi:</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-        id="titleAbout" name="titleAbout" [(ngModel)]="personas.titleAbout" required >
-     </div>
-     <div class=" input-group mb-3">
-        <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >Acerca de mi:</span>
-        <textarea type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-        id="about" name="about" [(ngModel)]="personas.about" required ></textarea>
-     </div>
-     <div class=" input-group mb-3 input-group custom-file-button" style="height: 6rem;">
-      <label class="texto_casillero input-group-text" for="inputGroupFile" id="inputGroup-sizing-default">URL de foto:</label>
-      <input type="file" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
-      id="inputGroupFile" name="img" (ngModel)="personas.img" (change)="uploadImg($event)" accept="image/*"
-      style="
-            background-image: url({{imgService.url}});
-            background-size: 5rem 5rem;
-            background-repeat: no-repeat;
-            background-position: center;
-            "
-      >
-      <div class="d-flex justify-content-center" style="position: absolute;left: 50%;top: 50%;" *ngIf="isSpiner">
-        <div class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-   </div>
-     <div style="display: flex;justify-content: center;">
-      <button type="submit" class="btn btn-primary"
-        ngClick="Submit">
-        <span *ngIf="spinerBtn">Guardar cambios</span>
-        <div *ngIf="!spinerBtn">
-          <span  class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        enviando...
+      <div style="display: flex;justify-content: center;flex-direction: column;">
+        <form (ngSubmit)="onUpdate();spinerBtn = false" novalidate #f="ngForm">
+          <div>
+            <h1 class="text-center fs-3 fw-bolder">MODIFICAR USUARIO</h1>
+            <button type="button" class="btn-close btn_position_home" aria-label="Close" routerLink="/"></button>
           </div>
-        </button>
+          <div class="input-group mb-3">
+            <span class="texto_casillero input-group-text" id="inputGroup-sizing-default">Nombres:</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" id="schoolE" name="schoolE" [(ngModel)]="personas.nombre"
+              required>
+          </div>
+          <div class="input-group mb-3">
+            <span class="texto_casillero input-group-text" id="inputGroup-sizing-default">Apellidos:</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" id="titleE" name="titleE" [(ngModel)]="personas.apellido"
+              required>
+          </div>
+          <div class=" input-group mb-3">
+            <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default">Título:</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" id="title" name="title" [(ngModel)]="personas.title"
+              required>
+          </div>
+          <div class=" input-group mb-3">
+            <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default">Edad:</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" id="edad" name="edad" [(ngModel)]="personas.edad" required>
+          </div>
+          <div class=" input-group mb-3">
+            <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default">Ciudad:</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" id="city" name="city" [(ngModel)]="personas.city" required>
+          </div>
+          <div class=" input-group mb-3">
+            <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default">Título Acerca de mi:</span>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" id="titleAbout" name="titleAbout"
+              [(ngModel)]="personas.titleAbout" required>
+          </div>
+
+          <div class=" input-group mb-3">
+            <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default">Acerca de mi:</span>
+            <textarea type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" id="about" name="about" [(ngModel)]="personas.about"
+              required></textarea>
+          </div>
+
+          <div class=" input-group mb-3">
+            <span class=" texto_casillero input-group-text" id="inputGroup-sizing-default" >URL img:</span>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+            id="imgE" name="imgE" [(ngModel)]="personas.img" required>
+         </div>
+
+          <div style="display: flex;justify-content: center;margin-bottom: 1rem;">
+            <button type="submit" class="btn btn-primary btn-sm" style="width: 100%;" ngClick="Submit">
+              <span *ngIf="spinerBtn"><span style="font-size: 15px;">⬆️</span>Guardar textos</span>
+              <div *ngIf="!spinerBtn">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                enviando...
+              </div>
+            </button>
+          </div>
+        </form>
+
+
+        <!-- FORMULARIO PARA CARGAR IMAGENES DESDE FIREBASE -->
+
+        <!-- <form (ngSubmit)="onUpdate();spinerBtn = false" novalidate #f="ngForm">
+
+          <div class=" input-group mb-3 input-group custom-file-button" style="height: 6rem;">
+            <label class="texto_casillero input-group-text" for="inputGroupFile" id="inputGroup-sizing-default">Elije tu foto:</label>
+            <input type="file" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" id="inputGroupFile" name="img" (ngModel)="personas.img"
+              (change)="uploadImg($event)" accept="image/*"
+              style="
+                      background-image: url({{imgService.url}});
+                      background-image: url({{imagen}});
+                      background-size: 5rem 5rem;
+                      background-repeat: no-repeat;
+                      background-position: center;
+            ">
+
+            <div class="d-flex justify-content-center" style="position: absolute;left: 50%;top: 50%;" *ngIf="isSpiner">
+              <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex;justify-content: center;">
+            <button type="submit" class="btn btn-primary btn-sm" style="width: 100%;" ngClick="Submit">
+              <span *ngIf="spinerBtn">Guardar foto</span>
+              <div *ngIf="!spinerBtn">
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                enviando...
+              </div>
+            </button>
+          </div>
+        </form> -->
+
+      </div>
     </div>
-    </form>
-  </div>
-  </div>
   </div>
 </body>

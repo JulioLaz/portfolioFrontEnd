@@ -15,7 +15,8 @@ export const environment = {
 
   production: false,
   // URL: ''
-  URL: 'http://localhost:8080/'
+  URL: 'http://localhost:8080/',
+  changePasswordURL: 'http://localhost:8080/email',
 };
 
 /*

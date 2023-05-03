@@ -3,9 +3,11 @@
   <!-- FOTO + NOMBRE  -->
   <div class=" col-md-3 col-lg-3 text-center">
     <div class="caja_about_titulo">
-      <img class="imgAbout" [src]="persona.img" alt={{persona.img}}>
+      <img class="imgAbout"  [src]="persona.img"  alt={{persona.img}} *ngIf="imgExist" #imageRef>
+      <img class="imgAbout" src='{{img}}'  alt="imagen del usuario" *ngIf="!imgExist" #imageRef>
       <p class="imgP">{{persona.nombre}} {{persona.apellido}}</p>
     </div>
+    <!-- <button class="btn btn-outline-secondary" (click)="downloadImage()">img</button> -->
   </div>
 
     <hr style="border-color:black !important;border-width: 2px !important ;width: 100% !important">

@@ -18,3 +18,9 @@
   padding: .5rem;
   width: 100%;
 }
+
+.red:hover svg path,
+.red:hover svg polyline,
+.red:hover svg circle {
+  stroke: #89c5e9;
+}

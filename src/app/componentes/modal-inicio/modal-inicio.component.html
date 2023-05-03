@@ -1,0 +1,25 @@
+<div
+style="margin-top: 2rem;"
+class="modal fade show modal-background" tabindex="-1" role="dialog" aria-labelledby="modalInicio" style="display: block;"
+[ngClass]="{'show': showModal}"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalInicio">Ayuda</h5>
+        <button type="button" class="btn btn-outline-primary btn-sn close" data-dismiss="modal" aria-label="Cerrar" (click)="closeModal()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Este componente se encuentra en construcción</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade show"></div>
+
+<!-- <script>
+  document.body.classList.add("modal-open");
+</script> -->
+

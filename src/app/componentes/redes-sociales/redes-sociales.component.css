@@ -4,6 +4,9 @@
   justify-content: center
 }
 
+.red:hover svg {
+  fill: red !important;
+}
   img{
      width: calc(25px + .7vw);
   }
@@ -12,26 +15,16 @@
   }
 
   .imgFooter:hover{
-  /* width: 35px; */
 border-radius: 50%;
 border: 2px solid white;
-/* transition:all 0.3s ease ; */
   }
-
-
-  /* img#facebook:hover{
-     background-color: #3b5998;
-  }
-
-  img#linkedin:hover{
-     background-color:#0e76a8;
-  }
-
-  img#github:hover{
-     background-color: #171515;
-  } */
-
   span{
     width:calc(24px + .7vw);
     height:calc(24px + .7vw);
      }
+
+.red:hover svg path,
+.red:hover svg polyline,
+.red:hover svg circle {
+  stroke: #89c5e9;
+}

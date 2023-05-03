@@ -9,7 +9,9 @@
 </head>
 
 <body>
-  <section class="vh-100" style="background-color: #508bfc">
+  <section class="vh-100"
+  style="background-image: url(../../../assets/fondo.jpg);  background-size: cover;"
+  >
     <div class="container py-5 h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
@@ -34,17 +36,22 @@
                 </div>
 
                 <div style="display: flex;justify-content: center;">
-                  <button type="submit" style="width: 10rem;" class="btn btn-outline-primary btn-lg" ngClick="Submit">
-                    <span *ngIf="spinerBtn">Login</span>
+                  <button type="submit" style="width: 30%"style="width: 10rem;" class="btn btn-outline-primary btn-sm" ngClick="Submit">
+                    <span *ngIf="spinerBtn">Entrar</span>
                     <div *ngIf="!spinerBtn">
                       <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                      Login...
+                      Entrar...
                     </div>
                   </button>
+                  <button type="button" class=" btn btn-outline-secondary btn-sm" style="margin-left: .5rem;width: 30%" (click)="newUser()" *ngIf="!isLogged">
+                    New User
+                  </button>
+                  <button type="button" class=" btn btn-outline-secondary btn-sm" style="margin-left: .5rem;width: 30%" (click)="sendEmail()">
+                    Olvide Pass
+                  </button>
                 </div>
+
               </form>
-
-
             </div>
           </div>
         </div>

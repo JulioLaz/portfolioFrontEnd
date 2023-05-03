@@ -1,0 +1,19 @@
+/* .modal-backdrop.fade.show {
+  display: none;
+}
+
+body.modal-open {
+  overflow: hidden;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(52, 52, 54, 0.7);
+  z-index: 1040;
+} */

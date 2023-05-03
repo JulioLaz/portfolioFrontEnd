@@ -5,6 +5,7 @@ import { NuevoUsuario } from 'src/app/model/nuevo-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-new-experiencia',
@@ -19,10 +20,10 @@ export class NewExperienciaComponent implements OnInit {
   endE: string = '';
   cityE: string = '';
 
-  usuarioId:number;
+  usuarioId: number;
   nuevoUsuario: NuevoUsuario[] = [];
 
-  spinerBtn:boolean=true;
+  spinerBtn: boolean = true;
   isLogged!: boolean;
 
   constructor(
@@ -30,20 +31,38 @@ export class NewExperienciaComponent implements OnInit {
     private tokenService: TokenService,
     private router: Router,
     private authService: AuthService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.cargarUsuarioId();
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.nombreE,this.cargoE, this.descripcionE, this.startE, this.endE, this.cityE,this.usuarioId);
+    const expe = new Experiencia(this.nombreE, this.cargoE, this.descripcionE, this.startE, this.endE, this.cityE, this.usuarioId);
     this.sExperiencia.save(expe).subscribe({
-      next: () => {console.log("Experiencia añadida"),alert("Experiencia añadida"),this.router.navigate(['']);},
-      error: () => {console.error("Falló"), alert("Falló");},   //     this.router.navigate(['/nuevaexp']);
-      complete: () => console.info('complete')
-  })
-}
+      next: () => {
+        console.log("Experiencia añadida"),
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Experiencia añadida correctamente',
+            showConfirmButton: false,
+            timer: 1500
+          }),
+          this.router.navigate([''])
+      },
+      error: (e: string) => {
+        console.log("Falló"),
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No se pudo eliminar!',
+            footer: 'error: ' + e
+          })
+      },
+      complete: () => console.log('complete')
+    })
+  }
 
   cargarUsuarioId(): void {
     this.authService.lista().subscribe(

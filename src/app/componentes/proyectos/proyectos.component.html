@@ -20,6 +20,22 @@
           <div class="container-centrado row centrado">
             <div class=" card bgCard" style=" margin:.5rem;" *ngFor="let item of proyectos">
 
+              <div class="accordion accordion-flush" id="accordionExample" style="border-radius: 5px 5px 0 0">
+                <div class="accordion-item" style="border-radius: 5px 5px 0 0">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="height: 2.5rem;border-radius: 5px 5px 0 0">
+                      <p style="margin: .3rem; font-size: calc(.7rem + .6vw);font-weight: 500;">{{item.proyectos}}</p>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <p class="card-text text-center txtdecripcionProyecto">{{item.descripcion}}</p>
+                      <p class="card-text text-center txtdecripcionProyecto ">{{item.fecha}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div *ngIf="isLogged" style="display: flex; justify-content: space-between; margin: 8px;">
                 <!-- btn Delete con Dropdown in the card-->
                 <div>
@@ -35,7 +51,7 @@
                     DEL
                   </button>
                   <button type="button" class="dropdown-menu btn btn-danger"
-                    style="width:auto; padding: 0.5rem;text-align: center;" (click)="delete(item.id)">
+                    style="width:auto; padding: 0.5rem;text-align: center;" (click)="delete(item.proyectos,item.id)">
                     Eliminar
                   </button>
                 </div>
@@ -56,18 +72,16 @@
                 </div>
               </div>
 
-
-
               <div class="cardImg">
                 <a href={{item.urlProyecto}} target="_blank" style="width: 100%;">
                   <img src={{item.imgProyecto}} class="card-img imagen">
                 </a>
               </div>
-              <div class="card-body cajaTextos">
-                <p class="txtTituloProyecto card text-bg-dark card-text text-center fw-bolder ">{{item.proyectos}}</p>
-                <p class="card-text text-center txtdecripcionProyecto ">{{item.descripcion}}</p>
-                <p class="card-text text-center txtdecripcionProyecto ">{{item.fecha}}</p>
-                  <img class="card-body cajaTextos" src={{item.imgLenguajes}} alt="URL img" style="height: 90px;">
+
+              <div class="card-footer text-body-primary" style="border-radius:0 0 5px 5px;font-size: calc(.7rem + .6vw);color: black;">
+                <p>
+                  {{item.imgLenguajes}}
+                </p>
               </div>
 
 

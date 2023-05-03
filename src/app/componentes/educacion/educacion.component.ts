@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { Frases } from 'src/app/model/frases';
 import { NuevoUsuario } from 'src/app/model/nuevo-usuario';
 import { AuthService } from 'src/app/service/auth.service';
+import { EnvioUsuarioIdService } from 'src/app/service/envio-usuario-id.service';
 import { SEducacionService } from 'src/app/service/s-educacion.service';
 import { SFrasesService } from 'src/app/service/s-frases.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -24,7 +25,7 @@ export class EducacionComponent implements OnInit {
   seccionEdu: number = 1;
   frase: String;
   autor: String;
-  existeFrase:boolean;
+  existeFrase: boolean;
 
   constructor(
     private router: Router,
@@ -32,6 +33,7 @@ export class EducacionComponent implements OnInit {
     private sEducacion: SEducacionService,
     private tokenService: TokenService,
     private authService: AuthService,
+    public envioUsuarioIdService: EnvioUsuarioIdService,
   ) { }
 
   isLogged = false;
@@ -39,6 +41,13 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
     this.token();
     this.cargarUsuarioId();
+    this.envioUsuarioIdService.cargadorUsuarioId.subscribe(
+      data => {
+        this.cargarEducacion(data.data);
+        this.cargarFraseUsuarioId(data.data);
+        console.log("RECIBEINDO DATA: " + data.data)
+      }
+    )
   }
   token() {
     if (this.tokenService.getToken()) {
@@ -58,7 +67,7 @@ export class EducacionComponent implements OnInit {
     this.sFrases.findAllUsuarioId(usuarioId).subscribe(
       data => {
         data
-        if(JSON.parse(JSON.stringify(data))==false){console.log("existe frases: "+JSON.stringify(data))}
+        if (JSON.parse(JSON.stringify(data)) == false) { console.log("existe frases: " + JSON.stringify(data)) }
 
         this.frasesUsuarioId = JSON.parse(JSON.stringify(data));
         this.frasesUsuarioId.forEach(x => {
@@ -66,26 +75,27 @@ export class EducacionComponent implements OnInit {
             this.frase = x.frases;
             this.autor = x.autor;
             this.idFrases = x.id;
-            console.log("frases: "+x.frases+" autor: "+x.autor+ " id: "+ x.id+"  seccionID: "+ x.seccionId+"  usuarioId: "+x.usuarioId)
-          }else{
+            // console.log("frases: "+x.frases+" autor: "+x.autor+ " id: "+ x.id+"  seccionID: "+ x.seccionId+"  usuarioId: "+x.usuarioId)
+          } else {
           }
         })
       })
   }
 
-  verificarExistenciaFrase(usuarioId:number): void{
+  verificarExistenciaFrase(usuarioId: number): void {
     this.sFrases.findAllUsuarioId(usuarioId).subscribe(
       data => {
         data
         // console.log("data lengh"+ (JSON.parse(JSON.stringify(data))).length +"  "+JSON.parse(JSON.stringify(data)));
-        if(JSON.parse(JSON.stringify(data))==true){console.log("existe frases: "+JSON.stringify(data))}
+        if (JSON.parse(JSON.stringify(data)) == true) { console.log("existe frases: " + JSON.stringify(data)) }
         this.frasesUsuarioId = JSON.parse(JSON.stringify(data));
-        this.frasesUsuarioId.forEach(x => { x.seccionId
+        this.frasesUsuarioId.forEach(x => {
+          x.seccionId
           if (x.seccionId == 1) {
             // console.log("existe frases: "+x.seccionId)
             // this.existeFrase = true;
             // console.log("existe frases: "+this.existeFrase +" seccionId: "+x.seccionId +" usuarioId: "+ x.usuarioId)
-          }else{
+          } else {
             // console.log("No existe frases: "+x.seccionId)
 
             // this.cargarFraseUsuarioId(1);
@@ -96,11 +106,11 @@ export class EducacionComponent implements OnInit {
         })
       })
   }
-  onCreateFrase(): void{
-    const fra = new Frases("Julio", "Lo mejor de la vida",this.seccionEdu,this.usuarioId);
-console.log("frase: "+JSON.stringify(fra));
+  onCreateFrase(): void {
+    const fra = new Frases("Julio", "Lo mejor de la vida", this.seccionEdu, this.usuarioId);
+    // console.log("frase: "+JSON.stringify(fra));
     this.sFrases.save(fra).subscribe({
-      next: () =>{
+      next: () => {
         Swal.fire({
           position: 'center',
           icon: 'success',
@@ -108,14 +118,16 @@ console.log("frase: "+JSON.stringify(fra));
           showConfirmButton: false,
           timer: 1500
         }),
-        this.router.navigate([''])},
-      error: () =>{alert("falló"),this.router.navigate([''])},
-      complete: () => console.info('complete')}
+          this.router.navigate([''])
+      },
+      error: () => { alert("falló"), this.router.navigate(['']) },
+      complete: () => console.info('complete')
+    }
     )
   }
 
-
   cargarUsuarioId(): void {
+    console.log("EJECUTA EL METODO CARGAR USUARIO ");
     this.authService.lista().subscribe(
       data => {
         this.nuevoUsuario = data;
@@ -124,25 +136,54 @@ console.log("frase: "+JSON.stringify(fra));
             this.usuarioId = nuevo.id;
             this.cargarFraseUsuarioId(this.usuarioId);
             this.cargarEducacion(this.usuarioId);
-            // this.verificarExistenciaFrase(this.usuarioId);
 
           }
         })
         if (this.tokenService.getUserName() == undefined) {
-          this.cargarEducacion(1);
-          this.cargarFraseUsuarioId(1);
+          this.cargarEducacion(this.envioUsuarioIdService.selecionUsuarioId);
+          this.cargarFraseUsuarioId(this.envioUsuarioIdService.selecionUsuarioId);
+          console.log("this.envioUsuarioIdService.selecionUsuarioId: " + this.envioUsuarioIdService.selecionUsuarioId);
         }
       })
   }
 
-  delete(id?: number) {
+  delete(nombres: string,id?: number) {
     if (id != undefined) {
-      this.sEducacion.delete(id).subscribe(
-        {
-          next: () => { this.cargarEducacion(this.usuarioId) },
-          error: () => { alert("No se pudo eliminar") },
-          complete: () => { console.info('complete') }
+      Swal.fire({
+        title: 'Quieres borrar '+ nombres + '?',
+        text: "Esto será irreversible! ",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, borrar '+nombres + '!'
+      })
+        .then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire(
+              'Borrado!',
+              nombres+ ' ha sido eliminado.',
+              'success'
+            )
+            this.sEducacion.delete(id).subscribe(
+              {
+                next: () => {
+                  { this.cargarEducacion(this.usuarioId) }
+                  this.router.navigate([''])
+                },
+                error: (e) => {
+                  Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'No se pudo eliminar!',
+                    footer: 'error: '+e
+                  })
+                },
+                complete: () => { console.info('complete') }
+              })
+          }
         })
-    };
+    }
   }
+
 }

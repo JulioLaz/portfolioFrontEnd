@@ -5,12 +5,14 @@ import { NuevoUsuario } from 'src/app/model/nuevo-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { SHardSSkillsService } from 'src/app/service/s-hard-sskills.service';
 import { TokenService } from 'src/app/service/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-new-hard-soft-skill',
   templateUrl: './new-hard-soft-skill.component.html',
   styleUrls: ['./new-hard-soft-skill.component.css']
 })
+
 export class NewHardSoftSkillComponent implements OnInit {
   nuevoUsuario: NuevoUsuario[] = [];
   spinerBtn:boolean=true;
@@ -30,17 +32,31 @@ export class NewHardSoftSkillComponent implements OnInit {
     this.cargarUsuarioId();
   }
 
-  onCreate(): void{
-    const skill = new Hardsskills(this.nombre, this.porcentaje, this.imgURL,this.usuarioId);
-    this.sHardSSkillsService.save(skill).subscribe(
-      data => {
-        alert("Skill creada correctamente");
-        this.router.navigate(['']);
-      }, err =>{
-        alert("Fallo al añadir la skill");
-        this.router.navigate(['']);
-      }
-    )
+  onCreate(): void {
+       const skill = new Hardsskills(this.nombre, this.porcentaje, this.imgURL,this.usuarioId);
+    this.sHardSSkillsService.save(skill).subscribe({
+      next: () => {
+        console.log("skill añadida"),
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'skill añadida correctamente',
+            showConfirmButton: false,
+            timer: 1500
+          }),
+          this.router.navigate([''])
+      },
+      error: (e: string) => {
+        console.log("Falló"),
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'No se pudo eliminar!',
+            footer: 'error: ' + e
+          })
+      },
+      complete: () => console.log('complete')
+    })
   }
 
   cargarUsuarioId(): void {

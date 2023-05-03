@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-redes-sociales',
@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./redes-sociales.component.css']
 })
 export class RedesSocialesComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {
